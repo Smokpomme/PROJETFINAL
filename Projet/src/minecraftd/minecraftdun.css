@@ -549,6 +549,8 @@ body {
     height: 100vh;
     margin: 0;
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   .main-image img {
@@ -559,33 +561,36 @@ body {
   }
 
   .carousel-container {
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
   .description-container {
-    position: absolute;
-    bottom: 80px;
-    left: 0;
+    position: relative;
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     box-sizing: border-box;
+    margin-top: -100px;
+    z-index: 2;
   }
 
   .thumbnails {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 8px;
-    padding: 0 10px;
+    padding: 20px 10px;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
   }
 
   .thumbnail {
-    width: 150px;
-    height: 90px;
+    width: 60px;
+    height: 40px;
   }
 
   .collection-text h1 {
