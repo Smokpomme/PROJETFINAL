@@ -1,5 +1,5 @@
 let crafts = {}; // Variable globale pour stocker les données JSON
-const sanitizeHtml = require('sanitize-html');
+import sanitizeHtml from 'sanitize-html';
 
 // Charger le fichier JSON
 function loadCraftsData() {
@@ -36,37 +36,37 @@ document.addEventListener('DOMContentLoaded', loadCraftsData);
   // Fonction pour envoyer un message
   function handleUserInput() {
     const inputField = document.getElementById('chatbot-input');
-    let userMessage = inputField.value.trim();
+    const userMessage = inputField.value.trim(); // Récupérer et nettoyer la saisie utilisateur
   
     if (userMessage) {
       // Nettoyer l'entrée utilisateur avec sanitize-html
-      userMessage = sanitizeHtml(userMessage, {
+      const sanitizedMessage = sanitizeHtml(userMessage, {
         allowedTags: [], // Aucune balise HTML autorisée
-        allowedAttributes: {} // Pas d'attribut autorisé
+        allowedAttributes: {} // Aucun attribut autorisé
       });
   
-      // Afficher le message de l'utilisateur
-      appendMessage('user', userMessage);
+      // Afficher le message de l'utilisateur dans le chat
+      appendMessage('user', sanitizedMessage);
   
       let craftFound = false;
   
       // Parcourir toutes les catégories pour trouver le craft
-      for (let category in crafts) {
-        if (crafts[category][userMessage]) {
-          // Si le craft est trouvé dans la catégorie, afficher les détails
-          showCraftDetails(category, userMessage);
+      for (const category in crafts) {
+        if (crafts[category]?.[sanitizedMessage]) {
+          // Si le craft est trouvé dans une catégorie
+          showCraftDetails(category, sanitizedMessage);
           craftFound = true;
           break;
         }
       }
   
-      // Si le craft n'est pas trouvé, afficher une réponse générique
+      // Si aucun craft n'est trouvé, afficher une réponse générique
       if (!craftFound) {
-        const response = "Désolé, je ne connais pas ce craft. Pouvez-vous essayer autre chose ?";
-        appendMessage('bot', response);
+        appendMessage('bot', "Désolé, je ne connais pas ce craft. Pouvez-vous essayer autre chose ?");
       }
   
-      inputField.value = ''; // Réinitialiser le champ de saisie
+      // Réinitialiser le champ de saisie
+      inputField.value = '';
     }
   }
 
