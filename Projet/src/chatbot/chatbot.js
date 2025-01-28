@@ -1,4 +1,5 @@
 let crafts = {}; // Variable globale pour stocker les données JSON
+const sanitizeHtml = require('sanitize-html');
 
 // Charger le fichier JSON
 function loadCraftsData() {
@@ -35,9 +36,15 @@ document.addEventListener('DOMContentLoaded', loadCraftsData);
   // Fonction pour envoyer un message
   function handleUserInput() {
     const inputField = document.getElementById('chatbot-input');
-    const userMessage = inputField.value.trim().toLowerCase(); 
+    let userMessage = inputField.value.trim();
   
     if (userMessage) {
+      // Nettoyer l'entrée utilisateur avec sanitize-html
+      userMessage = sanitizeHtml(userMessage, {
+        allowedTags: [], // Aucune balise HTML autorisée
+        allowedAttributes: {} // Pas d'attribut autorisé
+      });
+  
       // Afficher le message de l'utilisateur
       appendMessage('user', userMessage);
   
