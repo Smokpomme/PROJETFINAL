@@ -290,100 +290,87 @@ body {
 }
 
 /* Responsivves */
-@media (min-width: 1281px) { /* pc */
-  .main-content {
-    min-height: 200vh;
-  }
-  .carousel-container {
-    height: 130vh;
-  }
-  .main-image {
-    height: 115vh;
-    margin-bottom: 125px;
-  }
+/* PC grand écran */
+@media (min-width: 1281px) {
   .description-container {
     font-size: 1.2rem;
   }
 }
 
-@media (max-width: 1280px) and (min-width: 769px) { /* pc portable */
-  .main-content {
-    min-height: 180vh;
-  }
+/* PC portable */
+@media (max-width: 1280px) and (min-width: 769px) {
   .carousel-container {
-    height: 100vh;
+    max-height: 700px;
   }
+  
   .main-image {
-    height: 100vh;
-    margin-bottom: 100px;
-  }
-  .description-container {
-    font-size: 1rem;
-  }
-  .thumbnails {
-    bottom: 10px;
-    right: 10px;
+    max-height: 500px;
   }
 }
 
-@media (max-width: 768px) and (min-width: 481px) { /* Tablette */
-  .main-content {
-    min-height: 150vh;
-  }
+/* Tablette */
+@media (max-width: 768px) and (min-width: 481px) {
   .carousel-container {
-    height: 90vh;
+    max-height: 600px;
   }
+  
   .main-image {
-    height: 90vh;
-    margin-bottom: 80px;
+    max-height: 400px;
   }
+  
   .description-container {
     font-size: 0.9rem;
   }
+  
   .thumbnail {
-    width: 80px;
-    height: 50px;
+    width: 70px;
+    height: 45px;
   }
 }
 
-@media (max-width: 480px) { /* Mobile */
-  .main-content {
-    min-height: 130vh;
-  }
+/* Mobile */
+@media (max-width: 480px) {
   .carousel-container {
-    height: 70vh;
+    max-height: 500px;
   }
+  
   .main-image {
-    height: 70vh;
-    margin-bottom: 50px;
+    max-height: 300px;
   }
+  
   .description-container {
     font-size: 0.8rem;
     padding: 10px;
     bottom: 10px;
     left: 10px;
+    right: 10px;
   }
+  
   .thumbnails {
     gap: 5px;
-    bottom: 5px;
-    right: 5px;
+    bottom: 10px;
+    right: 10px;
   }
+  
   .thumbnail {
     width: 60px;
     height: 40px;
   }
+  
   .community-creations h2 {
     font-size: 24px;
   }
+  
   .creation-card {
     margin: 0 5px;
   }
+  
   .collection-text h1 {
     font-size: 1.5em;
   }
+  
   .collection-text p {
     font-size: 1em;
   }
 }
-
 
