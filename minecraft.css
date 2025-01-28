@@ -290,87 +290,103 @@ body {
 }
 
 /* Responsivves */
-/* PC grand écran */
-@media (min-width: 1281px) {
+@media (min-width: 1281px) { /* pc */
+  .main-content {
+    min-height: 200vh;
+  }
+  .carousel-container {
+    height: 130vh;
+  }
+  .main-image {
+    height: 115vh;
+    margin-bottom: 125px;
+  }
   .description-container {
     font-size: 1.2rem;
   }
 }
 
-/* PC portable */
-@media (max-width: 1280px) and (min-width: 769px) {
-  .carousel-container {
-    max-height: 700px;
+@media (max-width: 1280px) and (min-width: 769px) { /* pc portable */
+  .main-content {
+    min-height: 180vh;
   }
-  
+  .carousel-container {
+    height: 100vh;
+  }
   .main-image {
-    max-height: 500px;
+    height: 100vh;
+    margin-bottom: 100px;
+  }
+  .description-container {
+    font-size: 1rem;
+  }
+  .thumbnails {
+    bottom: 10px;
+    right: 10px;
   }
 }
 
-/* Tablette */
-@media (max-width: 768px) and (min-width: 481px) {
+@media (max-width: 768px) and (min-width: 481px) { /* Tablette */
+  .main-content {
+    min-height: 150vh;
+  }
   .carousel-container {
-    max-height: 600px;
+    height: 90vh;
   }
-  
   .main-image {
-    max-height: 400px;
+    height: 90vh;
+    margin-bottom: 80px;
   }
-  
   .description-container {
     font-size: 0.9rem;
   }
-  
   .thumbnail {
-    width: 70px;
-    height: 45px;
+    width: 80px;
+    height: 50px;
   }
 }
 
-/* Mobile */
-@media (max-width: 480px) {
-  .carousel-container {
-    max-height: 500px;
+@media screen and (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    padding: 8px 4px;
+    gap: 10px;
   }
-  
-  .main-image {
-    max-height: 300px;
+
+  .logo {
+    width: 140px;
   }
-  
-  .description-container {
-    font-size: 0.8rem;
-    padding: 10px;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
+
+  .top-left, .top-right {
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
   }
-  
-  .thumbnails {
-    gap: 5px;
-    bottom: 10px;
-    right: 10px;
+
+  .top-center {
+    width: 100%;
+    order: 3;
   }
-  
-  .thumbnail {
-    width: 60px;
-    height: 40px;
+
+  .top {
+    font-size: 14px;
+    padding: 4px;
   }
-  
-  .community-creations h2 {
-    font-size: 24px;
+
+  .dropdown-content {
+    width: 250px;
+    left: 50%;
+    transform: translateX(-50%);
   }
-  
-  .creation-card {
-    margin: 0 5px;
+
+  .top-right .relief-button {
+    padding: 8px 15px;
+    font-size: 14px;
   }
-  
-  .collection-text h1 {
-    font-size: 1.5em;
-  }
-  
-  .collection-text p {
-    font-size: 1em;
+
+  .top-left img {
+    height: 30px;
   }
 }
+
 
