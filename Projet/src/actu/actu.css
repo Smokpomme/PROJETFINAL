@@ -1,0 +1,510 @@
+body {
+    margin: 0;
+    font-family: "CUSTOM";
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+  /* font */
+  @font-face {
+    font-family: "CUSTOM";
+    src: url("../../FONT/MIN.woff2");
+  }
+  @font-face {
+    font-family: "NOTO";
+    src: url("../../FONT/noto.ttf");
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    background-color: #313131;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 250vh;
+  
+    }
+  
+  
+  /* title container */
+  .title-container {
+    text-align: center;
+    margin: 0; 
+    background-color: #4CAF50 ;
+    padding-top: 90px;
+    padding-bottom: 30px;
+    position: relative;
+    
+  
+  }
+  
+  .minecraft-news-title {
+    font-family: "CUSTOM"; 
+    font-size: 48px; 
+    color: white; 
+    text-align: center; 
+  }
+  
+
+/* conteneur principal */
+.collection-container {
+    display: grid;
+    gap: 20px;
+    padding: 10px 20px;
+    background-color: rgb(36, 36, 36);
+    padding-top: 30px;
+  }
+.collection-text{
+    text-align: center;
+    color: white;
+}
+  
+  /* Carrousel */
+  .list-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .item {
+    flex: 0 0 33.33%; 
+    box-sizing: border-box;
+    padding: 10px;
+
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .img_li {
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Description */
+  .description {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'NOTO';
+    font-size: 0.7em;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .content {
+    background-color: #dfdfdf;
+  }
+  
+  /* Boutons du carrousel */
+.button {
+    position: absolute;
+    top: 50%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.0); 
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .button--previous {
+    left: 1rem; 
+  }
+  
+  /* Bouton suivant */
+  .button--next {
+    right: 1rem; 
+  }
+  
+  /* Effet survol  */
+  .button:hover::before {
+    border-color: #4CAF50; 
+  }
+  
+  /* Flèche à l'intérieur des boutons */
+  .button::before {
+    content: '';
+    display: inline-block;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    padding: 8px;
+    transform: rotate(45deg);
+  }
+  
+  /* Flèche directionnelle pour le bouton précédent */
+  .button--previous::before {
+    transform: rotate(135deg); 
+  }
+  
+  /* Flèche directionnelle pour le bouton suivant */
+  .button--next::before {
+    transform: rotate(-45deg); 
+  }
+  
+  /* Masquer les flèches quand elles sont désactivées */
+  .button:disabled {
+    display: none;
+  }
+  
+  /* Container Styles */
+.community-creations {
+  background-color: #3a3a3a;
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+.section-title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.creation-info {
+  padding: 20px; 
+  text-align: left; 
+  color: black; 
+}
+
+.creation-info h3 {
+  font-size: 1.5em; 
+  margin-bottom: 10px; 
+}
+
+.creation-info p {
+  font-size: 0.8em; 
+  font-family: "NOTO";
+}
+
+/* Grid Layout en 3x3  */
+.creations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  
+  gap: 15px; 
+  justify-items: center;  
+  max-width: 770px;  
+  margin: 0 auto; 
+}
+
+
+.creation-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  
+  aspect-ratio: 1 / 1; 
+  background-color: #f0f0f0; 
+}
+
+.creation-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transition: transform 0.3s ease-in-out;
+}
+
+.creation-card:hover img {
+  transform: scale(1.05); 
+}
+
+.creation-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7); 
+  color: white;
+  padding: 10px;
+  max-height: 65px; 
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.creation-info p {
+  margin: 5px 0 0;
+  font-size: 0.9em;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.creation-info h3 {
+  display: inline-block;
+  background-color: white; 
+  color: black; 
+  padding: 5px 10px;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase; 
+}
+
+/* Affiche toute la description au survol */
+.creation-card:hover .creation-info {
+  max-height: 200px; 
+}
+
+/* Conteneur principal de la FAQ */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+  padding: 50px;
+  background-color: white;
+}
+
+/* Titre de la FAQ */
+.faq-title {
+  font-family: 'CUSTOM';
+  font-size: 48px;
+  color: black;
+  margin-bottom: 40px;
+}
+
+/* Conteneur des colonnes */
+.faq-columns {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Style pour chaque colonne */
+.faq-column {
+  flex: 1; 
+}
+
+/* Style pour chaque élément FAQ */
+.faq-item h2 {
+  font-family: 'CUSTOM';
+  font-size: 22px;
+  color: black;
+  margin-bottom: 10px;
+  text-align: left;
+  font-family: 'NOTO';
+}
+
+.faq-item p {
+  font-family: 'NOTO';
+  font-size: 14px;
+  color: black;
+  line-height: 1.5;
+  margin: 0 auto; 
+  text-align: left;
+}
+
+.faq-item a {
+  color: #458f31;
+  text-decoration: underline; 
+  transition: text-decoration 0.3s ease;
+}
+
+.faq-item a:hover {
+  text-decoration: none; 
+}
+
+
+
+/* Style du Popup */
+.popup {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; 
+}
+
+/* Contenu du Popup */
+.popup-content {
+  position: relative; 
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/* Bouton de fermeture */
+.popup-close {
+  font-size: 30px;
+  color: #000;
+  cursor: pointer;
+  position: absolute; 
+  top: 10px;
+  right: 10px;
+  z-index: 10; 
+}
+
+/* Effet au survol du bouton de fermeture */
+.popup-close:hover {
+  color: #f00;
+}
+
+/* Responsive */
+
+/* pc */
+@media (min-width: 1281px) {
+  body {
+    font-size: 16px;
+  }
+
+  .main-content {
+    min-height: 200vh;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .description-box,
+  .version-selection {
+    width: 350px;
+  }
+
+  .description-box h2,
+  .version-selection h2 {
+    font-size: 1.5em;
+  }
+
+  .description-box p,
+  .version-box p,
+  .version-box ul li {
+    font-size: 1em;
+  }
+
+  .version-box {
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .creations-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .creation-card {
+    max-width: 300px;
+    padding: 15px;
+  }
+
+  .popup-content {
+    width: 400px;
+  }
+
+  .new-button-class {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+}
+
+/* Tablette */
+@media (min-width: 768px) and (max-width: 1280px) {
+  .title-container {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  .main-content {
+    min-height: 180vh;
+  }
+
+  .creations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .button {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .popup-content {
+    width: 80%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .title-container {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .minecraft-news-title {
+    font-size: 36px;
+  }
+
+  .collection-container {
+    padding-top: 20px;
+  }
+
+  .collection-text {
+    font-size: 1.2em;
+  }
+
+  .list-wrapper {
+    width: 100%;
+  }
+
+  .item {
+    flex: 0 0 100%;
+  }
+
+  .creations-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .button {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .faq-columns {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .popup-content {
+    width: 90%;
+  }
+}
+  
+  
+  
+  
+  
+
+  

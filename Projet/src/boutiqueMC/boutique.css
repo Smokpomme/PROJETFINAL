@@ -1,0 +1,679 @@
+body {
+    margin: 0;
+    font-family: "CUSTOM";
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+    /* font */
+  @font-face {
+      font-family: "CUSTOM";
+      src: url("../../FONT/MIN.woff2");
+  }
+  @font-face {
+      font-family: "NOTO";
+      src: url("../../FONT/noto.ttf");
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    background-color: #313131;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 250vh;
+    
+    }
+  
+  
+  
+
+
+
+  /* container*/
+  .container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+  
+  /* Ajout de la section  description */
+  .description-box {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 350px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    color: white;
+    z-index: 10;
+    border-radius: 8px;
+  }
+  
+  .description-box h2 {
+    margin-bottom: 20px;
+  }
+  
+  .description-box p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #bbb;
+  }
+  
+  /* Version selection */
+  .version-selection {
+    position: absolute;
+    top: 50%; 
+    right: 0;
+    transform: translateY(-50%);
+    background-color: rgb(43, 43, 43);
+    padding: 20px;
+    width: 350px;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    overflow-y: auto;
+    margin-right: 100px;
+    max-height: 80vh; 
+    border-top-color: rgba(104, 104, 104, 0.9);  
+    border-right-color: rgba(104, 104, 104, 0.9);  
+    border-bottom-color: rgba(0, 0, 0, 0.9);  
+    border-left-color: rgba(0, 0, 0, 0.9);  
+    border-style: solid;
+  }
+  
+
+  .versionLOGO {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+    height: auto;
+  }
+  .version-selection h2 {
+    margin-bottom: 20px;
+    font-size: 1em;
+    text-align: left;
+  }
+  
+  
+  /* Style des versions */
+  .version-box {
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 15px;
+    border: 2px solid transparent; 
+    transition: all 0.3s ease;
+    background-color: #111;
+    border-top-color: rgba(104, 104, 104, 0.9);  
+    border-right-color: rgba(104, 104, 104, 0.9);  
+    border-bottom-color: rgba(0, 0, 0, 0.9);  
+    border-left-color: rgba(0, 0, 0, 0.9);  
+    border-style: solid;
+    
+  }
+  
+  .version-box h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .version-box p, .version-box ul li {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #bbb;
+  }
+  
+  .version-box ul {
+    list-style: none;
+  }
+  
+  /* Marge entre les versions */
+  .version-box:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  
+  /* Effet hover */
+  .version-box:hover {
+    background-color: #333;
+    border-color: #4caf50;
+  }
+  
+  /* Version sélectionnée avec bordure */
+  .version-box.selected {
+    border-color: #4caf50;
+    background-color: #222;
+  }
+  
+  .highlighted-text {
+    color: #4caf50;
+  }
+  
+  .new-div-class .new-button-class {
+    font-family: "CUSTOM";
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0px;
+    box-shadow: 0 4px #3C8527;
+    transition: all 0.3s ease;
+    margin-left: 10px;  
+
+}
+
+
+.new-div-class .new-button-class:hover {
+    background-color: #3C8527;
+}
+
+.new-div-class .new-button-class:active {
+    box-shadow: 0 2px #3C8527;
+    transform: translateY(2px);
+}
+  
+
+
+/* Style de la description du jeu */
+.game-description {
+  border-radius: 8px;
+  color: #f5f5f5;
+  padding-left: 300px;
+  padding-right: 500px;
+  padding-bottom: 10px;
+}
+
+.game-description h3 {
+  font-size: 3.0em;
+  margin-bottom: 15px;
+  color: #ffffff; 
+  padding-right: 300px;
+}
+
+.game-description p {
+  font-size: 0.8em;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 0;
+  font-family: "NOTO";
+}
+
+.game-description p span {
+  font-weight: bold;
+  color: #ffcc00; 
+}
+
+.game-description p em {
+  font-size: 0.9em;
+  color: #a0a0a0; 
+}
+
+
+/* Slider */
+.sliderMC {
+  position: relative;
+  padding-left: 300px;
+  padding-right: 500px;
+  padding-top: 30px;
+  max-width: 100%;
+  margin: auto;
+  text-align: left; 
+  color: #f5f5f5;
+  box-sizing: border-box; 
+}
+
+.slider-titleMC {
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  color: #ffffff;
+  text-align: left; 
+  font-family: "CUSTOM"; 
+}
+
+.main-slideMC {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start; 
+}
+
+.main-imageMC {
+  width: 100%;
+  max-width: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-descriptionMC {
+  font-size: 1em;
+  color: #d3d3d3;
+  margin: 10px 0;
+  text-align: left; 
+}
+
+/* Miniatures */
+.thumbnail-containerMC {
+  display: flex;
+  justify-content: flex-start; 
+  margin-top: 10px;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 60px;
+  margin: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  border-color: #5FCA42; 
+}
+
+/* Style des boutons de navigation */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #3C8527;
+  padding: 10px;
+  cursor: pointer;
+  font-family: "CUSTOM";
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #000;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.prev { left: 310px; }
+.next { right: 980px; }
+
+.prev:hover, .next:hover {
+  background-color: rgb(24, 24, 24);
+  box-shadow: 4px 4px 0 #000000;
+  color: #5FCA42;
+}
+
+/* Conteneur principal */
+.comparison-container {
+  padding-left: 300px;
+  padding-right: 500px;
+  max-width: 100%;
+  margin: auto;
+  text-align: left;
+  color: #f5f5f5;
+  font-family: "CUSTOM"; 
+}
+
+/* Titre du tableau */
+.comparison-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Tableau de comparaison */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #ffffff;
+}
+
+/* En têtes */
+.comparison-table thead th {
+  font-size: 1.1em;
+  padding: 15px 10px;
+  color: #ffffff;
+  background-color: #333333;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Cellules */
+.comparison-table tbody td {
+  padding: 15px 10px;
+  border-top: 1px solid #444444;
+  color: #d3d3d3;
+  text-align: center;
+}
+
+/* Colonnes pour "applicable" et "non applicable" */
+.applicable {
+  font-size: 1.5em;
+}
+
+.not-applicable {
+  font-size: 1.5em;
+}
+
+
+/* Styles des lignes */
+.comparison-table tbody tr:nth-child(odd) {
+  background-color: #222222; 
+}
+
+.comparison-table tbody tr:nth-child(even) {
+  background-color: #1a1a1a;
+}
+.comparison-container p {
+  font-family: "NOTO";
+  font-size: 0.8em;
+  padding-bottom: 20px;
+}
+
+/* Style du Popup */
+.popup {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; 
+}
+
+/* Contenu du Popup */
+.popup-content {
+  position: relative; 
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.popup-content h2{
+  color: black;
+}
+.popup-content p{
+  color: black;
+}
+/* Bouton de fermeture */
+.popup-close {
+  font-size: 30px;
+  color: #000;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10; 
+}
+
+/* Effet survol bouton de fermeture */
+.popup-close:hover {
+  color: #f00;
+}
+
+
+/* Style bouton soit visible */
+.new-button-class {
+    padding: 10px 20px;
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.new-button-class:hover {
+    background-color: #45a049;
+}
+
+/* responsive */
+/* pc */
+@media (min-width: 1281px) {
+  body {
+    font-size: 16px;
+  }
+  .main-content {
+    min-height: 200vh;
+  }
+  .image-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .description-box, .version-selection {
+    width: 350px;
+  }
+
+  .description-box h2, .version-selection h2 {
+    font-size: 1.5em;
+  }
+
+  .description-box p, .version-box p, .version-box ul li {
+    font-size: 1em;
+  }
+
+  .version-box {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 2px solid transparent;
+    background-color: #111;
+    border-top-color: rgba(104, 104, 104, 0.9);
+    border-right-color: rgba(104, 104, 104, 0.9);
+    border-bottom-color: rgba(0, 0, 0, 0.9);
+    border-left-color: rgba(0, 0, 0, 0.9);
+    border-style: solid;
+  }
+
+  .game-description {
+    padding-left: 300px;
+    padding-right: 500px;
+    padding-bottom: 10px;
+  }
+
+  .sliderMC {
+    padding-left: 300px;
+    padding-right: 500px;
+  }
+
+  .creations-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .creation-card {
+    max-width: 300px;
+    padding: 15px;
+  }
+
+  .popup-content {
+    width: 400px;
+  }
+
+  .new-button-class {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+/* pc portable */
+@media (max-width: 1280px) and (min-width: 769px) {
+  body {
+    font-size: 15px;
+  }
+  .main-content {
+    min-height: 180vh;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .description-box, .version-selection {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+  }
+
+  .version-box {
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .creations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .creation-card {
+    max-width: 250px;
+  }
+
+  .game-description {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .sliderMC {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .new-button-class {
+    font-size: 15px;
+  }
+}
+
+/* Tablettle */
+@media (max-width: 768px) and (min-width: 481px) {
+  body {
+    font-size: 14px;
+  }
+  .main-content {
+    min-height: 250vh;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .description-box, .version-selection {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+  }
+
+  .description-box h2, .version-selection h2 {
+    font-size: 1.3em;
+  }
+
+  .description-box p, .version-box p, .version-box ul li {
+    font-size: 0.9em;
+  }
+
+  .creations-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .creation-card {
+    max-width: 250px;
+  }
+
+  .game-description {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .sliderMC {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .new-button-class {
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+  .main-content {
+    min-height: 280vh;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .description-box, .version-selection {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+  }
+
+  .description-box h2, .version-selection h2 {
+    font-size: 1.2em;
+  }
+
+  .description-box p, .version-box p, .version-box ul li {
+    font-size: 0.8em;
+  }
+
+  .creations-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .creation-card {
+    max-width: 200px;
+  }
+
+  .game-description {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .sliderMC {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .new-button-class {
+    font-size: 13px;
+  }
+}
+
+  
+  
+  
+
+  

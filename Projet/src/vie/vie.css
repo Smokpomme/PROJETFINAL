@@ -1,0 +1,264 @@
+body {
+    margin: 0;
+    font-family: "CUSTOM";
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+  
+  /* font */
+  @font-face {
+    font-family: "CUSTOM";
+    src: url("../../FONT/MIN.woff2");
+  }
+  @font-face {
+    font-family: "NOTO";
+    src: url("../../FONT/noto.ttf");
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    background-color: #313131;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  
+  
+/* FAQ */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+  }
+  
+  .loggo {
+    width: 100px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+  .faq-title {
+    font-family: 'CUSTOM';
+    font-size: 38px;
+    color: black;
+    margin-bottom: 5px;
+  }
+
+.detail{
+    font-family: 'NOTO';
+    margin-bottom: 20px;
+  }
+  
+  /* Conteneur des colonnes */
+  .faq-columns {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1000px;
+    width: 100%;
+  }
+
+  /* Style pour chaque élément FAQ */
+  .faq-item h2 {
+    font-size: 19px;
+    color: black;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: 'NOTO';
+  }
+  
+  .faq-item p {
+    font-family: 'NOTO';
+    font-size: 14px;
+    color: black;
+    line-height: 1.5;
+    margin: 0 auto; 
+    text-align: left;
+    max-width: 300px;
+  }
+  
+  .faq-item a {
+    color: #458f31;
+    text-decoration: underline; 
+    transition: text-decoration 0.3s ease;
+  }
+  
+  .faq-item a:hover {
+    text-decoration: none; 
+  }
+  
+  /* section travail */
+.jobs-section {
+    background-color: #ffffff;
+    padding: 40px 20px;
+}
+.jobs-title {
+    font-size: 38px;
+    margin-bottom: 30px;
+    font-family: 'CUSTOM';
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.jobs-grid {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+.job-location {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.job-location h4 {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    font-family: 'NOTO';
+}
+.job-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 0px;
+    box-shadow: 0 4px #3C8527;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.job-button:hover {
+    background-color: #45a049;
+}
+.job-button:active{
+    box-shadow: 0 2px #3C8527;
+    transform: translateY(2px);
+}
+
+
+/* Responsive */
+@media (min-width: 1281px) { /* pc */
+  .faq-container {
+    padding: 50px;
+  }
+  .faq-title {
+    font-size: 38px;
+  }
+  .faq-columns {
+    gap: 50px;
+    max-width: 1000px;
+  }
+  .faq-item h2 {
+    font-size: 19px;
+  }
+  .faq-item p {
+    font-size: 14px;
+    max-width: 300px;
+  }
+  .jobs-grid {
+    gap: 150px;
+  }
+  .job-location {
+    width: 200px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 769px) { /* pc portable */
+  .faq-container {
+    padding: 40px;
+  }
+  .faq-title {
+    font-size: 34px;
+  }
+  .faq-columns {
+    gap: 30px;
+  }
+  .faq-item h2 {
+    font-size: 17px;
+  }
+  .faq-item p {
+    font-size: 13px;
+    max-width: 280px;
+  }
+  .jobs-grid {
+    gap: 100px;
+  }
+  .job-location {
+    width: 180px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 481px) { /* Tablette */
+  .faq-container {
+    padding: 30px;
+  }
+  .faq-title {
+    font-size: 28px;
+  }
+  .faq-columns {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .faq-item h2 {
+    font-size: 16px;
+  }
+  .faq-item p {
+    font-size: 12px;
+    max-width: 100%;
+  }
+  .jobs-grid {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .job-location {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  .faq-container {
+    padding: 20px;
+  }
+  .faq-title {
+    font-size: 24px;
+  }
+  .faq-columns {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .faq-item h2 {
+    font-size: 14px;
+  }
+  .faq-item p {
+    font-size: 12px;
+    max-width: 100%;
+  }
+  .jobs-title {
+    font-size: 22px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .jobs-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .job-location {
+    width: 100%;
+    padding: 10px;
+  }
+  .job-button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}

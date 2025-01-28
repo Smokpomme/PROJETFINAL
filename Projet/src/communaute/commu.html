@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>commu</title>
+    <link rel="stylesheet" href="commu.css">
+    <script>
+        // Inclure fetch
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('../header/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+
+                    // Charger le script header.js
+                    const script = document.createElement('script');
+                    script.src = '../header/header.js';
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error('Erreur lors du chargement du header:', error));
+
+            fetch('../social/social.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('social').innerHTML = data);
+
+            fetch('../footer/footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer').innerHTML = data);
+              });
+      </script>
+</head>
+<body>
+
+    <main class="main-content">
+    <!-- appel header -->
+    <div id="header"></div>
+
+    <!-- appel chatbot -->
+    <div class="chatbot-icon" id="chatbotIcon" onclick="toggleChatbot()">
+        <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot">
+    </div>
+
+    <div class="chatbot-window" id="chatbotWindow" style="display: none;">
+        <div class="chatbot-header">
+            <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot Icon"><span>Gaston le Bot</span>
+            <span class="close-btn" onclick="toggleChatbot()">&times;</span>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chatbot-message received">
+                <p>Salut ! Moi, c'est Gaston, un PNJ savant. Si tu as des questions sur Minecraft, quel que soit le sujet, je suis là pour t'aider. Alors, n'hésite pas !</p>
+            </div>
+        </div>
+        <span class="toggle-choices" id="toggleChoices" onclick="toggleChoicesMenu()">▼</span>
+        <div class="chatbot-choices" id="chatbotChoices"></div>
+            <div class="chatbot-footer">
+            <input type="text" id="chatbot-input" placeholder="Écrivez votre craft..." />
+            <button id="chatbot-send" onclick="handleUserInput()">Envoyer</button>
+            </div>
+        </div>
+        <script src="/Projet/src/chatbot/chatbot.js"></script>
+        <link rel="stylesheet" href="/Projet/src/chatbot/chatbot.css">
+
+    <!-- title -->
+    <div class="title-container">
+        <h1 class="minecraft-news-title">Construction d’un monde meilleur</h1>
+        <p class="mc_p"><strong>Minecraft est bien plus qu’un simple jeu. C’est un moyen pour nous de créer un meilleur avenir pour tous.</strong></p>
+        <p class="mc_p">Nous travaillons avec des organisations extraordinaires dans le monde entier pour sensibiliser à des causes importantes et inspirer des actions par le jeu. La puissance de Minecraft permet aux membres de notre communauté (et au-delà) de créer facilement de véritables changements.</p>
+        <p class="mc_p">Nos initiatives Construction d’un monde meilleur se présentent sous toutes les formes et tailles, et chacune d’entre elles réalise quelque chose d’unique et de précieux à sa manière. Au fil du temps, nous avons compris que Minecraft et sa formidable communauté réalisaient de grandes choses dans trois domaines particulièrement importants pour nous : <strong>l’éducation, l’équité, et la durabilité.</strong></p>
+    </div>
+
+        <!-- communauter -->
+        <section class="community-creations">
+          <h2 class="section-title">Vous êtes notre source d'inspiration</h2>
+          <p class="section-description">
+              Nous ne sommes pas les seuls à réaliser des choses extraordinaires. Des initiatives de construction d'un monde meilleur se multiplient dans le monde entier. Notre communauté est extraordinaire.
+          </p>
+          <div class="creations-grid">
+              <div class="creation-card" onclick="toggleFlip(this)">
+                  <div class="flip-card">
+                      <div class="flip-card-front">
+                          <img src="pic/mod1.jpg" alt="Construction Monumentale" class="creation-image">
+                      </div>
+                      <div class="flip-card-back">
+                          <div class="creation-info">
+                              <h3>Sodium Extra</h3>
+                              <p>Sodium Extra est un complément essentiel pour ceux qui cherchent à affiner les performances graphiques de Minecraft tout en bénéficiant d’options visuelles améliorées.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="creation-card flipped" onclick="toggleFlip(this)">
+                  <div class="flip-card">
+                      <div class="flip-card-front">
+                          <img src="pic/mod2.jpg" alt="Explorations en Forêt" class="creation-image">
+                      </div>
+                      <div class="flip-card-back">
+                          <div class="creation-info">
+                              <h3>Pastel Shaders</h3>
+                              <p>Le Pastel Shaders est un shader esthétique conçu pour transformer l’apparence visuelle de Minecraft avec des palettes de couleurs douces et pastel.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      
+              <div class="creation-card" onclick="toggleFlip(this)">
+                  <div class="flip-card">
+                      <div class="flip-card-front">
+                          <img src="pic/p1.PNG" alt="Costumes et Skins" class="creation-image">
+                      </div>
+                      <div class="flip-card-back">
+                          <div class="creation-info">
+                              <h3>Hypixel</h3>
+                              <p>Hypixel est connu pour son travail sur le mode de jeu original Bedwars, qui a été un succès majeur au moment de sa création et de son innovation.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="creation-card" onclick="toggleFlip(this)">
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <img src="pic/p2.jpg" alt="Costumes et Skins" class="creation-image">
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="creation-info">
+                            <h3>OneCube</h3>
+                            <p>Le serveur Minecraft annoncé par Inoxtag lors du ZEvent 2021 va enfin ouvrir ses portes …</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="creation-card" onclick="toggleFlip(this)">
+              <div class="flip-card">
+                  <div class="flip-card-front">
+                      <img src="pic/mod3.jpg" alt="Costumes et Skins" class="creation-image">
+                  </div>
+                  <div class="flip-card-back">
+                      <div class="creation-info">
+                          <h3>AI Improvements</h3>
+                          <p>AI Improvements est un mod conçu pour optimiser les performances des intelligences artificielles dans Minecraft, en particulier dans les environnements fortement modifiés. </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="creation-card flipped" onclick="toggleFlip(this)">
+            <div class="flip-card">
+                <div class="flip-card-front">
+                    <img src="pic/mod4.jpg" alt="Costumes et Skins" class="creation-image">
+                </div>
+                <div class="flip-card-back">
+                    <div class="creation-info">
+                        <h3>DawnCraft</h3>
+                        <p>DawnCraft – Echoes of Legends vous invite à plonger dans une aventure dense et exigeante, où chaque étape est marquée par de nouveaux défis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="creation-card flipped" onclick="toggleFlip(this)">
+          <div class="flip-card">
+              <div class="flip-card-front">
+                  <img src="pic/p3.jpg" alt="Costumes et Skins" class="creation-image">
+              </div>
+              <div class="flip-card-back">
+                  <div class="creation-info">
+                      <h3>Sea Diary</h3>
+                      <p>Sea Diary est en quelque sorte l'une des constructions ultimes de Minecraft ! Véritable citée marine, à moitié immergée, elle déborde de détails.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="creation-card" onclick="toggleFlip(this)">
+        <div class="flip-card">
+            <div class="flip-card-front">
+                <img src="pic/mod5.jpg" alt="Costumes et Skins" class="creation-image">
+            </div>
+            <div class="flip-card-back">
+                <div class="creation-info">
+                    <h3>Rubidium</h3>
+                    <p>Rubidium est un mod pour Minecraft conçu comme un fork non officiel de Sodium, spécialement adapté pour fonctionner avec le mod loader Forge.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="creation-card flipped" onclick="toggleFlip(this)">
+      <div class="flip-card">
+          <div class="flip-card-front">
+              <img src="pic/p5.jpg" alt="Costumes et Skins" class="creation-image">
+          </div>
+          <div class="flip-card-back">
+              <div class="creation-info">
+                  <h3>Minecraft Forge </h3>
+                  <p>Forge est ce qu'on appelle un mod loader pour le jeu vidéo Minecraft. Comme son nom l'indique, il permet de charger un ou plusieurs mods.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+          </div>
+      </section>
+
+      <!-- collection -->
+      <div class="collection-container">
+        <div class="collection-text">
+          <h1>BUILD VEDETTE</h1>
+          <p class="explanatory-text">
+              Découvrez les créations incroyables de notre communauté. Chaque build est une œuvre unique, pleine de créativité et d'ingéniosité. Plongez dans ces mondes fantastiques ! 
+              <br><br>
+              Chaque semaine, envoyez-nous vos créations, qu'elles soient gigantesques ou petites, détaillées ou non, vertes, rouges ou bleues ! Tentez de figurer chaque semaine sur notre page de builds hebdomadaire et gagnez en visibilité. Que vous soyez un nouveau builder ou un vétéran, c'est votre chance de briller !
+              <br><br>
+              Que le meilleur gagne !<br>
+              
+              <a href="/Projet/src/communaute/commu.html#share">Envoyez nous vos build !</a>
+          </p>
+        </div>
+
+<!-- Carrousel -->
+<div class="list-wrapper">
+  <ul class="list">
+    <li class="item">
+      <div class="content">
+        <img src="pic/1.jpg" alt="" class="img_li">
+        <div class="description" id="lune">
+          <h1>Maison dans une Lune</h1>
+          <p><i>"J'ai voulu créer quelque chose d'original, car j'en avais marre de construire des maisons au sol tout le temmps. Le seul problème, c'est : comment monter dans ma maison ?"</i><strong>by BuildWizard</strong></p>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <div class="content">
+        <img src="pic/2.jpg" alt="" class="img_li">
+        <div class="description" id="portail">
+          <h1>Portail remonter de l'eau</h1>
+          <p><i>"Un étrange portail a été remonté de l'eau hier dans l'après-midi. Les villageois et moi ne savons pas quoi faire, nous entendons des bruits très étranges émanant de ce portail."</i><strong>by EnderExplorer</strong></p>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <div class="content">
+        <img src="pic/3.jpg" alt="" class="img_li">
+        <div class="description" id="temple">
+          <h1>Temple dans la Jungle</h1>
+          <p><i>"J'ai voulu rendre hommage aux villageois qui se sont perdus dans la jungle, alors j'ai construit un temple en leur honneur."</i><strong>by CraftMaster</strong></p>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <div class="content">
+        <img src="pic/4.jpg" class="img_li">
+        <div class="description" id="arbre">
+          <h1>Maison sur un Arbre</h1>
+          <p><i>"J'aime beaucoup les elfes, donc j'ai décidé de vivre comme eux, c'est-à-dire dans un arbre !"</i><strong>by CreeperHunter</strong></p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</div>
+</div>
+
+
+    <!-- partage -->
+      <div class="share" id="share">
+        <div class="earth-icon">
+            <img src="pic/mc.avif" alt="">
+        </div>
+        <div class="earth-description">
+          <h1>Partagez votre histoire !</h1>
+          <p>N’hésitez pas à nous contacter ! Faites-nous savoir comment vous utilisez le pouvoir de Minecraft pour construire un monde meilleur. Peu importe que vous organisiez une fête avec un message positif ou que vous utilisiez Minecraft pour améliorer votre nation ! Chaque geste compte.</p>
+      </div>
+      <div class="share-button">
+        <button class="relief-button" onclick="showPopup()">Envoyez vos Histoires</button>
+      </div>
+      </div>
+
+   <!-- Popup -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="popup-close" onclick="closePopup()">&times;</span>
+        <h2>Page non disponible</h2>
+        <p>La page de partage d'histoires n'est pas encore disponible. Revenez plus tard !</p>
+    </div>
+</div>
+    <!-- appel social -->
+      <div id="social"></div>
+    </main>
+
+    <!-- appel footer -->
+    <div id="footer"></div>
+
+    <!-- appel js -->
+    <script src="commu.js"></script>
+</body>
+</html>

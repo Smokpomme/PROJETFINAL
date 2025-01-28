@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeux</title>
+    <link rel="stylesheet" href="vie.css">
+    <script>
+        // Inclure fetch
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('../header/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+
+                    // Charger le script header.js
+                    const script = document.createElement('script');
+                    script.src = '../header/header.js';
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error('Erreur lors du chargement du header:', error));
+            
+            fetch('../social/social.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('social').innerHTML = data);
+
+            fetch('../footer/footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer').innerHTML = data);
+              });
+      </script>
+</head>
+<body>
+    <main class="main-content">
+    <!-- appel header -->
+    <div id="header"></div>
+
+    <!-- appel chatbot -->
+    <div class="chatbot-icon" id="chatbotIcon" onclick="toggleChatbot()">
+        <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot">
+    </div>
+
+    <div class="chatbot-window" id="chatbotWindow" style="display: none;">
+        <div class="chatbot-header">
+            <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot Icon"><span>Gaston le Bot</span>
+            <span class="close-btn" onclick="toggleChatbot()">&times;</span>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chatbot-message received">
+                <p>Salut ! Moi, c'est Gaston, un PNJ savant. Si tu as des questions sur Minecraft, quel que soit le sujet, je suis là pour t'aider. Alors, n'hésite pas !</p>
+            </div>
+        </div>
+        <span class="toggle-choices" id="toggleChoices" onclick="toggleChoicesMenu()">▼</span>
+        <div class="chatbot-choices" id="chatbotChoices"></div>
+            <div class="chatbot-footer">
+            <input type="text" id="chatbot-input" placeholder="Écrivez votre craft..." />
+            <button id="chatbot-send" onclick="handleUserInput()">Envoyer</button>
+            </div>
+        </div>
+        <script src="/Projet/src/chatbot/chatbot.js"></script>
+        <link rel="stylesheet" href="/Projet/src/chatbot/chatbot.css">
+
+    <!-- faq -->
+    <div class="faq-container">
+        <img src="pic/loggo.avif" alt="Mojang Studios Logo" class="loggo">
+        <h1 class="faq-title">Carrières chez Mojang Studios</h1>
+        <p class="detail">Créez un monde meilleur grâce à la puissance du jeu.</p>
+        
+        <div class="faq-columns">
+            <div class="faq-column">
+                <div class="faq-item">
+                    <h2>Créer ensemble</h2>
+                    <p>Nous sommes une équipe dynamique dont les membres créent ensemble</p>
+                </div>
+      
+                <div class="faq-item">
+                    <h2>Alimenter la passion</h2>
+                    <p>Notre profonde détermination nourrit notre passion </p>
+                </div>
+
+            </div>
+      
+            <div class="faq-column">
+                <div class="faq-item">
+                    <h2>Célébrer la créativité </h2>
+                    <p>Nous avons tous le pouvoir d’être créatifs chaque jour</p>
+                </div>
+      
+                <div class="faq-item">
+                    <h2>Créer de l’amusement</h2>
+                    <p>Nous nous amusons en créant du divertissement</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    
+    <!-- Section travail -->
+    <div class="jobs-section">
+        <h2 class="jobs-title">Postes Vacants</h2>
+        <div class="jobs-grid">
+            <div class="job-location">
+                <h4>Stockholm, Suède</h4>
+                <a href="https://boards.greenhouse.io/mojangab" class="job-button">Consulter les postes</a>
+            </div>
+            <div class="job-location">
+                <h4>Redmond, Washington</h4>
+                <a href="https://jobs.careers.microsoft.com/global/en/search?q=Minecraft" class="job-button">Consulter les postes</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- appel social -->
+    <div id="social"></div>
+    </main>
+    
+    <!-- appel footer -->
+    <div id="footer"></div>
+</body>
+</html>

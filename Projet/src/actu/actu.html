@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>commu</title>
+    <link rel="stylesheet" href="actu.css">
+    <script>
+      // Inclure fetch
+      document.addEventListener('DOMContentLoaded', () => {
+        fetch('../header/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+
+                    // Charger le script header.js
+                    const script = document.createElement('script');
+                    script.src = '../header/header.js';
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error('Erreur lors du chargement du header:', error));
+
+          fetch('../social/social.html')
+              .then(response => response.text())
+              .then(data => document.getElementById('social').innerHTML = data);
+
+          fetch('../footer/footer.html')
+              .then(response => response.text())
+              .then(data => document.getElementById('footer').innerHTML = data);
+            });
+    </script>
+</head>
+<body>
+  <!-- appel chatbot -->
+  <div class="chatbot-icon" id="chatbotIcon" onclick="toggleChatbot()">
+    <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot">
+</div>
+
+<div class="chatbot-window" id="chatbotWindow" style="display: none;">
+    <div class="chatbot-header">
+        <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot Icon"><span>Gaston le Bot</span>
+        <span class="close-btn" onclick="toggleChatbot()">&times;</span>
+    </div>
+    <div class="chatbot-body" id="chatbotBody">
+        <div class="chatbot-message received">
+            <p>Salut ! Moi, c'est Gaston, un PNJ savant. Si tu as des questions sur Minecraft, quel que soit le sujet, je suis là pour t'aider. Alors, n'hésite pas !</p>
+        </div>
+    </div>
+    <span class="toggle-choices" id="toggleChoices" onclick="toggleChoicesMenu()">▼</span>
+    <div class="chatbot-choices" id="chatbotChoices"></div>
+        <div class="chatbot-footer">
+        <input type="text" id="chatbot-input" placeholder="Écrivez votre craft..." />
+        <button id="chatbot-send" onclick="handleUserInput()">Envoyer</button>
+        </div>
+    </div>
+    <script src="/Projet/src/chatbot/chatbot.js"></script>
+    <link rel="stylesheet" href="/Projet/src/chatbot/chatbot.css">
+
+    <main class="main-content">
+    <!-- appel header -->
+    <div id="header"></div>
+
+    <!-- title container -->
+    <div class="title-container">
+        <h1 class="minecraft-news-title">MINECRAFT NEWS</h1>
+    </div>
+
+    <!-- collection contenaire -->
+    <div class="collection-container">
+        <div class="collection-container">
+              <div class="collection-text">
+                <h1>Actualitées</h1>
+              </div>
+      <!-- Carrousel -->
+      <div class="list-wrapper">
+        <ul class="list">
+          <li class="item">
+            <div class="content">
+              <img src="pic/actu1.avif" alt="" class="img_li">
+              <div class="description">
+                <h1>Les lots de bravoure sont là !</h1>
+                <p>Préparez-vous à rassembler votre courage et à remasteriser votre inventaire, car les Lots de bravoure sont enfin là ! Notre troisième lancement de jeu apporte des bundles (un objet qui vous permet de stocker et d'empiler d'autres objets) et le mode Hardcore (le sous-mode Survie le plus difficile) à Minecraft – et il est disponible pour jouer dès maintenant.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="content">
+              <img src="pic/actu2.jpg" alt="" class="img_li">
+              <div class="description">
+                <h1>Nouveau PatchNote</h1>
+                <p>Préparez-vous à explorer de nouvelles terres ! Une mise à jour exceptionnelle vient d'arriver avec un nouveau biome mystérieux, des blocs uniques, et des tonnes de nouveautés prêtes à être découvertes ! Rassemblez vos outils, et plongez dans cette aventure enrichie de nouvelles ressources et secrets à découvrir.</p>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="content">
+              <img src="pic/actu3.avif" alt="" class="img_li">
+              <div class="description">
+                <h1>Fleurs pour les yeux et résine</h1>
+                <p>Êtes-vous déjà entré dans le jardin pâle ? Deux nouvelles fonctionnalités du prochain jeu seront testées dans l'aperçu et les tests bêta de Bedrock cette semaine : les fleurs des yeux (une fleur unique au jardin pâle) et la résine (un nouveau bloc) !</p>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+        <button onclick="handleClick('previous')" class="button button--previous" type="button"></button>
+        <button onclick="handleClick('next')" class="button button--next" type="button"></button>
+      </div>
+    </div>
+  </div>
+
+   
+  <!-- section communauté -->
+  <section class="community-creations">
+    <h2 class="section-title">Section Actus</h2>
+    <p class="section-description">
+      Ne ratez pas les dernières actus Minecraft !
+    </p>
+    <div class="creations-grid">
+        <div class="creation-card">
+            <img src="pic/A1.jpg" alt="Construction Monumentale" class="creation-image" onclick="showPopup()">
+            <div class="creation-info">
+                <h3>contenus</h3>
+                <p>Accroche désormais n’importe quel objet sur tes pancartes !</p>
+            </div>
+        </div>
+
+        <div class="creation-card">
+            <img src="pic/A2.jfif" alt="Explorations en Forêt" class="creation-image" onclick="showPopup()">
+            <div class="creation-info">
+                <h3>actualités</h3>
+                <p>Nouvelle mise à jour sur Minecraft Dungeons : tous les problèmes récents sont corrigés !</p>
+            </div>
+        </div>
+
+        <div class="creation-card">
+            <img src="pic/A3.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
+            <div class="creation-info">
+                <h3>contenus</h3>
+                <p>Nouveau skin disponible sur le Marketplace !</p>
+            </div>
+        </div>
+
+        <div class="creation-card">
+            <img src="pic/A4.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
+            <div class="creation-info">
+                <h3>contenus</h3>
+                <p>Des portails sont désormais disponibles partout dans l'Overworld !</p>
+            </div>
+        </div>
+
+        <div class="creation-card">
+            <img src="pic/A5.avif" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
+            <div class="creation-info">
+                <h3>actualités</h3>
+                <p>Une nouvelle mise à jour, la 1.21, est disponible avec de nouveaux donjons !</p>
+            </div>
+        </div>
+        
+        <div class="creation-card">
+            <img src="pic/A6.avif" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
+            <div class="creation-info">
+                <h3>actualités</h3>
+                <p>Minecraft Education vous apprend tout sur la vie et la faune de Minecraft !</p>
+            </div>
+        </div>
+
+        <div class="creation-card">
+            <img src="pic/A7.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
+            <div class="creation-info">
+                <h3>actualités</h3>
+                <p>Les chunks sont désormais plus diversifiés grâce à nos développeurs !</p>
+            </div>
+        </div>
+
+        <div class="creation-card">
+            <img src="pic/A8.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
+            <div class="creation-info">
+                <h3>actualités</h3>
+                <p>Les grottes sont désormais aussi verdoyantes que l'Overworld !</p>
+            </div>
+        </div>
+
+        <div class="creation-card">
+            <img src="pic/A9.avif" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
+            <div class="creation-info">
+                <h3>actualités</h3>
+                <p>Le PvP a une nouvelle vie : apprenez à combattre à nouveau !</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+      <span class="popup-close" onclick="closePopup()">&times;</span>
+      <h2>Page non disponible</h2>
+      <p>La page des actualités de développement et des contenues n'est pas encore disponible. Revenez plus tard !</p>
+  </div>
+</div>
+
+        
+
+
+<!-- faq -->
+<div class="faq-container">
+  <h1 class="faq-title">PatchNotes</h1>
+  
+  <div class="faq-columns">
+      <div class="faq-column">
+          <div class="faq-item">
+              <h2>MINECRAFT - 1.21.43 (BEDROCK)</h2>
+              <p><i><strong>Posted:</strong> 28 October 2024</i><br><br>
+              <strong>FIXES:</strong><br>
+                -Fixed an issue that prevented items being used or consumed when looking at a Copper Block <a href="">(MCPE-187188)</a><br>
+                -Fixed an issue that prevented some Trophies from being unlocked on PlayStation®5<br>
+                -To ensure players receive all missing Trophies, certain objectives that didn’t unlock previously may need to be completed again. Sorry for the inconvenience and we thank you for your patience!<br>
+                -Fixed an issue that prevented some notifications from appearing on Xbox</p>
+          </div>
+
+          <div class="faq-item">
+              <h2>MINECRAFT: JAVA EDITION 1.21.3 </h2>
+              <p><strong>Fixed bugs in 1.21.3</strong><br><br>
+              <a href="">MC-277791</a> - Attempting to join a Realm with a Resource Pack enabled fails with an error<br>
+              <a href="">MC-277779</a> - Salmon from 1.21.1 or before shrink when updating to 1.21.2</p>
+          </div>
+
+          <div class="faq-item">
+              <h2>MINECRAFT: JAVA EDITION 1.21.2 - BUNDLES OF BRAVERY</h2>
+              <p><strong>New Features</strong><br><br>
+              <strong>Bundles:</strong><br>
+                -A Bundle is an item that can pack different items together into the same stack<br>
+                -A Bundle only fits one stack (usually 64 items) but it can be a mixture of many different item types<br>
+                -You can insert items into a Bundle directly in the inventory<br>
+                -Bundles have a tooltip that shows the items inside<br>
+                -If a Bundle has less than 12 item types inside, the tooltip will show all of them<br>
+                -Otherwise, the tooltip will show the top three rows of items (at least 8 item types) and the others will be hidden below<br>
+                -You can select any of the visible items to pull out of the Bundle<br>
+                -Right-click to take the first item<br>
+                -Use the scroll wheel to select a different item, then right-click to take it<br>
+                -When selecting an item to remove, the Bundle icon shows that item poking out of the Bundle<br>
+                -When holding a Bundle in hand, you can empty items onto the ground by right-clicking or holding right-click<br>
+                -The Bundle is crafted with one String above one Leather<br>
+                -The controls have changed from the original prototype:<br>
+                -Use left-click to put an item into a Bundle<br>
+                -Use right-click to remove the top item type from a Bundle<br>
+                -When the Bundle tooltip is visible, use the mouse wheel to select a different item type, then use right-click to remove it</p>
+          </div>
+        </div>
+
+
+      <div class="faq-column">
+          <div class="faq-item">
+              <h2>MINECRAFT - 1.21.41 (BEDROCK)</h2>
+              <p><i><strong>Posted:</strong> 22 October 2024</i><br><br>
+                -A new update is being released to address a few issues with the 1.21.40 release. This update will be rolling to all platforms as they become available, so please allow time for the update to reach you.<br><br>
+              <strong>FIXES:</strong><br>
+              <strong>Realms:</strong><br>
+                -Fixed issue where game mode and difficulty were not being preserved after uploading or replacing world in Realms Slot. It should now be safe to play Hardcore on Realms, regardless of what kind of world the Hardcore world is replacing.<br><br>
+              <strong>Technical Updates:</strong><br>
+            <strong>Biomes:</strong><br>
+                -Fixed an issue where chunks created before 1.17.40 could behave as Ocean biomes, with ocean-like fog, sky color, and mob spawning (MCPE-186928)
+              </p>
+          </div>
+
+          <div class="faq-item">
+              <h2>MINECRAFT - 1.21.3 (PS4 ONLY)</h2>
+              <p><i><strong>Posted:</strong> July 15, 2024</i><br><br>
+              <strong>FIXES:</strong><br>
+                -Fixed an issue that could occur with back-end services on PlayStation 4
+              </p>
+          </div>
+
+          <div class="faq-item">
+              <h2>MINECRAFT: JAVA EDITION 1.20.5 - ARMORED PAWS</h2>
+              <p><strong>-Do you smell that?</strong> Ah yes, it's the magical, tell-tale scent of release day Tuesday - and what a release day it is!<br><br>
+                -Today we are shipping Minecraft: Java Edition 1.20.5, also known as the Armored Paws drop! Travel to the Savanna and Badlands biomes and say hello to the endearing Armadillos. Find and befriend eight new Wolf variants and equip your canine companions with dyable armor made from Armadillo Scutes and go adventuring together!<br><br>
+                -On the technical side, the Armored Paws drop is also introducing a change to how Java Edition spawn chunks work, the details of which we covered in the changelog for Snapshot 24w03a earlier this year. The tl;dr version of this change is that we're making the spawn chunk radius a configurable game rule and decreasing the default value by 98%. This should translate to a noticeable performance boost for most players!<br><br>
+                -So what are you waiting for? Stock up on food and water and start reading through the complete 1.20.5 changelog below. It's a looong one.<br><br>
+                -Happy scute brushing!<br><br>
+              <strong>NEW FEATURES:</strong><br>
+                -Added Armadillo and Armadillo Scutes<br>
+                -Added Wolf Armor<br>
+                -Added Wolf variants</p>
+          </div>
+          
+          
+
+
+      </div>
+  </div>
+</div>
+    <!--appel social -->
+    <div id="social"></div>
+
+    </main>
+
+    <!-- appel footer -->
+    <div id="footer"></div>
+
+    <!-- appel js -->
+    <script src="actu.js"></script>
+</body>
+</html>

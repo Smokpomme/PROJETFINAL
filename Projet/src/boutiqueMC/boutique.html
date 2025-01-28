@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeux</title>
+    <link rel="stylesheet" href="boutique.css">
+    <script>
+      // Inclure fetch
+      document.addEventListener('DOMContentLoaded', () => {
+        fetch('../header/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+
+                    // Charger le script header.js
+                    const script = document.createElement('script');
+                    script.src = '../header/header.js';
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error('Erreur lors du chargement du header:', error));
+            
+          fetch('../social/social.html')
+              .then(response => response.text())
+              .then(data => document.getElementById('social').innerHTML = data);
+
+          fetch('../footer/footer.html')
+              .then(response => response.text())
+              .then(data => document.getElementById('footer').innerHTML = data);
+            });
+    </script>
+</head>
+<body>
+    <main class="main-content">
+    <!-- appel header -->
+    <div id="header">
+    </div>
+
+    <!-- appel chatbot -->
+    <div class="chatbot-icon" id="chatbotIcon" onclick="toggleChatbot()">
+      <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot">
+  </div>
+
+  <div class="chatbot-window" id="chatbotWindow" style="display: none;">
+      <div class="chatbot-header">
+          <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot Icon"><span>Gaston le Bot</span>
+          <span class="close-btn" onclick="toggleChatbot()">&times;</span>
+      </div>
+      <div class="chatbot-body" id="chatbotBody">
+          <div class="chatbot-message received">
+              <p>Salut ! Moi, c'est Gaston, un PNJ savant. Si tu as des questions sur Minecraft, quel que soit le sujet, je suis là pour t'aider. Alors, n'hésite pas !</p>
+          </div>
+      </div>
+      <span class="toggle-choices" id="toggleChoices" onclick="toggleChoicesMenu()">▼</span>
+      <div class="chatbot-choices" id="chatbotChoices"></div>
+          <div class="chatbot-footer">
+          <input type="text" id="chatbot-input" placeholder="Écrivez votre craft..." />
+          <button id="chatbot-send" onclick="handleUserInput()">Envoyer</button>
+          </div>
+      </div>
+      <script src="/Projet/src/chatbot/chatbot.js"></script>
+      <link rel="stylesheet" href="/Projet/src/chatbot/chatbot.css">
+
+
+    <!-- vontainer boutique -->
+    <div class="container" id="boutiqueMC">
+      <div class="image-container">
+        <img class="main-image" src="pic/deluxe1.jpg" alt="Minecraft Image">
+      </div>
+    
+      <div class="version-selection">
+        <img class="versionLOGO" src="PIC/mccc.avif" alt="Start"> 
+        <h2>Sélectionnez une version</h2>
+    
+        <div class="version-box selected" onclick="selectVersion('deluxe')">
+          <h3>Deluxe Collection</h3>
+          <p>39,99 €</p>
+          <p class="highlighted-text">Meilleur rapport qualité-prix</p>
+          <ul>
+            <li>- Minecraft : édition Java</li>
+            <li>- Minecraft : édition Bedrock</li>
+            <li>- Launcher Minecraft</li>
+            <li>- 1 600 Minecoins</li>
+            <li>- 5 cartes</li>
+            <li>- 3 packs de skins</li>
+            <li>- 1 pack de textures</li>
+          </ul>
+        </div>
+    
+        <div class="version-box" onclick="selectVersion('standard')">
+          <h3>Minecraft</h3>
+          <p>29,99 €</p>
+          <ul>
+            <li>- Minecraft : édition Java</li>
+            <li>- Minecraft : édition Bedrock</li>
+            <li>- Launcher Minecraft</li>
+          </ul>
+        </div>
+    
+        <div class="new-div-class">
+          <button class="new-button-class" id="payButton">Payer</button>
+      </div>
+      
+      <!-- Popup -->
+      <div class="popup" id="payPopup">
+          <div class="popup-content">
+              <span class="popup-close" id="payPopupClose">&times;</span>
+              <h2>Paiement en cours...</h2>
+              <p>Cette fonctionnalité n'est pas encore disponible. Merci de revenir plus tard.</p>
+          </div>
+      </div>
+    
+      </div>
+    </div>
+
+    <!-- Description du jeu -->
+    <div class="game-description" id="gameDescription">
+      <h3>Minecraft : éditions Java et Bedrock – Deluxe Collection</h3>
+      <p>En vente pour 39,99 € au cours des 30 derniers jours<br><br>
+        Découvrez toutes les différentes façons d’explorer, de survivre et de construire dans Minecraft avec Minecraft : Deluxe Collection pour PC avec Java et Bedrock et le launcher Minecraft inclus !
+        Jouez à l’édition Bedrock sur un PC pour parcourir une infinité de contenus créés par la communauté sur la Place de marché de Minecraft, découvrez de nouveaux styles de jeu grâce à différentes cartes et exprimez-vous avec des objets et des émotes du créateur de personnage.*<br><br>
+        <i>*Minecraft : édition Java s’exécute sur Windows, Mac et Linux ; Minecraft : édition Bedrock s’exécute sur Windows. Le contenu Deluxe Collection ne s’exécute que sur Minecraft : édition Bedrock sur Windows.</i></p>
+    </div>
+      
+    <!-- Slider -->
+    <div class="sliderMC">
+      <h2 class="slider-titleMC">CAPTURES D'ÉCRAN DU JEU</h2>
+    
+      <div class="main-slideMC">
+        <img class="main-imageMC" src="pic/mc1.avif" alt="Main Image">
+      </div>
+    
+      <p class="image-descriptionMC">Embarquez-vous dans une aventure commune ! Jouez avec vos amis en personne ou en ligne grâce au jeu multiplateforme.</p>
+    
+      <div class="prev" onclick="moveSlide(-1)">&#10094;</div>
+      <div class="next" onclick="moveSlide(1)">&#10095;</div>
+    
+      <div class="thumbnail-containerMC">
+        <img src="pic/mc1.avif" alt="Thumbnail 1" onclick="selectSlide(0)" class="thumbnail">
+        <img src="pic/mc2.avif" alt="Thumbnail 2" onclick="selectSlide(1)" class="thumbnail">
+        <img src="pic/mc3.avif" alt="Thumbnail 3" onclick="selectSlide(2)" class="thumbnail">
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- comparation container -->
+    <div class="comparison-container">
+      <h2 class="comparison-title">COMPAREZ LES FONCTIONNALITÉS PRINCIPALES DES ÉDITIONS JAVA ET BEDROCK DE MINECRAFT</h2>
+  
+      <table class="comparison-table">
+          <thead>
+              <tr>
+                  <th>Fonctionnalités</th>
+                  <th>Java</th>
+                  <th>Bedrock</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Compatibilité multiplateforme</td>
+                  <td>Jeu multiplateforme avec Windows, Mac et Linux</td>
+                  <td>Jeu multiplateforme sur Windows 10, Windows 11, Xbox, Nintendo Switch, PS5 et mobile</td>
+              </tr>
+              <tr>
+                  <td>Mode multijoueur avec écran fractionné</td>
+                  <td class="not-applicable">✗</td>
+                  <td class="not-applicable">✗</td>
+              </tr>
+              <tr>
+                  <td>Manette/support tactile</td>
+                  <td class="not-applicable">✗</td>
+                  <td class="applicable">✓</td>
+              </tr>
+              <tr>
+                  <td>Place de marché de Minecraft</td>
+                  <td class="not-applicable">✗</td>
+                  <td class="applicable">✓</td>
+              </tr>
+              <tr>
+                <td>Contenu téléchargeable (DLC)</td>
+                <td class="not-applicable">✗</td>
+                <td class="applicable">✓</td>
+              </tr>
+              <tr>
+                <td>Mods</td>
+                <td class="applicable">✓</td>
+                <td class="not-applicable">✗</td>
+              </tr>
+              <tr>
+                <td>Realms</td>
+                <td class="applicable">✓</td>
+                <td class="applicable">✓</td>
+              </tr>
+              <tr>
+                <td>Hébergez votre propre serveur</td>
+                <td class="applicable">✓</td>
+                <td class="applicable">✓</td>
+              </tr>
+              <tr>
+                <td>Rejoignez des serveurs hébergés par d’autres joueurs</td>
+                <td class="applicable">✓</td>
+                <td class="applicable">✓</td>
+              </tr>
+              <tr>
+                <td>Succès/Trophées</td>
+                <td class="not-applicable">✗</td>
+                <td class="applicable">✓</td>
+              </tr>
+              <tr>
+                <td>Jeu en mode multijoueur via un réseau local ou une connexion Wi-Fi</td>
+                <td class="applicable">✓</td>
+                <td class="applicable">✓</td>
+              </tr>
+              <tr>
+                <td>Contrôle parental avec le compte Microsoft</td>
+                <td class="not-applicable">✗</td>
+                <td class="applicable">✓</td>
+              </tr>
+              <tr>
+                <td>Ray tracing</td>
+                <td class="not-applicable">✗</td>
+                <td class="applicable">✓</td>
+              </tr>
+          </tbody>
+      </table>
+      <p><i>**Realms et Realms Plus nécessitent un abonnement payant.</i></p>
+    </div>
+
+    <!-- appel social -->
+    <div id="social"></div>
+
+    </main>
+    
+    <!-- appel footer -->
+    <div id="footer"></div>
+
+    <!-- appel js -->
+    <script src="boutique.js"></script>
+</body>
+</html>

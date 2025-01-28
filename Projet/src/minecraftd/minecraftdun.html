@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeux</title>
+    <link rel="stylesheet" href="minecraftdun.css">
+    <script>
+      // Inclure fetch
+      document.addEventListener('DOMContentLoaded', () => {
+        fetch('../header/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+
+                    // Charger le script header.js
+                    const script = document.createElement('script');
+                    script.src = '../header/header.js';
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error('Erreur lors du chargement du header:', error));
+                
+          fetch('../social/social.html')
+              .then(response => response.text())
+              .then(data => document.getElementById('social').innerHTML = data);
+
+          fetch('../footer/footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer').innerHTML = data);
+            });
+    </script>
+</head>
+<body>
+    <main class="main-content">
+        <!-- appel header -->
+        <div id="header"></div>
+
+        <!-- appel chatbot -->
+        <div class="chatbot-icon" id="chatbotIcon" onclick="toggleChatbot()">
+          <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot">
+      </div>
+  
+      <div class="chatbot-window" id="chatbotWindow" style="display: none;">
+          <div class="chatbot-header">
+              <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot Icon"><span>Gaston le Bot</span>
+              <span class="close-btn" onclick="toggleChatbot()">&times;</span>
+          </div>
+          <div class="chatbot-body" id="chatbotBody">
+              <div class="chatbot-message received">
+                  <p>Salut ! Moi, c'est Gaston, un PNJ savant. Si tu as des questions sur Minecraft, quel que soit le sujet, je suis là pour t'aider. Alors, n'hésite pas !</p>
+              </div>
+          </div>
+          <span class="toggle-choices" id="toggleChoices" onclick="toggleChoicesMenu()">▼</span>
+          <div class="chatbot-choices" id="chatbotChoices"></div>
+              <div class="chatbot-footer">
+              <input type="text" id="chatbot-input" placeholder="Écrivez votre craft..." />
+              <button id="chatbot-send" onclick="handleUserInput()">Envoyer</button>
+              </div>
+          </div>
+          <script src="/Projet/src/chatbot/chatbot.js"></script>
+          <link rel="stylesheet" href="/Projet/src/chatbot/chatbot.css">
+
+        
+        <!-- carousel -->
+        <div class="carousel-container">
+            <div class="main-image">
+                <img src="pic/mcdd.png" alt="Main Game Image" id="current-image"> 
+            </div>
+
+            <div class="description-container">
+                <h2 id="game-title">Minecraft Dungeons - Explorez les Donjons</h2>
+                <p id="game-description">Plongez dans un jeu d'action-aventure où vous explorez des donjons générés aléatoirement, combattez des monstres et récupérez des trésors épiques. Défiez le terrible Arch-Illager et sauvez le monde de Minecraft Dungeons.</p>
+            </div>
+
+            <div class="thumbnails">
+                <button class="arrow left-arrow">&#8249;</button>
+                <img src="pic/mcdd.png" alt="Thumbnail 0" class="thumbnail" data-title="Minecraft Dungeons - La Quête Épique" data-description="Rejoignez vos amis et partez à l'aventure dans des donjons remplis de monstres redoutables.">
+                <img src="pic/remplacepic2.jpg" alt="Thumbnail 1" class="thumbnail" data-title="Mondes Épiques" data-description="Explorez des mondes générés aléatoirement et découvrez de nouveaux défis.">
+                <img src="pic/rempalcepic3.jpg" alt="Thumbnail 2" class="thumbnail" data-title="Création de Personnages" data-description="Personnalisez votre héros avec des équipements uniques et des compétences spéciales.">
+                <img src="pic/remplacepic4.jpg" alt="Thumbnail 3" class="thumbnail" data-title="Coopération en Multijoueur" data-description="Formez une équipe avec vos amis pour vaincre des boss puissants et collecter des trésors incroyables.">
+                <img src="pic/hallo.jpg" alt="Thumbnail 4" class="thumbnail" data-title="Halloween" data-description="Formez une équipe avec vos amis pour vaincre des boss puissants et collecter des trésors incroyables.">
+                <img src="pic/deep.jpg" alt="Thumbnail 5" class="thumbnail" data-title="Ocean" data-description="Formez une équipe avec vos amis pour vaincre des boss puissants et collecter des trésors incroyables.">
+                <img src="pic/cloud.jpg" alt="Thumbnail 6" class="thumbnail" data-title="Cloud" data-description="Formez une équipe avec vos amis pour vaincre des boss puissants et collecter des trésors incroyables.">
+                <button class="arrow right-arrow">&#8250;</button>
+            </div>
+                
+            </div>
+            </div>
+        </div>
+
+        <!-- communauter -->
+        <section class="community-creations">
+            <h2>Fonctionnement</h2>
+            <div class="creations-grid">
+                <div class="creation-card">
+                    <div class="image-container">
+                        <img src="pic/1.png" alt="" class="creation-image">
+                    </div>
+                    <div class="creation-info">
+                        <span class="category">S’unir</span>
+                        <h3>Aventurez-vous seul dans les donjons ou faites équipe avec des amis ! Jusqu’à quatre joueurs peuvent s’affronter en ligne ou en mode coopératif.</h3>
+                    </div>
+                </div>
+                <div class="creation-card">
+                    <div class="image-container">
+                        <img src="pic/2.png" alt="" class="creation-image">
+                    </div>
+                    <div class="creation-info">
+                        <span class="category">Combattre</span>
+                        <h3>Utilisez les attaques de mêlée, restez en retrait avec les attaques à distance, ou frayez-vous un chemin protégé par une épaisse armure ! Personnalisez votre personnage et déverrouillez de nombreux éléments et enchantements d’armes uniques pour des attaques spéciales et dévastatrices.</h3>
+                    </div>
+                </div>
+                <div class="creation-card">
+                    <div class="image-container">
+                        <img src="pic/3.png" alt="" class="creation-image">
+                    </div>
+                    <div class="creation-info">
+                        <span class="category">Survivre</span>
+                        <h3>Explore des niveaux plein d’action et truffés de trésors dans une quête épique pour sauver les villageois et détruire le terrible Arch-Illager !</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- container -->
+        <div class="collection-container">
+          <div class="collection-text">
+            <h1>L’aventure Ultime continue !</h1>
+            <p>Plongez dans Minecraft Dungeons : Ultimate Edition et Aventures saisonnières - des événements à thème qui rendent le jeu encore plus passionnant. Obtenez le Pass Aventure et gagnez des Points Aventure supplémentaires pour débloquer des récompenses exclusives.</p>
+          </div>
+
+          <!-- Carrousel -->
+          <div class="list-wrapper">
+            <ul class="list">
+              <li class="item">
+                <div class="content">
+                  <img src="pic/c1.png" alt="" class="img_li">
+                  <div class="description">
+                    <h1>Édition Ultime</h1>
+                    <p>Découvrez l’Édition Ultime de Minecraft Dungeons, qui comprend le jeu de base et les six contenus téléchargeables. Posséder l’Édition Ultime, c’est avoir accès à l’expérience complète pour un prix inférieur à celui des achats séparés. Obtenez votre copie dès aujourd’hui !</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="content">
+                  <img src="pic/c2.png" alt="" class="img_li">
+                  <div class="description">
+                    <h1>Venez ensemble à la foire !</h1>
+                    <p>Foire de la Faune consiste en la configuration d’un camp, en y intégrant à la fois des activités explosives et des festivités amusantes. Unissez-vous avec des amis et participez ensemble à de nouveaux défis.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="content">
+                  <img src="pic/c3.png" alt="" class="img_li">
+                  <div class="description">
+                    <h1>C’est le moment de briller, aventurier !</h1>
+                    <p>Explorez la tour de nuit, sous un nouvel éclairage, et découvrez de nouveaux niveaux avec des fresques mystérieuses, des puzzles complexes et des ennemis féroces.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="content">
+                  <img src="pic/c4.png" alt="" class="img_li">
+                  <div class="description">
+                    <h1>Élevez-vous à de nouveaux sommets</h1>
+                    <p>Lancez-vous dans le défi Ascension nébuleuse, la première aventure saisonnière de Minecraft Dungeons, qui offre des récompenses saisonnières exclusives et une nouvelle tour mystérieuse.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <button onclick="handleClick('previous')" class="button button--previous" type="button"></button>
+            <button onclick="handleClick('next')" class="button button--next" type="button"></button>
+          </div>
+        </div>
+
+        <!-- plateforme container -->
+        <div class="platforms-container">
+            <h1 class="platforms-title">Achetez Minecraft Dungeons !</h1>
+            <p class="platforms-p">Minecraft Dungeons est accessible en plusieurs Editions :</p>
+            <div class="platforms-grid">
+                <a href="/Projet/src/boutiqueMCDUN/boutiqueDU.html" class="platform-item">
+                    <img class="platform-icon" src="pic/windows.png" alt="Windows">
+                    <p>Windows</p>
+                    <button class="buy-now-button">Ultimate Edition</button>
+                </a>
+                <a href="/Projet/src/boutiqueMCDUN/boutiqueDU.html" class="platform-item">
+                    <img class="platform-icon" src="pic/windows.png" alt="Windows">
+                    <p>Windows</p>
+                    <button class="buy-now-button">Standard Edition</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- news -->
+        <div class="News">
+            <h1 class="News_title">Nouveautés</h1>
+            <p class="News_p">
+                Venez découvrir les nouveaux outils,<br> 
+                lieux et espaces grâce à nos mises à jour régulières.<br> 
+                Jetez un œil aux dernières nouveautés.
+            </p>
+            <a href="/Projet/src/actu/actu.html" class="News_actu">Voir toutes les actualités</a>
+        </div>
+
+        <!-- appel social -->
+        <div id="social"></div>
+    </main>
+
+    <!-- appel footer -->
+    <div id="footer"></div>
+
+    <!-- appel js -->
+    <script src="minecraftdun.js"></script>
+</body>
+</html>

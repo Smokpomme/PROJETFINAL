@@ -1,0 +1,588 @@
+body {
+  margin: 0;
+  font-family: "CUSTOM";
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* font */
+@font-face {
+    font-family: "CUSTOM";
+    src: url("../../FONT/MIN.woff2");
+}
+@font-face {
+    font-family: "NOTO";
+    src: url("../../FONT/noto.ttf");
+}
+
+.main-content {
+  flex-grow: 1;
+  background-color: #313131;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 250vh;
+  }
+
+/* Conteneur du carrousel */
+.carousel-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: auto; 
+    position: relative;
+    background-color: #190D19;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.main-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 115vh; 
+    margin-bottom: 20px; 
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+/* Description */
+.description-container {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    color: white;
+    font-family: 'CUSTOM';
+    max-width: 40%;
+    padding: 20px;
+    border-radius: 0px;
+    margin-bottom: 20px; 
+}
+
+/* Miniatures */
+.thumbnails {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    justify-content: center; 
+    overflow: hidden;
+    position: relative; 
+    margin-bottom: 40px;
+}
+
+/* Flèches */
+.arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem; 
+    color: white; 
+    cursor: pointer;
+    padding: 10px; 
+    z-index: 10; 
+}
+
+.thumbnail {
+    width: 270px; 
+    height: 160px; 
+    object-fit: cover;
+    border-radius: 0px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.2s; 
+}
+
+.thumbnail:hover {
+    transform: scale(1.1); 
+}
+
+.thumbnail.selected {
+    border-color: #4CAF50;
+}
+
+/* communauter */
+.community-creations {
+  padding: 20px;
+  text-align: center;
+  background-color: #6C0E37;
+}
+
+.community-creations h2 {
+  font-family: "CUSTOM";
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.creations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.creation-card {
+  overflow: hidden; 
+  transition: none; 
+}
+
+.image-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  object-fit: contain;
+}
+
+.creation-image {
+  width: 100%;
+  height: auto; 
+  max-height: none; 
+  object-fit: contain; 
+  transition: none; 
+}
+
+.creation-info {
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.creation-info .category {
+  display: inline-block;
+  background-color: #d6d6d6;
+  color: black;
+  padding: 2px 5px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  
+}
+
+.creation-info h3 {
+  font-family: 'NOTO';
+  font-size: 14px;
+  margin: 5px 0 0 0;
+}
+
+/* Conteneur principal */
+.collection-container {
+  display: grid;
+  gap: 20px;
+  padding: 50px 20px;
+  background-color: black; 
+}
+
+/* Texte principal */
+.collection-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.collection-text h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: white; 
+}
+
+.collection-text p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: white; 
+}
+
+/* Carrousel */
+.list {
+  display: flex;
+  gap: 70px;
+  padding: 16px;
+  list-style: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  width: 100%; 
+}
+
+.item {
+  flex-shrink: 0;
+  width: 60%; 
+  min-height: 70vh; 
+  transition: transform 0.5s ease-in-out;
+  scroll-snap-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.img_li {
+  width: 100%;
+  height: auto; 
+  max-height: 60vh; 
+  object-fit: cover;
+  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+/* Description */
+.description {
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 1rem; 
+  box-sizing: border-box;
+  max-width: 90%; 
+  margin: 0 auto; 
+  color: white; 
+  font-family: 'NOTO';
+}
+.description h1{
+  font-family: 'CUSTOM';
+  font-size: 2.2rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start; 
+  height: 100%;
+}
+
+/* Conteneur du carrousel */
+.list-wrapper {
+  position: relative; 
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center; 
+  overflow: hidden; 
+}
+
+/* Boutons du carrousel */
+.button {
+  position: absolute;
+  top: 50%;
+  width: 4rem;
+  height: 4rem;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.0); 
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  transition: background-color 0.3s ease; 
+}
+
+.button--previous {
+  left: 1rem; 
+}
+
+/* Bouton suivant */
+.button--next {
+  right: 1rem; 
+}
+
+/* Effet au survol */
+.button:hover::before {
+  border-color: #ffa41f; 
+}
+
+/* Flèche à l'intérieur des boutons */
+.button::before {
+  content: '';
+  display: inline-block;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  padding: 8px;
+  transform: rotate(45deg);
+}
+
+/* Flèche directionnelle pour le bouton précédent */
+.button--previous::before {
+  transform: rotate(135deg); 
+}
+
+/* Flèche directionnelle pour le bouton suivant */
+.button--next::before {
+  transform: rotate(-45deg);
+}
+
+/* Masquer les flèches quand elles sont désactivées */
+.button:disabled {
+  display: none;
+}
+
+.platforms-container {
+  text-align: center;
+  padding: 40px;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.platforms-title {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.platforms-p{
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.platforms-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 70px;
+}
+
+.platform-icon {
+  width: 30px; 
+  height: auto; 
+  display: block; 
+  margin:  auto; 
+}
+
+.platform-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  width: 150px;
+}
+
+.platform-item p {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.buy-now-button {
+  background-color: #ffa41f;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: "CUSTOM";
+  box-shadow: 0 4px #ff8a00;
+}
+
+.buy-now-button:hover {
+  background-color: #ff8a00;
+  transform: scale(1.1);
+}
+
+.News {
+  background-color: #32122A; 
+  padding: 20px 0; 
+  padding-left: 30px;
+  padding-bottom: 70px;
+}
+
+.News_title {
+  font-size: 2.5em; 
+  color: white; 
+  text-align: left; 
+}
+
+.News_p {
+  font-family: 'NOTO', sans-serif; 
+  color: white; 
+  text-align: left; 
+  margin: 10px 0; 
+  font-size: 1em; 
+}
+
+.News_actu {
+  display: inline-block;
+  color: orange; 
+  text-decoration: none; 
+  margin-top: 10px; 
+  font-weight: bold; 
+  transition: color 0.3s, text-decoration 0.3s;
+  font-family: "CUSTOM", sans-serif; 
+  font-size: 1.2em;
+}
+
+.News_actu:hover {
+  color: white; 
+  text-decoration: underline; 
+}
+
+/* Responsive */
+/* pc */
+@media (min-width: 1281px) {
+  .carousel-container {
+    height: auto;
+    padding: 20px 0;
+  }
+  .main-image {
+    height: 115vh;
+  }
+  .description-container {
+    max-width: 40%;
+    font-size: 1rem;
+  }
+  .thumbnails {
+    gap: 10px;
+  }
+  .community-creations h2 {
+    font-size: 36px;
+  }
+  .collection-text h1 {
+    font-size: 3em;
+  }
+  .item {
+    width: 60%;
+    min-height: 70vh;
+  }
+  .platforms-grid {
+    gap: 70px;
+  }
+  .platform-item p {
+    font-size: 1.1em;
+  }
+  .News_title {
+    font-size: 2.5em;
+  }
+}
+
+/* pc portable */
+@media (max-width: 1280px) and (min-width: 769px) {
+  .carousel-container {
+    padding: 15px 0;
+  }
+  .main-image {
+    height: 90vh;
+  }
+  .description-container {
+    max-width: 60%;
+    font-size: 0.9rem;
+  }
+  .thumbnails {
+    gap: 8px;
+  }
+  .community-creations h2 {
+    font-size: 32px;
+  }
+  .collection-text h1 {
+    font-size: 2.5em;
+  }
+  .item {
+    width: 70%;
+    min-height: 60vh;
+  }
+  .platforms-grid {
+    gap: 50px;
+  }
+  .platform-item p {
+    font-size: 1em;
+  }
+  .News_title {
+    font-size: 2.2em;
+  }
+}
+
+/* Tablette */
+@media (max-width: 768px) and (min-width: 481px) {
+  .carousel-container {
+    padding: 10px 0;
+  }
+  .main-image {
+    height: 70vh;
+  }
+  .description-container {
+    max-width: 80%;
+    font-size: 0.85rem;
+  }
+  .thumbnails {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .community-creations h2 {
+    font-size: 28px;
+  }
+  .collection-text h1 {
+    font-size: 2em;
+  }
+  .item {
+    width: 80%;
+    min-height: 50vh;
+  }
+  .platforms-grid {
+    gap: 30px;
+  }
+  .platform-item p {
+    font-size: 0.9em;
+  }
+  .News_title {
+    font-size: 2em;
+  }
+  .News_p {
+    font-size: 0.9em;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .carousel-container {
+    padding: 10px 0;
+  }
+  .main-image {
+    height: 50vh;
+  }
+  .description-container {
+    max-width: 100%;
+    font-size: 0.8rem;
+  }
+  .thumbnails {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .thumbnail {
+    width: 100px;
+    height: 80px;
+  }
+  .community-creations h2 {
+    font-size: 24px;
+  }
+  .collection-text h1 {
+    font-size: 1.5em;
+  }
+  .item {
+    width: 90%;
+    min-height: 40vh;
+  }
+  .platforms-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .platform-item p {
+    font-size: 0.8em;
+  }
+  .News_title {
+    font-size: 1.8em;
+  }
+  .News_p {
+    font-size: 0.8em;
+  }
+  .buy-now-button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}
+

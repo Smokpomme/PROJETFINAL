@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>commu</title>
+    <link rel="stylesheet" href="commudev.css">
+    <script>
+        // Inclure fetch
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('../header/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+
+                    // Charger le script header.js
+                    const script = document.createElement('script');
+                    script.src = '../header/header.js';
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error('Erreur lors du chargement du header:', error));
+
+            fetch('../social/social.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('social').innerHTML = data);
+
+            fetch('../footer/footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer').innerHTML = data);
+              });
+      </script>
+</head>
+<body>
+
+    <main class="main-content">
+    <!-- appel header -->
+    <div id="header"></div>
+
+    <!-- appel chatbot -->
+    <div class="chatbot-icon" id="chatbotIcon" onclick="toggleChatbot()">
+        <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot">
+    </div>
+
+    <div class="chatbot-window" id="chatbotWindow" style="display: none;">
+        <div class="chatbot-header">
+            <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot Icon"><span>Gaston le Bot</span>
+            <span class="close-btn" onclick="toggleChatbot()">&times;</span>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chatbot-message received">
+                <p>Salut ! Moi, c'est Gaston, un PNJ savant. Si tu as des questions sur Minecraft, quel que soit le sujet, je suis là pour t'aider. Alors, n'hésite pas !</p>
+            </div>
+        </div>
+        <span class="toggle-choices" id="toggleChoices" onclick="toggleChoicesMenu()">▼</span>
+        <div class="chatbot-choices" id="chatbotChoices"></div>
+            <div class="chatbot-footer">
+            <input type="text" id="chatbot-input" placeholder="Écrivez votre craft..." />
+            <button id="chatbot-send" onclick="handleUserInput()">Envoyer</button>
+            </div>
+        </div>
+        <script src="/Projet/src/chatbot/chatbot.js"></script>
+        <link rel="stylesheet" href="/Projet/src/chatbot/chatbot.css">
+
+     <!-- sliderr -->   
+    <div class="slider">
+        <div class="slides">
+          <div class="slide active">
+            <img src="pic/monocraft.png" alt="Image 1">
+          </div>
+          <div class="slide">
+            <img src="pic/dev1.jpg" alt="Image 2">
+          </div>
+          <div class="slide">
+            <img src="pic/dev2.jpg" alt="Image 3">
+          </div>
+        </div>
+        <div class="prev" onclick="moveSlide(-1)">&#10094;</div>
+        <div class="next" onclick="moveSlide(1)">&#10095;</div>
+    </div>
+    
+    <!-- Partage -->
+    <div class="share">
+        <div class="earth-description">
+          <h1>APPRENEZ À DEVENIR CRÉATEUR MINECRAFT À L’AIDE D’ADD-ONS</h1>
+          <p>Apprenez à créer des mods Minecraft avec des add-ons. Créez des skins, concevez des expériences uniques, découvrez les dernières fonctionnalités et développez vos compétences en tant que créateur Minecraft.</p>
+      </div>
+      <div class="share-button">
+        <a href="/Projet/src/commudev/commudev.html#community" class="platform-item">
+        <button class="relief-button">En Savoir Plus</button>
+        </a>
+      </div>
+      </div>
+
+      <!-- carrousel  -->
+      <div class="carousel-container">
+        <div class="carousel-description">
+            <h2>Quels sont les add-ons de Minecraft que vous pouvez créer ?</h2>
+            <p>
+                Découvrez l’ensemble du contenu que vous pouvez créer en tant que créateur Minecraft. Utilisez les add-ons Minecraft pour organiser le monde virtuel en fonction de votre style. Apprenez à personnaliser des skins Minecraft, à incorporer des packs de textures personnalisés et à créer un monde Minecraft qui vous permet de jouer à votre façon.
+            </p>
+            <div class="carr-arrows">
+                <span class="carr-prev" onclick="moveMinecraftSlide(-1)">&#10094;</span>
+                <span class="carr-next" onclick="moveMinecraftSlide(1)">&#10095;</span>
+            </div>
+        </div>
+        <div class="carousel-images">
+            <div class="carrousel-slides">
+                <div class="carr-slide">
+                    <img src="pic/m1.jpg" alt="Monde 1">
+                    
+                </div>
+                <div class="carr-slide">
+                    <img src="pic/m2.jpg" alt="Monde 2">
+                    
+                </div>
+                <div class="carr-slide">
+                    <img src="pic/m3.jpg" alt="Monde 3">
+                    
+                </div>
+                <div class="carr-slide">
+                    <img src="pic/m4.png" alt="Monde 4">
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- section communauter -->
+        <section class="community-creations" id="community">
+            <h2 class="section-title">Actualités des créateurs</h2>
+            <p class="section-description">
+                Voici l'actualité des créateurs de contenu, peut-être que certaines d'entre elles vous intéresseront !
+            </p>
+            <div class="creations-grid">
+                <div class="creation-card">
+                    <img src="pic/Z1.avif" alt="Construction Monumentale" class="creation-image" onclick="showPopup()">
+                    <div class="creation-info">
+                        <h3>guides</h3>
+                        <p>Voici le fonctionnement complet des villages ainsi que l'apparition de ces derniers et des golems de fer..</p>
+                    </div>
+                </div>
+        
+                <div class="creation-card">
+                    <img src="pic/Z2.png" alt="Explorations en Forêt" class="creation-image" onclick="showPopup()">
+                    <div class="creation-info">
+                        <h3>actualités</h3>
+                        <p>Une nouvelle application Minecraft qui va révolutionner votre façon de jouer.</p>
+                    </div>
+                </div>
+        
+                <div class="creation-card">
+                    <img src="pic/Z3.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
+                    <div class="creation-info">
+                        <h3>guides</h3>
+                        <p>Tuto complet sur l'End, son fonctionnement et les End Cities.</p>
+                    </div>
+                </div>
+        
+                <div class="creation-card">
+                    <img src="pic/Z4.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
+                    <div class="creation-info">
+                        <h3>guides</h3>
+                        <p>Tuto complet sur la redstone, son fonctionnement et les différentes dérivées.</p>
+                    </div>
+                </div>
+        
+                <div class="creation-card">
+                    <img src="pic/Z5.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
+                    <div class="creation-info">
+                        <h3>actualités</h3>
+                        <p>Nouveau live sur les nouveautés de la version 1.20.1.</p>
+                    </div>
+                </div>
+                
+                <div class="creation-card">
+                    <img src="pic/Z6.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
+                    <div class="creation-info">
+                        <h3>actualités</h3>
+                        <p>Un Minecraft plus beau qu'il ne l'est déjà : découvrez le nouveau meilleur shader..</p>
+                    </div>
+                </div>
+
+                <div class="creation-card">
+                    <img src="pic/Z7.png" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
+                    <div class="creation-info">
+                        <h3>guides</h3>
+                        <p>Coder Minecraft en Scratch, est-ce possible ?</p>
+                    </div>
+                </div>
+
+                <div class="creation-card">
+                    <img src="pic/Z8.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
+                    <div class="creation-info">
+                        <h3>guides</h3>
+                        <p>Tuto complet pour apprendre à coder des add-ons sur Minecraft de A à Z.</p>
+                    </div>
+                </div>
+
+                <div class="creation-card">
+                    <img src="pic/Z9.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
+                    <div class="creation-info">
+                        <h3>actualités</h3>
+                        <p>Le meilleur pack de textures pour vos vidéos YouTube !</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popup -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="popup-close" onclick="closePopup()">&times;</span>
+                <h2>Page non disponible</h2>
+                <p>La page des actualités de développement et des guides n'est pas encore disponible. Revenez plus tard !</p>
+            </div>
+        </div>
+
+        <!-- faq -->
+        <div class="faq-container">
+            <h1 class="faq-title">QUESTIONS FRÉQUENTES</h1>
+            
+            <div class="faq-columns">
+                <div class="faq-column">
+                    <div class="faq-item">
+                        <h2>COMMENT AJOUTER DES ADD-ONS À MINECRAFT ?</h2>
+                        <p>Après avoir choisi les add-ons Minecraft que vous voulez utiliser, vous pouvez les installer et les appliquer à des mondes différents dans votre jeu. Suivez les instructions <a href="">d’installation des add-ons Minecraft</a> et découvrez comment vous pouvez commencer à les utiliser lorsque vous jouez.</p>
+                    </div>
+        
+                    <div class="faq-item">
+                        <h2>OÙ TROUVER LES ADD-ONS MINECRAFT ?</h2>
+                        <p>Il existe de nombreux add-ons Minecraft gratuits et des mondes personnalisés que vous pouvez utiliser, ainsi que des mondes Minecraft personnalisés disponibles sur la Place de marché Minecraft. Si vous souhaitez concevoir vos propres add-ons pour Minecraft, explorez les différents packs de ressources et de comportements que vous pouvez utiliser pour stimuler votre créativité.</p>
+                    </div>
+        
+                    <div class="faq-item">
+                        <h2>POUVEZ-VOUS CRÉER DES MODS POUR MINECRAFT: BEDROCK EDITION ?</h2>
+                        <p>Vous pouvez utiliser les add-ons du pack de ressources et de comportement pour créer des mods de créatures, de blocs et d’objets Minecraft. En savoir plus sur la <a href="">Prise en main des add-ons Minecraft.</a></p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h2>EN QUOI CONSISTENT LES ADD-ONS DANS MINECRAFT ?</h2>
+                        <p>Les add-ons constituent des moyens de personnaliser votre expérience de jeu Minecraft. Vous pouvez utiliser des add-ons Minecraft gratuits et il existe également des add-ons spéciaux que vous pouvez acheter. Ces add-ons peuvent vous aider à modifier les règles de votre jeu. Vous pouvez utiliser les add-ons Minecraft pour changer l’apparence de votre monde et modifier l’apparence et le comportement des créatures.</p>
+                    </div>
+                </div>
+        
+
+                <div class="faq-column">
+                    <div class="faq-item">
+                        <h2>COMMENT CRÉER UN PACK DE TEXTURES MINECRAFT DANS BEDROCK ?</h2>
+                        <p>En savoir plus sur la procédure de création de packs de textures et de mods d’apparence de votre monde grâce à la lecture de la <a href="">Présentation des packs de ressources.</a></p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h2>COMMENT CRÉER UN PACK DE COMPORTEMENT MINECRAFT DANS BEDROCK ?</h2>
+                        <p>Pour commencer à créer des mods de votre expérience Minecraft, créez des add-ons de packs de comportement. Lisez le tutoriel sur la <a href="">Présentation des packs de comportement</a> pour en savoir plus.</p>
+                    </div>
+        
+                    <div class="faq-item">
+                        <h2>COMMENT AJOUTER UN BLOC DANS MINECRAFT BEDROCK EDITION ?</h2>
+                        <p>Vous pouvez ajouter des blocs dans Minecraft à l’aide de packs de ressources et de comportement. En savoir plus sur la création de mods de blocs grâce à la lecture de la <a href="">Procédure d’ajout d’un bloc personnalisé.</a></p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h2>POUVEZ-VOUS AJOUTER ET CRÉER DES MODS DE CRÉATURES DANS MINECRAFT BEDROCK EDITION ? </h2>
+                        <p>Vous pouvez créer des mods de comportement des créatures Minecraft existantes et créer une créature à ajouter dans votre monde. Utilisez le tutoriel sur la <a href="">Présentation de l’ajout d’une entité</a> pour encourager votre imagination.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h2>COMMENT CRÉER UN PACK DE SKINS PERSONNALISÉ ?</h2>
+                        <p>Lisez le tutoriel sur <a href="">l’Empaquetage d’un pack de skins</a> pour apprendre à personnaliser votre apparence en créant un skin et un mod de pack de skins.</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        
+        <!-- appel social -->
+        <div id="social"></div>
+
+    </main>
+
+    <!-- appel footer -->
+    <div id="footer"></div>
+
+    <!-- appel js -->
+    <script src="commudev.js"></script>
+</body>
+</html>

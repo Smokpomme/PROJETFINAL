@@ -1,0 +1,389 @@
+body {
+  margin: 0;
+  font-family: "CUSTOM";
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* font */
+@font-face {
+    font-family: "CUSTOM";
+    src: url("Projet/FONT/MIN.woff2");
+}
+@font-face {
+    font-family: "NOTO";
+    src: url("Projet/FONT/noto.ttf");
+}
+
+.main-content {
+  flex-grow: 1;
+  background-color: #313131;
+  background-repeat: no-repeat;
+  min-height: 200vh;
+  
+  }
+
+
+
+/* Conteneur du carrousel */
+.carousel-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 130vh;
+    position: relative;
+    background-color: #222;
+    box-sizing: border-box;
+}
+
+/* Image principale */
+.main-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 115vh; 
+    margin-bottom: 125px;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Description */
+.description-container {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-family: 'CUSTOM';
+    max-width: 40%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 0px;
+}
+
+.primary-button {
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    font-family: 'NOTO';
+    box-shadow: 0 4px #3C8527;
+  
+}
+
+.primary-button:hover {
+    background-color: #3C8527;
+}
+
+/* Miniatures */
+.thumbnails {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+
+}
+
+.thumbnail {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 0px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.thumbnail.selected {
+    border-color: #4CAF50;
+}
+
+
+.community-creations {
+  padding: 20px;
+  text-align: center;
+  background-color: #1e1e1e;
+}
+
+.community-creations h2 {
+  font-family: "CUSTOM";
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.view-all-link {
+  color: #32cd32;
+  text-decoration: none;
+  font-size: 18px;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding-top: 20px;
+}
+.view-all-link:hover {
+  transform: scale(1.02);
+  color: #29A629;
+  
+  }
+.creations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.creation-card {
+  background-color: #3333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.creation-card:hover {
+  transform: scale(1.05);
+}
+
+.image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.creation-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.creation-card:hover .creation-image {
+  transform: scale(1.1);
+}
+
+.creation-info {
+  padding: 10px;
+  text-align: left;
+  color: white;
+}
+
+.creation-info .category {
+  display: inline-block;
+  background-color: #d6d6d6;
+  color: black;
+  padding: 2px 5px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  
+}
+
+.creation-info h3 {
+  font-size: 18px;
+  margin: 5px 0 0 0;
+  text-decoration: underline;
+  
+}
+
+/* collection container */
+.collection-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  padding: 50px 20px;
+}
+
+.collection-text {
+  text-align: left;
+}
+
+.collection-text h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.collection-text p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.see-more {
+  color: #32cd32;
+  text-decoration: none;
+  font-size: 18px;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding-top: 20px;
+}
+
+.see-more:hover {
+  transform: scale(1.02);
+  color: #29A629;
+}
+
+.collection-items {
+  display: flex;
+  gap: 20px;
+}
+
+.item {
+  background-color: #1a1a1a;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  flex: 1;
+  margin: 0; 
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item img {
+  width: 100%;
+  height: 250px; 
+  object-fit: cover;
+
+
+}
+
+.item-description {
+  padding: 10px;
+  text-align: left;
+  color: white;
+}
+
+.category {
+  display: inline-block;
+  background-color: #d6d6d6;
+  color: black;
+  padding: 2px 5px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.item-description h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.download {
+  font-size: 1.5em;
+  cursor: pointer;
+  float: right;
+}
+
+/* Responsivves */
+@media (min-width: 1281px) { /* pc */
+  .main-content {
+    min-height: 200vh;
+  }
+  .carousel-container {
+    height: 130vh;
+  }
+  .main-image {
+    height: 115vh;
+    margin-bottom: 125px;
+  }
+  .description-container {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 769px) { /* pc portable */
+  .main-content {
+    min-height: 180vh;
+  }
+  .carousel-container {
+    height: 100vh;
+  }
+  .main-image {
+    height: 100vh;
+    margin-bottom: 100px;
+  }
+  .description-container {
+    font-size: 1rem;
+  }
+  .thumbnails {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 481px) { /* Tablette */
+  .main-content {
+    min-height: 150vh;
+  }
+  .carousel-container {
+    height: 90vh;
+  }
+  .main-image {
+    height: 90vh;
+    margin-bottom: 80px;
+  }
+  .description-container {
+    font-size: 0.9rem;
+  }
+  .thumbnail {
+    width: 80px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  .main-content {
+    min-height: 130vh;
+  }
+  .carousel-container {
+    height: 70vh;
+  }
+  .main-image {
+    height: 70vh;
+    margin-bottom: 50px;
+  }
+  .description-container {
+    font-size: 0.8rem;
+    padding: 10px;
+    bottom: 10px;
+    left: 10px;
+  }
+  .thumbnails {
+    gap: 5px;
+    bottom: 5px;
+    right: 5px;
+  }
+  .thumbnail {
+    width: 60px;
+    height: 40px;
+  }
+  .community-creations h2 {
+    font-size: 24px;
+  }
+  .creation-card {
+    margin: 0 5px;
+  }
+  .collection-text h1 {
+    font-size: 1.5em;
+  }
+  .collection-text p {
+    font-size: 1em;
+  }
+}
+
+

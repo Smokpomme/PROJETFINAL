@@ -1,0 +1,404 @@
+body {
+    margin: 0;
+    font-family: "CUSTOM";
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  /* font */
+  @font-face {
+    font-family: "CUSTOM";
+    src: url("../../FONT/MIN.woff2");
+  }
+  @font-face {
+    font-family: "NOTO";
+    src: url("../../FONT/noto.ttf");
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    background-color: #313131;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 250vh;
+    }
+  
+  
+  /* title */
+  .title-container {
+    text-align: center;
+    margin: 0; 
+    background-color: #1d1d1d;
+    padding-top: 90px;
+    padding-bottom: 30px;
+    position: relative;
+  }
+  
+  .minecraft-news-title {
+    font-family: "CUSTOM"; 
+    font-size: 48px; 
+    color: rgb(235, 235, 235); 
+    text-align: center; 
+  }
+  
+  /* Conteneur principal */
+  #carrousel-1 {
+    background-color: rgb(71, 153, 50); 
+  }
+  #carrousel-2 {
+    background-color: rgb(124, 65, 16); 
+  }
+  #carrousel-3 {
+    background-color: rgb(0, 89, 223); 
+  }
+
+/* collection container */
+  .collection-container {
+    display: grid;
+    gap: 20px;
+    padding: 10px 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+  }
+  .collection-text{
+    text-align: center;
+    color: white;
+  }
+  
+  /* Carrousel */
+  .list-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .item {
+    flex: 0 0 33.33%; 
+    box-sizing: border-box;
+    padding: 10px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .img_li {
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Description */
+  .description {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'NOTO';
+    font-size: 8px;
+    text-align: left;
+    padding-left: 10px;
+    
+    padding-bottom: 30px;
+  }
+  .description a {
+    color: #27b600;
+    text-decoration: none;
+    font-size: 13px;
+  }
+  .description a:hover {
+    text-decoration: underline;
+  }
+  
+  .content {
+    background-color: #dfdfdf;
+  }
+  
+  /* Boutons du carrousel */
+.button {
+    position: absolute;
+    top: 50%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.0); 
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .button--previous {
+    left: 1rem; 
+  }
+  
+  /* Bouton suivant */
+  .button--next {
+    right: 1rem; 
+  }
+  
+  /* Effet au survol */
+  .button:hover::before {
+    border-color: #4CAF50; 
+  }
+  
+  /* Flèche à l'intérieur des boutons */
+  .button::before {
+    content: '';
+    display: inline-block;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    padding: 8px;
+    transform: rotate(45deg);
+  }
+  
+  /* Flèche directionnelle pour le bouton précédent */
+  .button--previous::before {
+    transform: rotate(135deg); 
+  }
+  
+  /* Flèche directionnelle pour le bouton suivant */
+  .button--next::before {
+    transform: rotate(-45deg); 
+  }
+  
+  /* Masquer les flèches quand elles sont désactivées */
+  .button:disabled {
+    display: none;
+  }
+
+  /* carousel */
+  .carousel-container { 
+    display: flex;
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #e2e2e2;
+}
+
+.carousel-description {
+    width: 20%; 
+    margin-right: 10px; 
+    padding-left: 200px; 
+}
+
+#carousel-1-images .carousel-description h2{
+  color: rgb(71, 153, 50); 
+}
+#carousel-2-images .carousel-description h2{
+  color: rgb(124, 65, 16); 
+}
+#carousel-3-images .carousel-description h2{
+  color: rgb(0, 89, 223); 
+}
+
+
+.carousel-description h2 {
+    font-family: "CUSTOM";
+    font-size: 50px;
+}
+
+.carr-arrows {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.carr-arrows .carr-prev, .carr-arrows .carr-next {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.carr-prev:hover, .carr-next:hover {
+    color: #3C8527;
+}
+
+.carousel-images {
+    width: 50%; 
+    overflow: hidden;
+    position: relative;
+}
+
+.carrousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carr-slide {
+    min-width: 25%; 
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+.carr-slide a {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'NOTO';
+    text-align: left;
+    display: inline-block;
+}
+.carr-slide a:hover {
+    text-decoration: underline;
+    color: #3C8527;
+}
+
+.carr-slide img {
+    max-width: 100%;
+}
+
+
+  
+  
+  /* Responsive */
+@media (min-width: 1281px) { /* pc */
+  body {
+    font-size: 16px;
+  }
+  .main-content {
+    min-height: 200vh;
+  }
+  .minecraft-news-title {
+    font-size: 48px;
+  }
+  .community-creations h2 {
+    font-size: 36px;
+  }
+  .creations-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .creation-card {
+    max-width: 300px;
+    padding: 15px;
+  }
+  .carousel-description h2 {
+    font-size: 50px;
+  }
+  .carr-slide a {
+    font-size: 14px;
+  }
+  .social-icon img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 769px) { /*pc portable */
+  body {
+    font-size: 15px;
+  }
+  .main-content {
+    min-height: 180vh;
+  }
+  .minecraft-news-title {
+    font-size: 42px;
+  }
+  .community-creations h2 {
+    font-size: 32px;
+  }
+  .creations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .creation-card {
+    max-width: 280px;
+    padding: 10px;
+  }
+  .carousel-description h2 {
+    font-size: 44px;
+  }
+  .carr-slide a {
+    font-size: 13px;
+  }
+  .social-icon img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 481px) { /* Tablette */
+  body {
+    font-size: 14px;
+  }
+  .main-content {
+    min-height: 150vh;
+  }
+  .minecraft-news-title {
+    font-size: 36px;
+  }
+  .community-creations h2 {
+    font-size: 28px;
+  }
+  .creations-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .creation-card {
+    max-width: 90%;
+    padding: 10px;
+  }
+  .carousel-description h2 {
+    font-size: 36px;
+  }
+  .carr-slide a {
+    font-size: 12px;
+  }
+  .social-icon img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  body {
+    font-size: 12px;
+  }
+  .main-content {
+    min-height: 120vh;
+  }
+  .minecraft-news-title {
+    font-size: 28px;
+  }
+  .community-creations h2 {
+    font-size: 24px;
+  }
+  .creations-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .creation-card {
+    max-width: 100%;
+    padding: 8px;
+  }
+  .carousel-description h2 {
+    font-size: 28px;
+  }
+  .carr-slide a {
+    font-size: 11px;
+  }
+  .social-icon img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+  

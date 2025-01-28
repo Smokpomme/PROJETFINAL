@@ -1,0 +1,556 @@
+{
+    "blocs": {
+    "planches de bois": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_wood.gif",
+        "description": "Fabriquez en plaçant des bûches dans la grille de fabrication. Matériau de base pour la construction."
+    },
+    "bâtons": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_stick.png",
+        "description": "Fabriquez en plaçant deux planches de bois verticalement dans la grille de fabrication. Utilisé dans de nombreuses recettes de fabrication."
+    },
+    "torches": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_torch.png",
+        "description": "Fabriquez en combinant du charbon et un bâton. Les torches fournissent de la lumière et peuvent faire fondre la glace et la neige."
+    },
+    "table de fabrication": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_workbench.png",
+        "description": "Fabriquez en plaçant quatre planches de bois dans la grille de fabrication. Permet d'accéder à une grille de fabrication 3x3."
+    },
+    "four": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_furnace.gif",
+        "description": "Fabriquez en plaçant huit pavés autour de la grille de fabrication en laissant le centre vide. Permet de faire fondre des matériaux."
+    },
+    "coffre": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_chest.png",
+        "description": "Fabriquez en plaçant huit planches de bois autour de la grille de fabrication en laissant le centre vide. Permet de stocker des blocs et des objets."
+    },
+    "échelles": {
+        "image": "/Projet/src/chatbot/PICchatbot/new_craft_ladder.png",
+        "description": "Fabriquez en utilisant des bâtons dans un motif en 'H'. Permet de grimper verticalement."
+    },
+    "barrière": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_fence.gif",
+        "description": "Fabriquez en utilisant des bâtons et des planches de bois. Sert de barrière infranchissable."
+    },
+    "bateau": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_boat.png",
+        "description": "Fabriquez en utilisant cinq planches de bois en forme de U. Utilisé pour voyager sur l'eau."
+    },
+    "dalles de bois": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_woodenslabs.gif",
+        "description": "Fabriquez en plaçant trois planches de bois horizontalement dans la grille de fabrication. Utilisé pour créer des pentes douces."
+    },
+    "dalles de pierre": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_stoneslabs.gif",
+        "description": "Fabriquez en plaçant trois blocs de pierre, briques, grès, pavés, briques du Nether, quartz ou grès rouge horizontalement. Utilisé pour créer des pentes douces."
+    },
+    "pancartes": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_sign_new.png",
+        "description": "Fabriquez en utilisant des planches de bois et un bâton. Peut afficher du texte."
+    },
+    "portes": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_doors.gif",
+        "description": "Fabriquez avec des planches de bois ou des lingots de fer. Les portes en bois peuvent être ouvertes manuellement ou avec de la redstone, celles en fer uniquement avec de la redstone."
+    },
+    "bois": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_wood2.png",
+        "description": "Bloc avec une texture de bûche sur tous les côtés."
+    },
+      "glowstone": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_glowstone.png",
+        "description": "Placez 4 poudres de glowstone dans la grille de fabrication. Source lumineuse brillante utilisable sous l'eau."
+      },
+      "bloc de neige": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_snow.png",
+        "description": "Placez 4 boules de neige dans la grille de fabrication. Utilisé pour stocker de la neige et comme matériau de construction."
+      },
+      "TNT": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_tnt.png",
+        "description": "Placez 5 sables et 4 poudres à canon dans la grille de fabrication. Explose lorsqu'allumé avec un briquet ou activé par un courant de redstone."
+      },
+      "bloc d'argile": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_clay.png",
+        "description": "Placez 4 argiles dans la grille de fabrication. Utilisé pour stocker de l'argile et comme matériau de construction."
+      },
+      "bloc de briques": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_brick.png",
+        "description": "Placez 4 briques d'argile dans la grille de fabrication. Matériau de construction solide."
+      },
+      "bibliothèque": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_bookshelf.png",
+        "description": "Placez 6 planches en bois et 3 livres dans la grille de fabrication. Utilisé pour la décoration."
+      },
+      "bloc de grès": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_sandstone.png",
+        "description": "Placez 4 sables dans la grille de fabrication. Matériau de construction."
+      },
+      "grès lisse": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_smoothsandstone.png",
+        "description": "Faites cuire un bloc de grès dans un four. Matériau de construction."
+      },
+      "grès décoratif": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_decorativesandstone.png",
+        "description": "Placez 2 dalles de grès empilées dans la grille de fabrication. Matériau de construction."
+      },
+      "bloc de note": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_noteblock.png",
+        "description": "Placez 8 planches en bois et 1 redstone dans la grille de fabrication. Joue une note lorsqu'il est cliqué ou alimenté en redstone."
+      },
+      "citrouille-lanterne": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_jackolantern_new.png",
+        "description": "Placez 1 citrouille et 1 torche dans la grille de fabrication. Source lumineuse."
+      },
+      "bloc de lapis-lazuli": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_lapis.png",
+        "description": "Placez 9 teintures de lapis-lazuli dans un carré 3x3 dans la grille de fabrication. Permet de stocker du lapis-lazuli."
+      },
+      "bloc de diamant": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_diamondblock.jpg",
+        "description": "Placez 9 diamants dans un carré 3x3 dans la grille de fabrication. Permet de stocker des diamants."
+      },
+      "bloc d'or": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_goldblock.jpg",
+        "description": "Placez 9 lingots d'or dans un carré 3x3 dans la grille de fabrication. Permet de stocker des lingots d'or."
+      },
+      "bloc de fer": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_ironblock.jpg",
+        "description": "Placez 9 lingots de fer dans un carré 3x3 dans la grille de fabrication. Permet de stocker des lingots de fer."
+      },
+      "bloc d'émeraude": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_emeraldblock.png",
+        "description": "Placez 9 émeraudes dans un carré 3x3 dans la grille de fabrication. Permet de stocker des émeraudes."
+      },
+      "bloc de charbon": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_blockofcoal.png",
+        "description": "Placez 9 charbons dans un carré 3x3 dans la grille de fabrication. Permet de stocker du charbon."
+      },
+      "briques de pierre": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_stonebrick.png",
+        "description": "Placez 4 pierres dans un carré 2x2 dans la grille de fabrication. Matériau de construction."
+      },
+      "escaliers en bois": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_woodenstairs.gif",
+        "description": "Placez 6 planches en bois en forme de V dans la grille de fabrication. Utilisé pour construire des escaliers."
+      },
+      "escaliers en pierre": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_stonestairs.gif",
+        "description": "Placez 6 pierres, grès, briques, pierres de pierre, pierres du nether, quartz ou grès rouge en forme de V dans la grille de fabrication. Utilisé pour construire des escaliers."
+      },
+      "muret de pierre": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_cobblestonewall.gif",
+        "description": "Placez 6 pavés ou pierres moussues en 2 rangées horizontales dans la grille de fabrication. Bloc décoratif similaire aux barrières."
+      },
+      "bloc de redstone": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_blockofredstone.png",
+        "description": "Placez 9 redstones dans un carré 3x3 dans la grille de fabrication. Source d'énergie en redstone."
+      },
+      "bloc de quartz": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_blockofquartz.png",
+        "description": "Placez 4 quartz du nether dans un carré 2x2 dans la grille de fabrication. Matériau de construction."
+      },
+      "quartz ciselé": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_chiseledquartzblock.png",
+        "description": "Placez 2 dalles de quartz empilées dans la grille de fabrication. Matériau de construction."
+      },
+      "pilier de quartz": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_pillarquartzblock.png",
+        "description": "Placez 2 blocs de quartz verticalement dans la grille de fabrication. Matériau de construction."
+      },
+      "briques de quartz": {
+        "image": "/Projet/src/chatbot/PICchatbot/craft_quartzbricks.png",
+        "description": "Placez 4 blocs de quartz en carré 2x2 dans la grille de fabrication. Matériau de construction."
+      },
+    "argile teintée": {
+    "image": "/Projet/src/chatbot/PICchatbot/craft_stainedclay.gif",
+    "description": "Combinez de l'argile durcie et un colorant dans la grille de fabrication. Matériau de construction."
+    },
+    "meule de foin": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_haybale.png",
+      "description": "Utilisez du blé pour créer un bloc. Bloc décoratif et nourriture pour chevaux."
+    },
+    "granit": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_granite.png",
+      "description": "Combinez de la diorite et du quartz du Nether dans la grille de fabrication. Type de roche."
+    },
+    "andésite": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_andesite.png",
+      "description": "Combinez de la diorite et du gravier dans la grille de fabrication. Type de roche."
+    },
+    "diorite": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_diorite.png",
+      "description": "Combinez des pavés et du quartz du Nether dans la grille de fabrication. Type de roche."
+    },
+    "granit poli": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_polishedgranite.png",
+      "description": "Placez du granit dans la grille de fabrication. Matériau de construction."
+    },
+    "andésite polie": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_polishedandesite.png",
+      "description": "Placez de l'andésite dans la grille de fabrication. Matériau de construction."
+    },
+    "diorite polie": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_polisheddiorite.png",
+      "description": "Placez de la diorite dans la grille de fabrication. Matériau de construction."
+    },
+    "prismarine": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_prismarine.png",
+      "description": "Utilisez des fragments de prismarine. Type de roche."
+    },
+    "briques de prismarine": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_prismarinebricks.png",
+      "description": "Utilisez des fragments de prismarine. Matériau de construction."
+    },
+    "prismarine sombre": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_darkprismarine.png",
+      "description": "Combinez des fragments de prismarine et un colorant noir. Matériau de construction."
+    },
+    "lanterne marine": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_sealantern.png",
+      "description": "Combinez des cristaux de prismarine et des fragments de prismarine. Source lumineuse."
+    },
+    "terre stérile": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_coarsedirt.png",
+      "description": "Combinez de la terre et du gravier. Semblable à la terre normale, mais l'herbe ne peut pas s'y propager."
+    },
+    "bloc de slime": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_slimeblock.png",
+      "description": "Utilisez des boules de slime pour créer un bloc. Peut pousser d'autres blocs à l'aide de pistons."
+    },
+    "pierre moussue": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_mossstone.gif",
+      "description": "Combinez des pavés et des vignes ou un bloc de mousse. Matériau de construction."
+    },
+    "brique de pierre moussue": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_mossystonebrick.gif",
+      "description": "Combinez des briques de pierre et des vignes ou un bloc de mousse. Matériau de construction."
+    },
+    "brique de pierre ciselée": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_chiseledstonebrick.png",
+      "description": "Combinez des dalles de briques de pierre. Matériau de construction."
+    },
+    "grès rouge": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_redsandstone.png",
+      "description": "Utilisez du sable rouge. Matériau de construction."
+    },
+    "grès rouge lisse": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_smoothredsandstone.png",
+      "description": "Placez du grès rouge dans la grille de fabrication. Matériau de construction."
+    },
+    "grès rouge ciselé": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_chiseledredsandstone.png",
+      "description": "Combinez des dalles de grès rouge. Matériau de construction."
+    },
+    "bloc de purpur": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_purpurblock.png",
+      "description": "Fabriquez avec des fruits de chorus éclatés. Matériau de construction."
+    },
+    "pilier de purpur": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_purpurpillar.png",
+      "description": "Fabriquez avec des dalles de purpur. Matériau de construction."
+    },
+    "bloc de magma": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_magmablock.png",
+      "description": "Fabriquez avec de la crème de magma. Inflige des dégâts lorsqu'on marche dessus."
+    },
+    "bloc de verrues du Nether": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_netherwartblock.png",
+      "description": "Fabriquez avec des verrues du Nether. Décoration."
+    },
+    "brique du Nether": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_netherbrick.png",
+      "description": "Fabriquez avec des briques du Nether (objet). Matériau de construction."
+    },
+    "brique rouge du Nether": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_rednetherbrick.png",
+      "description": "Fabriquez avec des verrues du Nether et des briques du Nether. Matériau de construction."
+    },
+    "briques ciselées du Nether": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_chiselednetherbricks.png",
+      "description": "Fabriquez avec des dalles de briques du Nether. Matériau de construction."
+    },
+    "bloc d'os": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_boneblock.png",
+      "description": "Fabriquez avec de la poudre d'os. Décoration et stockage de poudre d'os."
+    },
+    "bloc d'algues séchées": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_driedkelpblock.png",
+      "description": "Fabriquez avec des algues séchées. Peut être utilisé comme combustible pour les fours."
+    },
+    "glace compactée": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_packedice.png",
+      "description": "Fabriquez avec de la glace. Matériau de construction glacé."
+    },
+    "glace bleue": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_blueice.png",
+      "description": "Fabriquez avec de la glace compactée. Matériau de construction glacé."
+    },
+    "bloc de miel": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_honeyblock.png",
+      "description": "Fabriquez avec des bouteilles de miel. Bloc collant qui ralentit les joueurs et entités."
+    },
+    "bloc de rayon de miel": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_honeycombblock.png",
+      "description": "Fabriquez avec des rayons de miel. Décoration."
+    },
+    "bois écorcé": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_strippedwood.png",
+      "description": "Fabriquez avec des rondins écorcés. Matériau de construction."
+    },
+    "basalte poli": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_polishedbasalt.png",
+      "description": "Fabriquez avec du basalte. Matériau de construction."
+    },
+    "pierre noire polie": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_polishedblackstone.png",
+      "description": "Fabriquez avec de la pierre noire. Matériau de construction."
+    },
+    "pierre noire polie ciselée": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_chiseledpolishedblackstone.png",
+      "description": "Fabriquez avec des dalles de pierre noire polie. Matériau de construction."
+    },
+    "briques de pierre noire polie": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_polishedblackstonebricks.png",
+      "description": "Fabriquez avec de la pierre noire polie. Matériau de construction."
+    },
+    "bloc de netherite": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_blockofnetherite.png",
+      "description": "Fabriquez avec des lingots de netherite. Stockage de netherite."
+    },
+    "bloc d'améthyste": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_blockofamethyst.png",
+      "description": "Fabriquez avec des éclats d'améthyste. Stockage d'améthyste."
+    },
+    "bloc de cuivre": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_blockofcopper.png",
+      "description": "Fabriquez avec des lingots de cuivre. Stockage de cuivre."
+    },
+    "cuivre taillé": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_cutcopper.png",
+      "description": "Fabriquez avec des blocs de cuivre. Matériau de construction."
+    },
+    "bloc de cuivre ciré": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_waxedblockofcopper.png",
+      "description": "Fabriquez avec un bloc de cuivre et des rayons de miel. Ne s'oxydera pas avec le temps."
+    },
+    "bloc de goutte": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_dripstoneblock.png",
+      "description": "Fabriquez avec des pointes de goutte. Permet la croissance de stalactites sous une source d'eau."
+    },
+    "racines de palétuvier boueuses": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_muddymangroveroots.png",
+      "description": "Fabriquez avec de la boue et des racines de palétuvier. Décoration."
+    },
+    "boue compactée": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_packedmud.png",
+      "description": "Fabriquez avec de la boue et du blé. Utilisée pour créer des briques de boue."
+    },
+    "briques de boue": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_mudbricks.png",
+      "description": "Fabriquez avec de la boue compactée. Décoration."
+    },
+    "bloc de bambou": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_blockofbamboo.png",
+      "description": "Fabriquez avec du bambou. Bloc en forme de rondin."
+    },
+    "planches de bambou": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_bambooplanks.gif",
+      "description": "Fabriquez avec un bloc de bambou ou un bloc de bambou écorcé. Matériau de construction."
+    },
+    "mosaïque de bambou": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_bamboomosaic.png",
+      "description": "Fabriquez avec des dalles de bambou. Décoration."
+    },
+    "bibliothèque ciselée": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_chiseledbookshelf.png",
+      "description": "Fabriquez avec des dalles de bois et des planches de bois. Peut contenir jusqu'à 6 livres."
+    },
+    "grille de cuivre": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_coppergrate.png",
+      "description": "Fabriquez avec des blocs de cuivre. Bloc décoratif semi-transparent."
+    }
+  },
+  "utilitaires": {
+    "pioche": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_pickaxes.gif",
+      "description": "Fabriquez avec des bâtons et des planches de bois, des pavés, de la pierre noire, des lingots de fer, des lingots d'or ou des diamants. Utilisée pour miner des blocs de pierre et des minerais."
+    },
+    "hache": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_axes.gif",
+      "description": "Fabriquez avec des bâtons et des planches de bois, des pavés, de la pierre noire, des lingots de fer, des lingots d'or ou des diamants. Utilisée pour couper les blocs de bois plus rapidement qu'à la main."
+    },
+    "pelle": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_shovels.gif",
+      "description": "Fabriquez avec des bâtons et des planches de bois, des pavés, de la pierre noire, des lingots de fer, des lingots d'or ou des diamants. Utilisée pour creuser du sable, du gravier, de la terre, de l'herbe et de la neige plus rapidement qu'à la main."
+    },
+    "houe": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_hoes.gif",
+      "description": "Fabriquez avec des bâtons et des planches de bois, des pavés, de la pierre noire, des lingots de fer, des lingots d'or ou des diamants. Utilisée pour labourer les blocs de terre en vue de planter des cultures."
+    },
+    "canne à pêche": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_fishingrod.png",
+      "description": "Fabriquez avec des bâtons et de la ficelle. Peut être utilisée pour pêcher dans l'eau."
+    },
+    "briquet": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_flintandsteel.png",
+      "description": "Fabriquez avec un lingot de fer et un silex. Utilisé pour allumer des feux, enflammer de la TNT et ouvrir des portails du Nether."
+    },
+    "boussole": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_compass.png",
+      "description": "Fabriquez avec des lingots de fer et de la redstone. Pointe vers le point d'apparition."
+    },
+    "horloge": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_clock.png",
+      "description": "Fabriquez avec des lingots d'or et de la redstone. Affiche l'heure dans le jeu."
+    },
+    "seau": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_bucket.png",
+      "description": "Fabriquez avec des lingots de fer. Utilisé pour transporter de l'eau, de la lave et du lait."
+    },
+    "cisailles": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_shears.png",
+      "description": "Fabriquez avec des lingots de fer. Utilisées pour récolter de la laine sur les moutons et des feuilles sur les arbres."
+    },
+    "boîte de shulker": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_shulkerbox.png",
+      "description": "Fabriquez avec une carapace de shulker et un coffre. Coffre portable."
+    },
+    "longue-vue": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_spyglass.png",
+      "description": "Fabriquez avec un éclat d'améthyste et des lingots de cuivre. Permet de zoomer sur des objets distants en cliquant droit."
+    },
+    "boussole de récupération": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_recoverycompass.png",
+      "description": "Fabriquez avec des éclats d'écho et une boussole. Pointe vers l'endroit où le joueur est mort pour la dernière fois."
+    },
+    "pinceau": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_brush.png",
+      "description": "Fabriquez avec une plume, un lingot de cuivre et un bâton. Utilisé sur le sable et le gravier suspects pour excaver des objets."
+    },
+    "casque": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_helmets.gif",
+      "description": "Fabriquez avec du cuir, des lingots de fer, des lingots d'or ou des diamants. Armure pour la tête."
+    },
+    "plastron": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_chestplates.gif",
+      "description": "Fabriquez avec du cuir, des lingots de fer, des lingots d'or ou des diamants. Armure pour le torse."
+    },
+    "jambières": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_leggings.gif",
+      "description": "Fabriquez avec du cuir, des lingots de fer, des lingots d'or ou des diamants. Armure pour les jambes."
+    },
+    "bottes": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_boots.gif",
+      "description": "Fabriquez avec du cuir, des lingots de fer, des lingots d'or ou des diamants. Armure pour les pieds."
+    },
+    "épée": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_swords.gif",
+      "description": "Fabriquez avec des bâtons et des planches de bois, des pavés, de la pierre noire, des lingots de fer, des lingots d'or ou des diamants. Inflige plus de dégâts aux créatures et aux joueurs qu'à mains nues."
+    },
+    "arc": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_bow.png",
+      "description": "Fabriquez avec de la ficelle et des bâtons. Utilisé pour tirer des flèches."
+    },
+    "flèche": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_arrow.png",
+      "description": "Fabriquez avec du silex, un bâton et une plume. Munitions pour les arcs."
+    },
+    "armure de cheval": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_horsearmor.png",
+      "description": "Fabriquez avec du cuir. Type spécial d'armure porté par les chevaux."
+    },
+    "bouclier": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_shield.png",
+      "description": "Fabriquez avec des planches et un lingot de fer. Protège le joueur des attaques."
+    },
+    "flèche spectrale": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_spectralarrow.png",
+      "description": "Fabriquez avec de la poussière de pierre lumineuse et des flèches. Donne un effet lumineux aux cibles touchées."
+    },
+    "flèche à effet": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_tippedarrow.png",
+      "description": "Fabriquez avec une potion persistante et des flèches. Inflige des effets de statut aux cibles."
+    },
+    "conduit": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_conduit.png",
+      "description": "Fabriquez avec des coquilles de nautile et un cœur de la mer. Fournit un pouvoir de conduit aux joueurs proches sous l'eau."
+    },
+    "carapace de tortue": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_turtleshell.png",
+      "description": "Fabriquez avec des écailles de tortue. Casque qui donne un effet de respiration aquatique au joueur."
+    },
+    "arbalète": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_crossbow.png",
+      "description": "Fabriquez avec des bâtons, un lingot de fer, de la ficelle et un crochet de fil de détente. Arme utilisée pour tirer des flèches plus loin et avec plus de précision qu'un arc."
+    },
+    "masse": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_mace.png",
+      "description": "Fabriquez avec un noyau lourd et une tige de brise. Arme d'attaque qui annule les dégâts de chute si utilisée par le joueur sur une entité en tombant."
+    },
+    "charge de vent": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_windcharge.png",
+      "description": "Fabriquez avec une tige de brise. Arme capable de repousser les entités."
+    }
+  },
+  "nourriture": {
+    "bol": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_bowl.png",
+      "description": "Fabriquez avec des planches de bois. Utilisé pour fabriquer différents types de ragoût."
+    },
+    "ragoût de champignons": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_stew.png",
+      "description": "Fabriquez avec un bol, un champignon rouge et un champignon brun. Restaure 6 points de faim."
+    },
+    "pain": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_bread.png",
+      "description": "Fabriquez avec du blé. Restaure 5 points de faim."
+    },
+    "pomme dorée": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_goldenapple.png",
+      "description": "Fabriquez avec une pomme et des pépites d'or. Restaure 4 points de faim."
+    },
+    "sucre": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_sugar.png",
+      "description": "Fabriquez avec de la canne à sucre. Utilisé pour créer des gâteaux."
+    },
+    "gâteau": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_cake.png",
+      "description": "Fabriquez avec des seaux de lait, du sucre, du blé et un œuf. Soigne 2 points de faim par portion, pour un total de 7 portions."
+    },
+    "cookies": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_cookie.png",
+      "description": "Fabriquez avec du blé et des fèves de cacao. Restaure 2 points de faim."
+    },
+    "bloc de pastèque": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_melonblock.png",
+      "description": "Fabriquez avec des tranches de pastèque. Utilisé pour stocker les tranches de pastèque."
+    },
+    "graines de pastèque": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_melonseeds.png",
+      "description": "Fabriquez avec une tranche de pastèque. Peuvent être plantées sur de la terre cultivée."
+    },
+    "graines de citrouille": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_pumpkinseeds.png",
+      "description": "Fabriquez avec une citrouille. Peuvent être plantées sur de la terre cultivée."
+    },
+    "carotte dorée": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_goldencarrot.png",
+      "description": "Fabriquez avec une carotte et des pépites d'or. Utilisée comme ingrédient d'alchimie et restaure 6 points de faim."
+    },
+    "tarte à la citrouille": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_pumpkinpie.png",
+      "description": "Fabriquez avec une citrouille, un œuf et du sucre. Restaure 8 points de faim."
+    },
+    "ragoût de lapin": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_rabbitstew.png",
+      "description": "Fabriquez avec un champignon, un bol, un lapin cuit, une carotte et une pomme de terre cuite. Restaure 10 points de faim."
+    },
+    "ragoût suspect": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_suspiciousstew.png",
+      "description": "Fabriquez avec un champignon rouge, un champignon brun, un bol et une fleur au choix. Restaure 6 points de faim."
+    },
+    "bouteille de miel": {
+      "image": "/Projet/src/chatbot/PICchatbot/craft_honeybottle.png",
+      "description": "Fabriquez avec des bouteilles en verre et un bloc de miel. Restaure 6 points de faim."
+    }
+  } 
+}

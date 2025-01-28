@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeux</title>
+    <link rel="stylesheet" href="minecraft.css">
+    <script>
+        // Inclure les fetch
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('Projet/src/header/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+
+                    // Charger script header.js
+                    const script = document.createElement('script');
+                    script.src = '/Projet/src/header/header.js';
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error('Erreur lors du chargement du header:', error));
+
+            fetch('Projet/src/social/social.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('social').innerHTML = data);
+
+            fetch('Projet/src/footer/footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer').innerHTML = data);
+              });
+      </script>
+</head>
+<body>
+    <!-- appel du header -->
+    <main class="main-content">
+    <div id="header"></div>
+    
+</body>
+    <!-- appel chatbot -->
+    <div class="chatbot-icon" id="chatbotIcon" onclick="toggleChatbot()">
+        <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot">
+    </div>
+
+    <div class="chatbot-window" id="chatbotWindow" style="display: none;">
+        <div class="chatbot-header">
+            <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot Icon"><span>Gaston le Bot</span>
+            <span class="close-btn" onclick="toggleChatbot()">&times;</span>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chatbot-message received">
+                <p>Salut ! Moi, c'est Gaston, un PNJ savant. Si tu as des questions sur Minecraft, quel que soit le sujet, je suis là pour t'aider. Alors, n'hésite pas !</p>
+            </div>
+        </div>
+        <span class="toggle-choices" id="toggleChoices" onclick="toggleChoicesMenu()">▼</span>
+        <div class="chatbot-choices" id="chatbotChoices"></div>
+            <div class="chatbot-footer">
+            <input type="text" id="chatbot-input" placeholder="Écrivez votre craft..." />
+            <button id="chatbot-send" onclick="handleUserInput()">Envoyer</button>
+            </div>
+        </div>
+        <script src="/Projet/src/chatbot/chatbot.js"></script>
+        <link rel="stylesheet" href="/Projet/src/chatbot/chatbot.css">
+
+        <!-- carrousel -->
+        <div class="carousel-container">
+            <div class="main-image">
+                <img src="PIC/page.png" alt="Main Game Image" id="current-image">
+            </div>
+
+            <div class="description-container">
+                <h2 id="game-title">Minecraft - Un Monde de Création et d'Aventure</h2>
+                <p id="game-description">Explorez un monde infini rempli de blocs, de créatures, et d'aventures. Découvrez les secrets des biomes et forgez votre propre histoire dans l'univers captivant de Minecraft.</p>
+                <a href="/Projet/src/conseil/conseil.html"><button class="primary-button">Prise en main</button></a>
+            </div>
+
+            <div class="thumbnails">
+                
+                <img src="PIC/page.png" alt="Thumbnail 0" class="thumbnail selected" data-title="Minecraft - Un Monde de Création et d'Aventure" data-description="Explorez un monde infini rempli de blocs, de créatures, et d'aventures. Découvrez les secrets des biomes et forgez votre propre histoire dans l'univers captivant de Minecraft.">
+                
+                <img src="PIC/bob.png" alt="Thumbnail 1" class="thumbnail selected" data-title="Un Monde Multijoueur" data-description="Jouez avec vos amis dans Minecraft, construisez ensemble, explorez des mondes infinis et relevez des défis en équipe. L'aventure est toujours meilleure en multijoueur !">
+                
+                <img src="PIC/home.jpg" alt="Thumbnail 2" class="thumbnail" data-title="Un Monde Multijoueur Unique avec Realms" data-description="Avec Minecraft Realms, jouez sur des serveurs privés avec vos amis. Explorez, construisez et créez des aventures uniques dans un univers sans limite, à tout moment !">
+                
+                <img src="PIC/pop.png" alt="Thumbnail 3" class="thumbnail" data-title="Une Esthétique Intemporelle" data-description="Malgré les années, Minecraft reste visuellement attrayant. Ses blocs colorés et simples forment un univers unique, captivant les joueurs encore aujourd'hui.">
+            </div>
+        </div>
+
+        <!-- section communaute -->
+        <section class="community-creations">
+            <h2>Créations de la Communauté</h2>
+            <a href="/Projet/src/communaute/commu.html#container" class="view-all-link">Voir toutes les créations</a>
+            <div class="creations-grid">
+                <div class="creation-card">
+                    <a href="/Projet/src/communaute/commu.html#lune">
+                    <div class="image-container">
+                        <img src="PIC/1.jpg" alt="" class="creation-image">
+                    </div>
+                    <div class="creation-info">
+                        <span class="category">LUNE</span>
+                        <h3>Maison dans une Lune</h3>
+                    </div>
+                    </a>
+                </div>
+                <div class="creation-card">
+                    <a href="/Projet/src/communaute/commu.html#portail">
+                    <div class="image-container">
+                        <img src="PIC/2.jpg" alt="" class="creation-image">
+                    </div>
+                    <div class="creation-info">
+                        <span class="category">PORTAIL</span>
+                        <h3>Portail remonter de l'eau</h3>
+                    </div>
+                    </a>
+                </div>
+                <div class="creation-card">
+                    <a href="/Projet/src/communaute/commu.html#temple">
+                    <div class="image-container">
+                        <img src="PIC/3.jpg" alt="" class="creation-image">
+                    </div>
+                    <div class="creation-info">
+                        <span class="category">TEMPLE</span>
+                        <h3>Temple dans la Jungle</h3>
+                    </div>
+                    </a>
+                </div>
+                <div class="creation-card">
+                    <a href="/Projet/src/communaute/commu.html#arbre">
+                    <div class="image-container">
+                        <img src="PIC/4.jpg" alt="" class="creation-image">
+                    </div>
+                    <div class="creation-info">
+                        <span class="category">ARBRE</span>
+                        <h3>Maison sur un Arbre</h3>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- collection container -->
+        <div class="collection-container">
+            <div class="collection-text">
+                <h1>ENVIE D'AVENTURE ?</h1>
+                <p>
+                    Le monde de Minecraft est vaste. Pourquoi ne pas explorer encore plus en plongeant directement dans l’aventure ? 
+                    Commencez votre voyage seul ou accompagné !
+                </p>
+                <a href="/Projet/src/boutiqueMC/boutique.html" class="see-more">Achetez Minecraft maintenant !</a>
+                </a>
+            </div>
+            
+            <div class="collection-items">
+                <a href="/Projet/src/boutiqueMC/boutique.html#boutiqueMC">
+                <div class="item">
+                    <img src="PIC/deluxe.avif" alt="">
+                    <div class="item-description">
+                        <span class="category">DELUXE</span>
+                        <a class="h2"><h2>Achetez Minecraft Deluxe Collection !</h2></a>
+                    </div>
+                </div>
+                </a>   
+            </div>
+        </div>
+    
+        <!-- appel social -->
+        <div id="social"></div>
+
+    </main>
+    
+    <!-- appel footer -->
+    <div id="footer"></div>
+
+    <!-- appel js -->
+    <script src="minecraft.js"></script>
+</body>
+</html>
