@@ -347,11 +347,7 @@ button.relief-button:hover {
 @media screen and (max-width: 480px) {
   .header {
     padding: 8px 10px;
-  }
-
-  .logo {
-    width: 120px;
-    margin-bottom: 10px;
+    align-items: center;
   }
 
   .top-center {
@@ -360,27 +356,38 @@ button.relief-button:hover {
     gap: 10px;
     width: 100%;
     padding: 5px;
+    justify-items: center;
   }
 
   .top {
     text-align: center;
     font-size: 14px;
     padding: 8px 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .top-left, .top-right {
+  .dropdown {
     width: 100%;
+    display: flex;
     justify-content: center;
+  }
+
+  .logo {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+
+  .top-left img {
+    height: 30px;
   }
 
   .dropdown-content {
     width: 200px;
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  .top-left img {
-    height: 30px;
   }
 
   .dropdown-content .dropdown-section {
