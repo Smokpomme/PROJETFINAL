@@ -351,19 +351,36 @@ button.relief-button:hover {
 
   .logo {
     width: 120px;
+    margin-bottom: 10px;
   }
 
-  .top-left img {
-    height: 30px;
+  .top-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    padding: 5px;
   }
 
   .top {
+    text-align: center;
     font-size: 14px;
-    padding: 3px;
+    padding: 8px 5px;
+  }
+
+  .top-left, .top-right {
+    width: 100%;
+    justify-content: center;
   }
 
   .dropdown-content {
     width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .top-left img {
+    height: 30px;
   }
 
   .dropdown-content .dropdown-section {
