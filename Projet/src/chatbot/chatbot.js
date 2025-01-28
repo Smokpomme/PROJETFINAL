@@ -1,5 +1,4 @@
 let crafts = {}; // Variable globale pour stocker les données JSON
-import sanitizeHtml from 'sanitize-html';
 
 // Charger le fichier JSON
 function loadCraftsData() {
@@ -36,37 +35,31 @@ document.addEventListener('DOMContentLoaded', loadCraftsData);
   // Fonction pour envoyer un message
   function handleUserInput() {
     const inputField = document.getElementById('chatbot-input');
-    const userMessage = inputField.value.trim(); // Récupérer et nettoyer la saisie utilisateur
+    const userMessage = inputField.value.trim().toLowerCase(); 
   
     if (userMessage) {
-      // Nettoyer l'entrée utilisateur avec sanitize-html
-      const sanitizedMessage = sanitizeHtml(userMessage, {
-        allowedTags: [], // Aucune balise HTML autorisée
-        allowedAttributes: {} // Aucun attribut autorisé
-      });
-  
-      // Afficher le message de l'utilisateur dans le chat
-      appendMessage('user', sanitizedMessage);
+      // Afficher le message de l'utilisateur
+      appendMessage('user', userMessage);
   
       let craftFound = false;
   
       // Parcourir toutes les catégories pour trouver le craft
-      for (const category in crafts) {
-        if (crafts[category]?.[sanitizedMessage]) {
-          // Si le craft est trouvé dans une catégorie
-          showCraftDetails(category, sanitizedMessage);
+      for (let category in crafts) {
+        if (crafts[category][userMessage]) {
+          // Si le craft est trouvé dans la catégorie, afficher les détails
+          showCraftDetails(category, userMessage);
           craftFound = true;
           break;
         }
       }
   
-      // Si aucun craft n'est trouvé, afficher une réponse générique
+      // Si le craft n'est pas trouvé, afficher une réponse générique
       if (!craftFound) {
-        appendMessage('bot', "Désolé, je ne connais pas ce craft. Pouvez-vous essayer autre chose ?");
+        const response = "Désolé, je ne connais pas ce craft. Pouvez-vous essayer autre chose ?";
+        appendMessage('bot', response);
       }
   
-      // Réinitialiser le champ de saisie
-      inputField.value = '';
+      inputField.value = ''; // Réinitialiser le champ de saisie
     }
   }
 
