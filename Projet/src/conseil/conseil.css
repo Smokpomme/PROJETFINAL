@@ -335,70 +335,100 @@ body {
   }
 }
 
-@media (max-width: 768px) and (min-width: 481px) { /* Tablette */
-  body {
-    font-size: 14px;
-  }
-  .main-content {
-    min-height: 150vh;
-  }
+
+/* Tablettes */
+@media screen and (max-width: 768px) {
   .minecraft-news-title {
     font-size: 36px;
   }
-  .community-creations h2 {
-    font-size: 28px;
-  }
-  .creations-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .creation-card {
-    max-width: 90%;
+
+  .collection-container {
     padding: 10px;
   }
-  .carousel-description h2 {
-    font-size: 36px;
+
+  .item {
+    flex: 0 0 50%;
   }
-  .carr-slide a {
+
+  .carousel-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .carousel-description {
+    width: 90%;
+    padding-left: 0;
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .button::before {
+    padding: 6px;
+  }
+
+  .description {
     font-size: 12px;
   }
-  .social-icon img {
-    width: 30px;
-    height: 30px;
+
+  .description a {
+    font-size: 12px;
   }
 }
 
-@media (max-width: 480px) { /* Mobile */
-  body {
-    font-size: 12px;
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .title-container {
+    padding-top: 70px;
+    padding-bottom: 20px;
   }
-  .main-content {
-    min-height: 120vh;
-  }
+
   .minecraft-news-title {
     font-size: 28px;
   }
-  .community-creations h2 {
-    font-size: 24px;
+
+  .item {
+    flex: 0 0 100%;
+    padding: 5px;
   }
-  .creations-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
+
+  .img_li {
+    max-height: 40vh;
   }
-  .creation-card {
-    max-width: 100%;
-    padding: 8px;
+
+  .description {
+    font-size: 11px;
+    padding-left: 5px;
   }
-  .carousel-description h2 {
-    font-size: 28px;
-  }
-  .carr-slide a {
+
+  .description a {
     font-size: 11px;
   }
-  .social-icon img {
-    width: 25px;
-    height: 25px;
+
+  .button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .button::before {
+    padding: 5px;
+  }
+
+  .carousel-description h2 {
+    font-size: 1.5em;
+  }
+
+  .carousel-description p {
+    font-size: 0.9em;
+  }
+
+  .collection-text {
+    font-size: 0.9em;
   }
 }
-
-  

@@ -661,114 +661,75 @@ body {
   }
 }
 
-/* Tablettle */
-@media (max-width: 768px) and (min-width: 481px) {
-  body {
-    font-size: 14px;
-  }
-  .main-content {
-    min-height: 250vh;
+/* Tablettes */
+@media screen and (max-width: 768px) {
+  .description-box, .version-selection {
+    position: static;
+    transform: none;
+    width: 90%;
+    margin: 20px auto;
+    max-height: none;
   }
 
   .image-container {
-    width: 100%;
-    height: 100vh;
+    height: 50vh;
   }
 
-  .description-box, .version-selection {
-    width: 90%;
-    left: 5%;
-    right: 5%;
-  }
-
-  .description-box h2, .version-selection h2 {
-    font-size: 1.3em;
-  }
-
-  .description-box p, .version-box p, .version-box ul li {
-    font-size: 0.9em;
-  }
-
-  .creations-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .creation-card {
-    max-width: 250px;
+  .container {
+    flex-direction: column;
+    height: auto;
   }
 
   .game-description {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
-  .sliderMC {
-    padding-left: 50px;
-    padding-right: 50px;
+  .game-description h3 {
+    font-size: 2.2em;
   }
 
-  .new-button-class {
-    font-size: 14px;
+  .version-box {
+    padding: 10px;
   }
 }
 
 /* Mobile */
-@media (max-width: 480px) {
-  body {
-    font-size: 12px;
-  }
-  .main-content {
-    min-height: 280vh;
+@media screen and (max-width: 480px) {
+  .description-box, .version-selection {
+    width: 95%;
+    padding: 15px;
   }
 
   .image-container {
-    width: 100%;
-    height: 100vh;
+    height: 40vh;
   }
 
-  .description-box, .version-selection {
-    width: 90%;
-    left: 5%;
-    right: 5%;
+  .game-description h3 {
+    font-size: 1.8em;
   }
 
-  .description-box h2, .version-selection h2 {
-    font-size: 1.2em;
+  .version-box h3 {
+    font-size: 1.1em;
   }
 
-  .description-box p, .version-box p, .version-box ul li {
-    font-size: 0.8em;
+  .version-box p, .version-box ul li {
+    font-size: 0.9em;
   }
 
-  .creations-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
+  .new-div-class .new-button-class {
+    padding: 8px 15px;
+    font-size: 14px;
+    margin-left: 5px;
   }
 
-  .creation-card {
-    max-width: 200px;
+  .versionLOGO {
+    max-width: 90%;
   }
 
-  .game-description {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .sliderMC {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .new-button-class {
-    font-size: 13px;
+  .thumbnail-containerMC {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
 }
-
-  
-  
-  
-  
-  
-  
-  

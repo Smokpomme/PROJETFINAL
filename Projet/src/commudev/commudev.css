@@ -517,56 +517,93 @@ body {
   }
 }
 
-/* Tablette */
-@media (max-width: 768px) and (min-width: 481px) {
-  body {
-    font-size: 14px;
-  }
-  .main-content {
-    min-height: 250vh;
-  }
+/* Tablettes */
+@media screen and (max-width: 768px) {
   .minecraft-news-title {
     font-size: 36px;
   }
-  .creations-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
+
+  .mc_p {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 13px;
   }
-  .carousel-description h2 {
-    font-size: 40px;
+
+  .prev, .next {
+    padding: 12px;
+    width: 8px;
+    height: 8px;
   }
-  .carr-slide a {
-    font-size: 11px;
+
+  .earth-description p {
+    padding-left: 30px;
+    padding-right: 30px;
   }
-  .social-icon img {
-    width: 30px;
-    height: 30px;
+
+  .carousel-container {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .carousel-description {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .earth-icon img {
+    max-width: 70%;
   }
 }
 
 /* Mobile */
-@media (max-width: 480px) {
-  body {
+@media screen and (max-width: 480px) {
+  .title-container {
+    padding-top: 70px;
+    padding-bottom: 20px;
+  }
+
+  .minecraft-news-title {
+    font-size: 28px;
+  }
+
+  .mc_p {
+    margin-left: 20px;
+    margin-right: 20px;
     font-size: 12px;
   }
-  .main-content {
-    min-height: 280vh;
+
+  .prev, .next {
+    padding: 10px;
+    width: 6px;
+    height: 6px;
   }
-  .minecraft-news-title {
-    font-size: 30px;
+
+  .earth-description h1 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
   }
-  .creations-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
+
+  .earth-description p {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 0.9em;
   }
+
+  .share-button .relief-button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
   .carousel-description h2 {
-    font-size: 35px;
+    font-size: 1.2rem;
   }
-  .carr-slide a {
-    font-size: 10px;
+
+  .carousel-description p {
+    font-size: 0.9rem;
   }
-  .social-icon img {
-    width: 25px;
-    height: 25px;
+
+  .earth-icon img {
+    max-width: 90%;
   }
 }

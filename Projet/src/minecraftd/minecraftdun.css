@@ -497,92 +497,101 @@ body {
   }
 }
 
-/* Tablette */
-@media (max-width: 768px) and (min-width: 481px) {
-  .carousel-container {
-    padding: 10px 0;
-  }
+/* Tablettes */
+@media screen and (max-width: 768px) {
   .main-image {
-    height: 70vh;
+    height: 60vh;
   }
+
   .description-container {
     max-width: 80%;
-    font-size: 0.85rem;
+    padding: 15px;
   }
+
   .thumbnails {
     flex-wrap: wrap;
-    gap: 6px;
+    justify-content: center;
+    gap: 8px;
   }
-  .community-creations h2 {
-    font-size: 28px;
+
+  .thumbnail {
+    width: 200px;
+    height: 120px;
   }
+
   .collection-text h1 {
-    font-size: 2em;
+    font-size: 2.5em;
   }
-  .item {
-    width: 80%;
-    min-height: 50vh;
+
+  .collection-text p {
+    font-size: 1.1em;
   }
-  .platforms-grid {
-    gap: 30px;
+
+  .community-creations h2 {
+    font-size: 30px;
   }
-  .platform-item p {
-    font-size: 0.9em;
+
+  .creations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px 0;
   }
-  .News_title {
-    font-size: 2em;
-  }
-  .News_p {
-    font-size: 0.9em;
+
+  .creation-info .category {
+    font-size: 18px;
   }
 }
 
 /* Mobile */
-@media (max-width: 480px) {
-  .carousel-container {
-    padding: 10px 0;
-  }
+@media screen and (max-width: 480px) {
   .main-image {
-    height: 50vh;
+    height: 40vh;
+    margin-bottom: 15px;
   }
+
   .description-container {
-    max-width: 100%;
-    font-size: 0.8rem;
+    max-width: 95%;
+    padding: 10px;
   }
-  .thumbnails {
-    flex-wrap: wrap;
-    gap: 5px;
-  }
+
   .thumbnail {
-    width: 100px;
-    height: 80px;
+    width: 150px;
+    height: 90px;
   }
+
+  .collection-text h1 {
+    font-size: 2em;
+  }
+
+  .collection-text p {
+    font-size: 1em;
+  }
+
+  .community-creations {
+    padding: 15px;
+  }
+
   .community-creations h2 {
     font-size: 24px;
+    margin-bottom: 15px;
   }
-  .collection-text h1 {
-    font-size: 1.5em;
+
+  .creations-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 10px 0;
   }
-  .item {
-    width: 90%;
-    min-height: 40vh;
+
+  .creation-info .category {
+    font-size: 16px;
+    padding: 2px 4px;
   }
-  .platforms-grid {
-    flex-direction: column;
-    gap: 20px;
+
+  .creation-info h3 {
+    font-size: 13px;
   }
-  .platform-item p {
-    font-size: 0.8em;
-  }
-  .News_title {
-    font-size: 1.8em;
-  }
-  .News_p {
-    font-size: 0.8em;
-  }
-  .buy-now-button {
-    padding: 8px 16px;
-    font-size: 0.9em;
+
+  .collection-container {
+    padding: 30px 15px;
   }
 }
-

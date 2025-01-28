@@ -429,105 +429,116 @@ body {
   }
 }
 
-/* Tablette */
+/* Tablettes */
 @media screen and (max-width: 768px) {
   .minecraft-news-title {
-    font-size: 36px; 
+    font-size: 36px;
   }
 
   .mc_p {
-    font-size: 14px;
     margin-left: 50px;
     margin-right: 50px;
+    font-size: 13px;
   }
 
   .collection-container {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
   }
 
-  .collection-text {
+  .collection-text, .list-wrapper {
     max-width: 90%;
+    width: 100%;
   }
 
-  .list-wrapper {
-    max-width: 100%;
+  .collection-text p {
+    padding-right: 0;
   }
 
-  .creations-grid {
-    grid-template-columns: 1fr 1fr; 
-    gap: 15px;
+  .item {
+    width: 80%;
   }
 
-  .creation-card {
-    max-width: 90%;
+  .description h1 {
+    font-size: 1.3rem;
   }
 
-  .earth-icon img {
-    max-width: 70%;
+  .community-creations {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 1.8em;
+  }
+
+  .section-description {
+    font-size: 1.1em;
   }
 }
 
 /* Mobile */
 @media screen and (max-width: 480px) {
-  body {
-    font-size: 14px; 
-  }
-
   .title-container {
-    padding-top: 40px;
+    padding-top: 70px;
     padding-bottom: 20px;
   }
 
   .minecraft-news-title {
-    font-size: 28px; 
+    font-size: 28px;
   }
 
   .mc_p {
-    font-size: 12px;
     margin-left: 20px;
     margin-right: 20px;
-  }
-
-  .collection-container {
-    gap: 10px; 
+    font-size: 12px;
   }
 
   .collection-text h1 {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   .collection-text p {
     font-size: 0.9em;
   }
 
-  .list-wrapper {
-    gap: 5px;
+  .collection-text a {
+    font-size: 16px;
   }
 
-  .creations-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
+  .item {
+    width: 100%;
+    min-height: 30vh;
   }
 
-  .creation-card {
-    height: auto;
-    max-width: 100%;
+  .img_li {
+    max-height: 35vh;
   }
 
-  .earth-icon img {
-    max-width: 80%; 
+  .description {
+    font-size: 0.75rem;
+  }
+
+  .description h1 {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.5em;
+  }
+
+  .section-description {
+    font-size: 1em;
+  }
+
+  .creation-info {
+    padding: 15px;
+  }
+
+  .creation-info h3 {
+    font-size: 1.3em;
+  }
+
+  .creation-info p {
+    font-size: 0.75em;
   }
 }
-
-
-
-
-
-
-
-
-
-
-

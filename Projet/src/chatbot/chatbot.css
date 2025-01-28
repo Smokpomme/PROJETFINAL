@@ -241,3 +241,72 @@
   
   
   
+  /* Tablettes */
+  @media screen and (max-width: 768px) {
+    .chatbot-window {
+      width: 280px;
+      height: 500px;
+    }
+
+    .chatbot-icon {
+      width: 70px;
+      height: 70px;
+    }
+
+    .chatbot-header img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .chatbot-choices button {
+      width: 220px;
+      height: 35px;
+      font-size: 0.9em;
+    }
+  }
+
+  /* Mobile */
+  @media screen and (max-width: 480px) {
+    .chatbot-window {
+      width: 90%;
+      height: 80vh;
+      right: 5%;
+      bottom: 80px;
+    }
+
+    .chatbot-icon {
+      width: 60px;
+      height: 60px;
+      bottom: 10px;
+      right: 10px;
+    }
+
+    .chatbot-header {
+      padding: 3px;
+    }
+
+    .chatbot-header img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .chatbot-message {
+      max-width: 85%;
+      font-size: 13px;
+    }
+
+    .chatbot-choices button {
+      width: 200px;
+      height: 32px;
+      font-size: 0.85em;
+      padding: 8px;
+    }
+
+    .chatbot-footer input {
+      padding: 6px;
+    }
+
+    .chatbot-footer button {
+      padding: 6px 8px;
+    }
+  }
