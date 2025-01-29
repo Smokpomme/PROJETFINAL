@@ -1,352 +1,356 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-    margin: 0;
-    font-family: "CUSTOM";
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-  
-  /* font */
-  @font-face {
-    font-family: "CUSTOM";
-    src: url("../../FONT/MIN.woff2");
-  }
-  @font-face {
-    font-family: "NOTO";
-    src: url("../../FONT/noto.ttf");
-  }
-  
-  .main-content {
-    flex-grow: 1;
-    background-color: #313131;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 250vh;
-  
-    }
-  
-    /* container */
-  .title-container {
-    text-align: center;
-    margin: 0; 
-    background-image: url("pic/fond5.png");;
-    padding-top: 90px;
-    padding-bottom: 30px;
-    position: relative;
-    
-  }
-  
-  .minecraft-news-title {
-    font-family: "CUSTOM"; 
-    font-size: 48px; 
-    color: white; 
-    text-align: center; 
-  }
-  
-  .mc_p {
-    font-family: "NOTO"; 
-    color: white; 
-    font-size: 14px;
-    margin-left: 200px;
-    margin-right: 200px;
-    text-align: center;
-  }
+  margin: 0;
+  font-family: "CUSTOM";
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  touch-action: manipulation;
+  -webkit-overflow-scrolling: touch;
+}
 
-  /*slider */
-  .slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-    max-height: 430px;
-  }
-  
-  .slide {
-    min-width: 100%;
-    max-height: 430px;
+/* font */
+@font-face {
+  font-family: "CUSTOM";
+  src: url("../../FONT/MIN.woff2");
+}
+@font-face {
+  font-family: "NOTO";
+  src: url("../../FONT/noto.ttf");
+}
 
-  }
-  
-  .slide img {
-    width: 100%;
-    object-fit: cover;
-    max-height: 430px;
-  
-  
-  }
-  
-  .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.9); 
-    color: white;
-    padding: 16px;
-    cursor: pointer;
-    font-family: "CUSTOM"; 
-    border: 2px solid #000; 
-    box-shadow: 2px 2px 0 #000; 
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
-    width: 10px;
-    height: 10px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.main-content {
+  flex-grow: 1;
+  background-color: #313131;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 250vh;
+}
+
+/* container */
+.title-container {
+  text-align: center;
+  margin: 0; 
+  background-image: url("pic/fond5.png");;
+  padding-top: 90px;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.minecraft-news-title {
+  font-family: "CUSTOM"; 
+  font-size: 48px; 
+  color: white; 
+  text-align: center; 
+}
+
+.mc_p {
+  font-family: "NOTO"; 
+  color: white; 
+  font-size: 14px;
+  margin-left: 200px;
+  margin-right: 200px;
+  text-align: center;
+}
+
+/*slider */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  max-height: 430px;
+}
+
+.slide {
+  min-width: 100%;
+  max-height: 430px;
+}
+
+.slide img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 430px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.9); 
+  color: white;
+  padding: 16px;
+  cursor: pointer;
+  font-family: "CUSTOM"; 
+  border: 2px solid #000; 
+  box-shadow: 2px 2px 0 #000; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  width: 10px;
+  height: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Alignement à gauche et à droite */
 .prev {
-    left: 20px;
+  left: 20px;
 }
 
 .next {
-    right: 20px;
+  right: 20px;
 }
 
 /* Effet au survol pour un aspect cubique */
 .prev:hover, .next:hover {
-    background-color: rgb(24, 24, 24); 
-    box-shadow: 4px 4px 0 #000000; 
-    color: #3C8527;
+  background-color: rgb(24, 24, 24); 
+  box-shadow: 4px 4px 0 #000000; 
+  color: #3C8527;
 }
 
 /* partage */
 
 .share {
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    text-align: center; 
-    color: rgb(0, 0, 0); 
-    padding: 20px; 
-    background-color: #ececec;
-  }
-  
-  .earth-icon img {
-    max-width: 50%; 
-  }
-  
-  .earth-description h1{
-    margin-bottom: 40px;
-  }
-  .earth-description p {
-    font-size: 1em;
-    font-family: "NOTO";
-    padding-left: 100px;
-    padding-right: 1%;
-    margin-bottom: 30px;
-  }
-  
-  .share-button .relief-button {
-    font-family: "CUSTOM";
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 0px;
-    box-shadow: 0 4px #3C8527;
-    transition: all 0.3s ease;
-    margin-left: 10px;  
-    border: none; 
-  }
-  
-  .share-button .relief-button:hover {
-    background-color: #3C8527;
-  }
-  
-  .share-button .relief-button:active {
-    box-shadow: 0 2px #3C8527;
-    transform: translateY(2px);
-  }
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  text-align: center; 
+  color: rgb(0, 0, 0); 
+  padding: 20px; 
+  background-color: #ececec;
+}
+
+.earth-icon img {
+  max-width: 50%; 
+}
+
+.earth-description h1{
+  margin-bottom: 40px;
+}
+
+.earth-description p {
+  font-size: 1em;
+  font-family: "NOTO";
+  padding-left: 100px;
+  padding-right: 1%;
+  margin-bottom: 30px;
+}
+
+.share-button .relief-button {
+  font-family: "CUSTOM";
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 0px;
+  box-shadow: 0 4px #3C8527;
+  transition: all 0.3s ease;
+  margin-left: 10px;  
+  border: none; 
+}
+
+.share-button .relief-button:hover {
+  background-color: #3C8527;
+}
+
+.share-button .relief-button:active {
+  box-shadow: 0 2px #3C8527;
+  transform: translateY(2px);
+}
 
 /* carousel container */
-  .carousel-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #b1b1b1;
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #b1b1b1;
 }
 
 .carousel-description {
-    width: 40%;
+  width: 40%;
 }
 
 .carousel-description h2 {
-    font-family: "CUSTOM";
-    font-size: 1.5rem;
-    color: #000000;
+  font-family: "CUSTOM";
+  font-size: 1.5rem;
+  color: #000000;
 }
 
 .carousel-description p {
-    font-size: 1rem;
-    color: #000000;
-    font-family: "NOTO";
+  font-size: 1rem;
+  color: #000000;
+  font-family: "NOTO";
 }
 
 .carr-arrows {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
 }
 
 .carr-arrows .carr-prev, .carr-arrows .carr-next {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 1.5rem;
-    margin-right: 10px;
-
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-right: 10px;
 }
-.carr-prev:hover, .carr-next:hover {
-    background-color: rgb(24, 24, 24); 
-    box-shadow: 4px 4px 0 #000000; 
-    color: #3C8527;
 
+.carr-prev:hover, .carr-next:hover {
+  background-color: rgb(24, 24, 24); 
+  box-shadow: 4px 4px 0 #000000; 
+  color: #3C8527;
 }
 
 .carousel-images {
-    width: 55%;
-    overflow: hidden;
-    position: relative;
+  width: 55%;
+  overflow: hidden;
+  position: relative;
 }
 
 .carrousel-slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carr-slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    text-align: center;
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .carr-slide img {
-    max-width: 60%;
-
+  max-width: 60%;
 }
 
 .carr-slide p {
-    font-family: 'Minecraft', sans-serif;
-    font-size: 1rem;
-    margin-top: 10px;
+  font-family: 'Minecraft', sans-serif;
+  font-size: 1rem;
+  margin-top: 10px;
 }
 
 /* communauter  */
 .community-creations {
-    background-color: #3a3a3a;
-    padding: 40px;
-    text-align: center;
-    color: white;
-  }
+  background-color: #3a3a3a;
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+.section-title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.creation-info {
+  padding: 20px;
+  text-align: left; 
+  color: black; 
+}
+
+.creation-info h3 {
+  font-size: 1.5em; 
+  margin-bottom: 10px;
+}
+
+.creation-info p {
+  font-size: 0.8em; 
+  font-family: "NOTO";
+}
+
+/* Grid Layout pour 3x3 */
+.creations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  
+  gap: 15px; 
+  justify-items: center; 
+  max-width: 770px;  
+  margin: 0 auto;  
+}
+
+.creation-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
   
-  .section-title {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .section-description {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-  }
-  
-  .creation-info {
-    padding: 20px;
-    text-align: left; 
-    color: black; 
-  }
-  
-  .creation-info h3 {
-    font-size: 1.5em; 
-    margin-bottom: 10px;
-  }
-  
-  .creation-info p {
-    font-size: 0.8em; 
-    font-family: "NOTO";
-  }
-  
-  /* Grid Layout pour 3x3 */
-  .creations-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);  
-    gap: 15px; 
-    justify-items: center; 
-    max-width: 770px;  
-    margin: 0 auto;  
-  }
-  
-  .creation-card {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    
-    aspect-ratio: 1 / 1; 
-    background-color: #f0f0f0; 
-  }
-  
-  .creation-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .creation-card:hover img {
-    transform: scale(1.05); 
-  }
-  
-  .creation-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7); 
-    color: white;
-    padding: 10px;
-    max-height: 65px; 
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-  }
-  
-  .creation-info p {
-    margin: 5px 0 0;
-    font-size: 0.9em;
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  .creation-info h3 {
-    display: inline-block;
-    background-color: white; 
-    color: black; 
-    padding: 5px 10px;
-    font-size: 0.9em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-transform: uppercase; 
-  }
-  
-  /* Affiche toute la description au survol */
-  .creation-card:hover .creation-info {
-    max-height: 200px; 
-  }
-  
-  
- /* Popup */
+  aspect-ratio: 1 / 1; 
+  background-color: #f0f0f0; 
+}
+
+.creation-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transition: transform 0.3s ease-in-out;
+}
+
+.creation-card:hover img {
+  transform: scale(1.05); 
+}
+
+.creation-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7); 
+  color: white;
+  padding: 10px;
+  max-height: 65px; 
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.creation-info p {
+  margin: 5px 0 0;
+  font-size: 0.9em;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.creation-info h3 {
+  display: inline-block;
+  background-color: white; 
+  color: black; 
+  padding: 5px 10px;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase; 
+}
+
+/* Affiche toute la description au survol */
+.creation-card:hover .creation-info {
+  max-height: 200px; 
+}
+
+/* Popup */
 .popup {
   display: none; 
   position: fixed;
@@ -384,7 +388,6 @@ body {
 .popup-close:hover {
   color: #f00;
 }
-
 
 /* Conteneur principal de la FAQ */
 .faq-container {
@@ -558,6 +561,12 @@ body {
 
 /* Mobile */
 @media screen and (max-width: 480px) {
+  .main-content {
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+  }
+
   .title-container {
     padding-top: 70px;
     padding-bottom: 20px;
@@ -605,5 +614,71 @@ body {
 
   .earth-icon img {
     max-width: 90%;
+  }
+
+  .faq-container {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .faq-title {
+    font-size: 1.8em;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .faq-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .faq-column {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .faq-item {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .faq-item h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .faq-item p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  .earth-description {
+    padding: 15px;
+  }
+
+  .earth-description h1 {
+    font-size: 1.5em;
+  }
+
+  .earth-description p {
+    font-size: 0.9em;
+  }
+
+  .carousel-description {
+    padding: 15px;
+  }
+
+  .carousel-description h2 {
+    font-size: 1.3em;
+  }
+
+  .carousel-description p {
+    font-size: 0.9em;
   }
 }

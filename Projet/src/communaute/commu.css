@@ -630,4 +630,30 @@ body {
     padding: 10px 20px;
     font-size: 1em;
   }
+
+  /* Styles pour la section partage histoire */
+  .share-story {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .share-story p {
+    font-size: 0.8em;
+    line-height: 1.3;
+    margin: 5px 0;
+    display: inline;
+  }
+
+  .share-story-text {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .share-story h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
 }
