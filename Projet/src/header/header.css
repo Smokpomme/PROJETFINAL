@@ -354,7 +354,7 @@ button.relief-button:hover {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    gap: 5px;
+    gap: 3px;
     width: 100%;
     overflow-x: auto;
     scrollbar-width: none; /* Firefox */
@@ -372,19 +372,58 @@ button.relief-button:hover {
     margin: 0 !important;
     text-decoration: none;
     color: white;
+    display: flex;
+    align-items: center;
   }
 
   .dropdown {
     display: flex;
     align-items: center;
+    position: relative;
   }
 
   .dropdown .arrow {
-    display: none; /* Cacher les flèches pour simplifier */
+    display: inline-block !important;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid white;
+    margin-left: 3px;
   }
 
   .dropdown-content {
-    display: none; /* Cacher le contenu déroulant par défaut */
+    display: none; /* Caché par défaut */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    min-width: 150px;
+    z-index: 1000;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content .dropdown-section {
+    margin-bottom: 5px;
+  }
+
+  .dropdown-content h4 {
+    color: white;
+    margin: 5px 0;
+    font-size: 0.8em;
+  }
+
+  .dropdown-content a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 3px;
+    font-size: 0.7em;
   }
 
   .top-left, .top-right {
