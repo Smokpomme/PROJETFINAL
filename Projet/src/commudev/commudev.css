@@ -681,4 +681,96 @@ body {
   .carousel-description p {
     font-size: 0.9em;
   }
+
+  /* Agrandir l'image des add-ons */
+  .carousel-images {
+    width: 100%;
+  }
+
+  .carr-slide img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  /* Masquer les textes dans la grille d'actualités */
+  .creation-info {
+    display: none;
+  }
+
+  .creation-card {
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin-bottom: 10px;
+  }
+
+  .creation-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Ajuster la grille pour mobile */
+  .creations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Optimiser l'affichage du carousel */
+  .carousel-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .carousel-description {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .carousel-images {
+    width: 100%;
+  }
+
+  /* Masquer tout le texte dans la section partage histoire */
+  .share {
+    padding: 10px;
+  }
+
+  .earth-description h1,
+  .earth-description p,
+  .share p,
+  .share h2,
+  .share-story p,
+  .share-story h2,
+  .share-story-text {
+    display: none;
+  }
+
+  .earth-icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .earth-icon img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .share-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .share-button .relief-button {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 1em;
+  }
 }
