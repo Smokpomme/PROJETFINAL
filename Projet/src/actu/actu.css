@@ -501,8 +501,8 @@ body {
   .creations-grid {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 8px !important;
-    padding: 5px !important;
+    gap: 0px !important;
+    padding: 0px !important;
     width: 100% !important;
   }
 
@@ -515,7 +515,7 @@ body {
   }
 
   .creation-image {
-    width: 80% !important;
+    width: 90% !important;
     height: 105px !important;
     object-fit: cover !important;
     border-radius: 0 !important;
@@ -530,7 +530,7 @@ body {
 
   /* Ajuster le conteneur principal */
   .community-creations {
-    padding: 10px 0 !important;
+    padding: 5px 0 !important;
     background: none !important;
   }
 
