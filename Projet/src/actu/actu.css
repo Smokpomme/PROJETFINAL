@@ -643,7 +643,7 @@ body {
   .creations-grid {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 11px !important;
+    gap: 30px !important;
     padding: 8px !important;
     width: 100% !important;
   }
@@ -657,11 +657,11 @@ body {
   }
 
   .creation-image {
-    width: 100% !important;
-    height: 100px !important;
+    width: 40% !important;
+    height: 60px !important;
     object-fit: cover !important;
     border-radius: 4px !important;
-    margin: 0 !important;
+    margin: 0 auto !important;
     display: block !important;
   }
 
@@ -680,5 +680,14 @@ body {
   .section-description {
     padding: 0 10px !important;
     margin-bottom: 8px !important;
+  }
+
+  /* Supprimer la barre blanche */
+  html, body {
+    overflow-x: hidden !important;
+    position: relative !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
