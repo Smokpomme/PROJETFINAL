@@ -643,7 +643,7 @@ body {
   .creations-grid {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 30px !important;
+    gap: 13px !important;
     padding: 8px !important;
     width: 100% !important;
   }
@@ -657,10 +657,10 @@ body {
   }
 
   .creation-image {
-    width: 40% !important;
-    height: 60px !important;
+    width: 30% !important;
+    height: 50px !important;
     object-fit: cover !important;
-    border-radius: 4px !important;
+    border-radius: 0px !important;
     margin: 0 auto !important;
     display: block !important;
   }
