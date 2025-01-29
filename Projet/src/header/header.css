@@ -345,114 +345,50 @@ button.relief-button:hover {
 
 /* Mobile */
 @media screen and (max-width: 480px) {
-  .top-center {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    padding: 0 10px;
-  }
-
-  .top {
-    font-size: 0.8em;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    padding: 5px;
-    margin: 0;
-  }
-
-  .dropdown {
-    position: relative;
-  }
-
-  .dropdown .top {
-    display: inline-flex;
-    align-items: center;
-  }
-
-  .dropdown .arrow {
-    display: none; /* Cacher les flèches pour simplifier */
-  }
-
-  .dropdown-content {
-    display: none; /* Cacher le contenu déroulant par défaut */
-  }
-
-  .logo {
-    width: 120px; /* Réduire la taille du logo */
-  }
-
   .header {
-    padding: 8px 10px;
-    align-items: center;
+    padding: 5px 10px;
   }
 
+  /* Ajustement de la navigation */
   .top-center {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Permet un bon ajustement */
+    justify-content: space-between;
     width: 100%;
-    padding: 5px;
-    justify-items: center;
+    max-width: 100%;
   }
 
   .top {
-    text-align: center;
-    font-size: 14px;
-    padding: 8px 5px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 12px; /* Encore plus réduit sur mobile */
+    padding: 6px 5px;
   }
 
-  .dropdown {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
+  /* Réduction de la taille du logo */
   .logo {
-    width: 120px;
-    margin-bottom: 10px;
+    width: 110px;
   }
 
+  /* Réduction de la hauteur du logo */
   .top-left img {
-    height: 30px;
+    height: 28px;
   }
 
+  /* Ajustement des boutons */
+  .top-right .relief-button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  /* Positionnement du dropdown au-dessus */
   .dropdown-content {
-    width: 200px;
+    width: 180px;
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  .dropdown-content .dropdown-section {
-    padding: 8px;
+    top: 90%;
+    position: absolute;
   }
 
   .dropdown-content a {
-    font-size: 13px;
-  }
-
-  .top-right .relief-button {
-    padding: 6px 12px;
-    font-size: 13px;
-  }
-
-  .CONpopup-content {
-    padding: 15px;
-    max-width: 300px;
-  }
-
-  .form-group input {
-    padding: 6px;
-  }
-
-  button.relief-button {
-    padding: 8px;
-    font-size: 0.9rem;
+    font-size: 12px;
   }
 }
