@@ -392,7 +392,6 @@ body {
     flex: 0 0 100%;
   }
 
-
   .carousel-1-images,
   .carousel-2-images,
   .carousel-3-images {
@@ -431,6 +430,10 @@ body {
     object-fit: cover !important;
     border-radius: 0 !important;
     margin: 0 !important;
+  }
+
+  .carousel-description h2 {
+    font-size: 1.2em !important;
   }
 
   /* Navigation simplifiée */
