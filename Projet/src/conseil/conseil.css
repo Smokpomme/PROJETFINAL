@@ -497,4 +497,42 @@ body {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
   }
+
+  /* Forcer les changements pour les images des mondes et avancés */
+  .monde img,
+  .avance img {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 200px !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    margin: 10px 0 !important;
+    display: block !important;
+  }
+
+  .monde,
+  .avance {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 15px !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  /* Enlever les styles qui pourraient interférer */
+  .monde > *,
+  .avance > * {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Ajuster les conteneurs parents si nécessaire */
+  .conseil-container {
+    padding: 10px !important;
+    width: 100% !important;
+  }
 }
