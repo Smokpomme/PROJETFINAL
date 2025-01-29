@@ -656,4 +656,37 @@ body {
     font-size: 1.2em;
     margin-bottom: 10px;
   }
+
+  /* Masquer tout le texte dans la section partage histoire */
+  .share-story *:not(.share-image):not(.share-button):not(.share-button *) {
+    display: none !important;
+  }
+
+  .share-story {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .share-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .share-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .share-button .relief-button {
+    width: auto;
+    padding: 12px 24px;
+    font-size: 1.1em;
+  }
 }
