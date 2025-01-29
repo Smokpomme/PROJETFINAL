@@ -524,13 +524,16 @@ body {
   .grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 10px;
+    gap: 20px;
+    padding: 15px;
   }
 
   .grid-item {
     position: relative;
     width: 100%;
+    margin-bottom: 0;
+    background: none;
+    box-shadow: none;
   }
 
   .grid-item img {
@@ -538,17 +541,19 @@ body {
     height: auto;
     display: block;
     border-radius: 8px;
+    margin: 0;
   }
 
-  /* Masquer tous les textes sous les images */
-  .grid-item p,
-  .grid-item h3,
+  /* Masquer tout le texte */
   .grid-item h2,
-  .grid-item span {
+  .grid-item h3,
+  .grid-item p,
+  .grid-item span,
+  .grid-item .text-content {
     display: none !important;
   }
 
-  /* Garder uniquement les badges/étiquettes ACTUALITÉ et CONTENU */
+  /* Garder uniquement le badge ACTUALITÉ/CONTENU */
   .grid-item .badge {
     position: absolute;
     top: 10px;
@@ -558,5 +563,16 @@ body {
     border-radius: 4px;
     font-weight: bold;
     display: block !important;
+    z-index: 2;
+  }
+
+  /* Enlever les marges et paddings inutiles */
+  .section-actus {
+    padding: 10px 0;
+  }
+
+  .section-actus h1 {
+    margin-bottom: 10px;
+    padding: 0 15px;
   }
 }

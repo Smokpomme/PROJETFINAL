@@ -455,4 +455,46 @@ body {
   .article-container {
     padding: 10px;
   }
+
+  /* Agrandir les images de tous les carousels */
+  .carousel-1-images,
+  .carousel-2-images,
+  .carousel-3-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .carousel-1-images img,
+  .carousel-2-images img,
+  .carousel-3-images img {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    min-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0;
+  }
+
+  /* Ajuster le conteneur des carousels */
+  .carousel-1,
+  .carousel-2,
+  .carousel-3 {
+    padding: 10px 0;
+  }
+
+  /* S'assurer que les flèches de navigation sont bien visibles */
+  .carousel-1 .prev,
+  .carousel-1 .next,
+  .carousel-2 .prev,
+  .carousel-2 .next,
+  .carousel-3 .prev,
+  .carousel-3 .next {
+    font-size: 24px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+  }
 }
