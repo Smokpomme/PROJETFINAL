@@ -538,5 +538,6 @@ body {
   .section-description {
     padding: 0 10px !important;
     margin-bottom: 8px !important;
+    padding-bottom: 8px !important;
   }
 }
