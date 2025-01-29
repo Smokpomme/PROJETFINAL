@@ -346,42 +346,35 @@ button.relief-button:hover {
 /* Mobile */
 @media screen and (max-width: 480px) {
   .header {
-    padding: 5px 10px;
+    padding: 5px 8px; /* Réduction du padding */
   }
 
-  /* Ajustement de la navigation */
+  /* Ajustement de la barre de navigation */
   .top-center {
     display: flex;
-    flex-wrap: wrap; /* Permet un bon ajustement */
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Empêche le passage à la ligne */
     width: 100%;
-    max-width: 100%;
+    gap: 5px; /* Réduction de l'espacement */
   }
 
   .top {
-    font-size: 12px; /* Encore plus réduit sur mobile */
-    padding: 6px 5px;
+    font-size: 11px; /* Réduction de la taille de police */
+    padding: 4px 3px; /* Réduction du padding */
+    white-space: nowrap; /* Empêche la coupure du texte */
   }
 
-  /* Réduction de la taille du logo */
-  .logo {
-    width: 110px;
-  }
-
-  /* Réduction de la hauteur du logo */
-  .top-left img {
-    height: 28px;
-  }
-
-  /* Ajustement des boutons */
+  /* Ajustement du bouton Connexion */
   .top-right .relief-button {
-    padding: 5px 10px;
-    font-size: 12px;
+    padding: 4px 8px; /* Réduction du padding */
+    font-size: 12px; /* Réduction de la taille de police */
+    width: 80px; /* Réduction de la largeur */
   }
 
-  /* Positionnement du dropdown au-dessus */
+  /* Ajustement des dropdowns */
   .dropdown-content {
-    width: 180px;
+    width: 170px; /* Réduction de la largeur */
     left: 50%;
     transform: translateX(-50%);
     top: 90%;
