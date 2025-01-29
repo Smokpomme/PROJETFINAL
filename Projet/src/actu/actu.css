@@ -620,4 +620,47 @@ body {
     padding: 5px 10px !important;
     border-radius: 4px !important;
   }
+
+  /* Cibler les bonnes classes pour les images */
+  .creation-card {
+    width: 100% !important;
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+  }
+
+  .creation-image {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 200px !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    margin: 0 !important;
+  }
+
+  .creations-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 15px !important;
+    width: 100% !important;
+  }
+
+  /* Masquer les infos */
+  .creation-info {
+    display: none !important;
+  }
+
+  /* Ajuster le conteneur principal */
+  .community-creations {
+    padding: 10px !important;
+  }
+
+  .section-title,
+  .section-description {
+    padding: 0 15px !important;
+    margin-bottom: 10px !important;
+  }
 }

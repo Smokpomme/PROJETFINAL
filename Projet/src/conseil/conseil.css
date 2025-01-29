@@ -535,4 +535,53 @@ body {
     padding: 10px !important;
     width: 100% !important;
   }
+
+  /* Cibler les bonnes classes pour les images */
+  .carr-slide img {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 200px !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    margin: 0 !important;
+  }
+
+  .carrousel-slides {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 15px !important;
+    width: 100% !important;
+  }
+
+  .carr-slide {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Ajuster la navigation */
+  .carr-prev,
+  .carr-next {
+    font-size: 24px !important;
+    padding: 10px !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-radius: 50% !important;
+    z-index: 10 !important;
+  }
+
+  /* Ajuster le conteneur principal */
+  .carousel-container {
+    padding: 10px !important;
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  /* Style des liens */
+  .carr-slide a {
+    display: block !important;
+    margin-top: 10px !important;
+    text-align: center !important;
+  }
 }
