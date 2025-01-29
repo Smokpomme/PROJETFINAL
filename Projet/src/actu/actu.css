@@ -631,13 +631,12 @@ body {
   }
 
   .creation-image {
-    width: 70% !important;
-    height: auto !important;
-    min-height: 200px !important;
-    max-width: none !important;
+    width: 25% !important;
+    height: 40px !important;
     object-fit: cover !important;
-    border-radius: 8px !important;
-    margin: 0 !important;
+    border-radius: 0 !important;
+    margin: 0 auto !important;
+    display: block !important;
   }
 
   .creations-grid {
@@ -660,7 +659,7 @@ body {
     width: 30% !important;
     height: 50px !important;
     object-fit: cover !important;
-    border-radius: 0px !important;
+    border-radius: 0 !important;
     margin: 0 auto !important;
     display: block !important;
   }

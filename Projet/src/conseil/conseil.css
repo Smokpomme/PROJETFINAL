@@ -384,208 +384,12 @@ body {
 
 /* Mobile */
 @media screen and (max-width: 480px) {
-  .title-container {
-    padding-top: 70px;
-    padding-bottom: 20px;
-  }
-
-  .minecraft-news-title {
-    font-size: 28px;
-  }
-
-  .item {
-    flex: 0 0 100%;
-    padding: 5px;
-  }
-
-  .img_li {
-    max-height: 40vh;
-  }
-
-  .description {
-    font-size: 11px;
-    padding-left: 5px;
-  }
-
-  .description a {
-    font-size: 11px;
-  }
-
-  .button {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-
-  .button::before {
-    padding: 5px;
-  }
-
-  .carousel-description h2 {
-    font-size: 1.5em;
-  }
-
-  .carousel-description p {
-    font-size: 0.9em;
-  }
-
-  .collection-text {
-    font-size: 0.9em;
-  }
-
-  .article-images {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    padding: 15px;
-  }
-
-  .article-images img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    min-width: 120px;
-  }
-
-  .article-images a {
-    display: block;
-    text-decoration: none;
-  }
-
-  /* Ajuster l'espacement du conteneur */
-  .article-container {
-    padding: 10px;
-  }
-
-  /* Agrandir les images de tous les carousels */
   .carousel-1-images,
   .carousel-2-images,
   .carousel-3-images {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 15px;
+    background: white !important;
   }
 
-  .carousel-1-images img,
-  .carousel-2-images img,
-  .carousel-3-images img {
-    width: 100%;
-    height: auto;
-    max-width: none;
-    min-height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 0;
-  }
-
-  /* Ajuster le conteneur des carousels */
-  .carousel-1,
-  .carousel-2,
-  .carousel-3 {
-    padding: 10px 0;
-  }
-
-  /* S'assurer que les flèches de navigation sont bien visibles */
-  .carousel-1 .prev,
-  .carousel-1 .next,
-  .carousel-2 .prev,
-  .carousel-2 .next,
-  .carousel-3 .prev,
-  .carousel-3 .next {
-    font-size: 24px;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-  }
-
-  /* Forcer les changements pour les images des mondes et avancés */
-  .monde img,
-  .avance img {
-    width: 100% !important;
-    height: auto !important;
-    min-height: 200px !important;
-    max-width: none !important;
-    object-fit: cover !important;
-    border-radius: 8px !important;
-    margin: 10px 0 !important;
-    display: block !important;
-  }
-
-  .monde,
-  .avance {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-    padding: 15px !important;
-    width: 100% !important;
-    max-width: none !important;
-  }
-
-  /* Enlever les styles qui pourraient interférer */
-  .monde > *,
-  .avance > * {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /* Ajuster les conteneurs parents si nécessaire */
-  .conseil-container {
-    padding: 10px !important;
-    width: 100% !important;
-  }
-
-  /* Cibler les bonnes classes pour les images */
-  .carr-slide img {
-    width: 100% !important;
-    height: auto !important;
-    min-height: 200px !important;
-    max-width: none !important;
-    object-fit: cover !important;
-    border-radius: 8px !important;
-    margin: 0 !important;
-  }
-
-  .carrousel-slides {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-    padding: 15px !important;
-    width: 100% !important;
-  }
-
-  .carr-slide {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /* Ajuster la navigation */
-  .carr-prev,
-  .carr-next {
-    font-size: 24px !important;
-    padding: 10px !important;
-    background: rgba(255, 255, 255, 0.8) !important;
-    border-radius: 50% !important;
-    z-index: 10 !important;
-  }
-
-  /* Ajuster le conteneur principal */
-  .carousel-container {
-    padding: 10px !important;
-    width: 100% !important;
-    overflow: hidden !important;
-  }
-
-  /* Style des liens */
-  .carr-slide a {
-    display: block !important;
-    margin-top: 10px !important;
-    text-align: center !important;
-  }
-
-  /* Configuration du carrousel en ligne */
   .carrousel-slides {
     display: flex !important;
     flex-direction: row !important;
@@ -593,7 +397,6 @@ body {
     padding: 10px !important;
     width: max-content !important;
     overflow-x: auto !important;
-    scroll-behavior: smooth !important;
   }
 
   .carr-slide {
@@ -604,47 +407,22 @@ body {
   }
 
   .carr-slide img {
-    width: 80% !important;
-    height: 100px !important;
+    width: 35% !important;
+    height: 45px !important;
     object-fit: cover !important;
-    border-radius: 4px !important;
-    margin: 0 !important;
-  }
-
-  /* Ajuster le conteneur principal */
-  .carousel-container {
-    padding: 10px 0 !important;
-    width: 100% !important;
-    overflow: hidden !important;
-    background: none !important;
-  }
-
-  /* Style des liens */
-  .carr-slide a {
+    border-radius: 0 !important;
+    margin: 0 auto !important;
     display: block !important;
-    margin-top: 8px !important;
-    text-align: center !important;
-    font-size: 14px !important;
   }
 
-  /* Ajuster la navigation */
+  /* Navigation simplifiée */
   .carr-prev,
   .carr-next {
     font-size: 20px !important;
     padding: 8px !important;
-    background: rgba(255, 255, 255, 0.8) !important;
-    border-radius: 50% !important;
     z-index: 10 !important;
-    position: absolute !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
   }
 
-  .carr-prev {
-    left: 5px !important;
-  }
-
-  .carr-next {
-    right: 5px !important;
-  }
+  .carr-prev { left: 5px !important; }
+  .carr-next { right: 5px !important; }
 }
