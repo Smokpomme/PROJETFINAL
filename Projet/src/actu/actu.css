@@ -642,10 +642,27 @@ body {
 
   .creations-grid {
     display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-    padding: 15px !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+    padding: 8px !important;
     width: 100% !important;
+  }
+
+  .creation-card {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+  }
+
+  .creation-image {
+    width: 100% !important;
+    height: 100px !important;
+    object-fit: cover !important;
+    border-radius: 4px !important;
+    margin: 0 !important;
+    display: block !important;
   }
 
   /* Masquer les infos */
@@ -655,12 +672,13 @@ body {
 
   /* Ajuster le conteneur principal */
   .community-creations {
-    padding: 10px !important;
+    padding: 10px 0 !important;
+    background: none !important;
   }
 
   .section-title,
   .section-description {
-    padding: 0 15px !important;
-    margin-bottom: 10px !important;
+    padding: 0 10px !important;
+    margin-bottom: 8px !important;
   }
 }

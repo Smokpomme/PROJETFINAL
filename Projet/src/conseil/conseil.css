@@ -584,4 +584,67 @@ body {
     margin-top: 10px !important;
     text-align: center !important;
   }
+
+  /* Configuration du carrousel en ligne */
+  .carrousel-slides {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 15px !important;
+    padding: 10px !important;
+    width: max-content !important;
+    overflow-x: auto !important;
+    scroll-behavior: smooth !important;
+  }
+
+  .carr-slide {
+    width: 200px !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .carr-slide img {
+    width: 100% !important;
+    height: 150px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    margin: 0 !important;
+  }
+
+  /* Ajuster le conteneur principal */
+  .carousel-container {
+    padding: 10px 0 !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    background: none !important;
+  }
+
+  /* Style des liens */
+  .carr-slide a {
+    display: block !important;
+    margin-top: 8px !important;
+    text-align: center !important;
+    font-size: 14px !important;
+  }
+
+  /* Ajuster la navigation */
+  .carr-prev,
+  .carr-next {
+    font-size: 20px !important;
+    padding: 8px !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-radius: 50% !important;
+    z-index: 10 !important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  .carr-prev {
+    left: 5px !important;
+  }
+
+  .carr-next {
+    right: 5px !important;
+  }
 }
