@@ -501,7 +501,7 @@ body {
   .creations-grid {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 13px !important;
+    gap: 10px !important;
     padding: 8px !important;
     width: 100% !important;
   }
@@ -515,8 +515,8 @@ body {
   }
 
   .creation-image {
-    width: 100% !important;
-    height: 100px !important;
+    width: 90% !important;
+    height: 110px !important;
     object-fit: cover !important;
     border-radius: 0 !important;
     margin: 0 auto !important;
