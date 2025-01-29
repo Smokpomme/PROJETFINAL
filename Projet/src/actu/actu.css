@@ -473,6 +473,31 @@ body {
     padding: 0 !important;
   }
 
+  .title-container {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .minecraft-news-title {
+    font-size: 36px;
+  }
+
+  .collection-container {
+    padding-top: 20px;
+  }
+
+  .collection-text {
+    font-size: 1.2em;
+  }
+
+  .list-wrapper {
+    width: 100%;
+  }
+
+  .item {
+    flex: 0 0 100%;
+  }
+
   .creations-grid {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
@@ -490,8 +515,8 @@ body {
   }
 
   .creation-image {
-    width: 20% !important;
-    height: 35px !important;
+    width: 80% !important;
+    height: 40px !important;
     object-fit: cover !important;
     border-radius: 0 !important;
     margin: 0 auto !important;
