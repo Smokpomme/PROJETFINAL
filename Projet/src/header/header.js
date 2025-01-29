@@ -18,28 +18,45 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header');
     let lastScrollTop = 0;
     const delta = 5; // Sensibilité du défilement
+    let scrollListener = null;
 
-    // Vérifier si c'est un appareil mobile
-    const isMobile = window.matchMedia("(max-width: 480px)").matches;
+    // Fonction pour ajouter/supprimer l'écouteur de défilement
+    function toggleScrollListener() {
+        const isMobile = window.innerWidth <= 480;
+        
+        // Supprimer l'ancien écouteur s'il existe
+        if (scrollListener && !isMobile) {
+            window.removeEventListener('scroll', scrollListener);
+            header.classList.remove('hide');
+            scrollListener = null;
+        }
+        
+        // Ajouter un nouvel écouteur si on est en mobile
+        if (isMobile && !scrollListener) {
+            scrollListener = () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (isMobile) {
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                // Détermine la direction du défilement
+                if (Math.abs(lastScrollTop - scrollTop) <= delta) {
+                    return;
+                }
 
-            // Détermine la direction du défilement
-            if (Math.abs(lastScrollTop - scrollTop) <= delta) {
-                return;
-            }
+                if (scrollTop > lastScrollTop && scrollTop > 50) {
+                    // Défilement vers le bas
+                    header.classList.add('hide');
+                } else if (scrollTop < lastScrollTop) {
+                    // Défilement vers le haut
+                    header.classList.remove('hide');
+                }
 
-            if (scrollTop > lastScrollTop && scrollTop > 50) {
-                // Défilement vers le bas
-                header.classList.add('hide');
-            } else if (scrollTop < lastScrollTop) {
-                // Défilement vers le haut
-                header.classList.remove('hide');
-            }
-
-            lastScrollTop = scrollTop;
-        });
+                lastScrollTop = scrollTop;
+            };
+            
+            window.addEventListener('scroll', scrollListener);
+        }
     }
+
+    // Initialiser et écouter les changements de taille
+    toggleScrollListener();
+    window.addEventListener('resize', toggleScrollListener);
 });
