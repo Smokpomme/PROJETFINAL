@@ -348,6 +348,11 @@ button.relief-button:hover {
   .header {
     padding: 8px 10px;
     align-items: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .header.hide {
+    transform: translateY(-100%);
   }
 
   .top-center {
