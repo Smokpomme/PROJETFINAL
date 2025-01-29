@@ -371,13 +371,14 @@ button.relief-button:hover {
   .dropdown-content {
     position: absolute;
     top: 100%;
-    left: 0; /* Aligné à gauche */
-    width: max-content; /* Largeur ajustée au contenu */
-    min-width: 180px; /* Assure une taille correcte */
+    right: 0; /* Aligné à droite au lieu de gauche */
+    width: max-content; /* Ajusté au texte */
+    min-width: 180px;
     background: rgba(0, 0, 0, 0.9);
     z-index: 999;
     display: none;
-    padding: 10px; /* Ajoute du padding interne */
+    padding: 10px;
+    text-align: left; /* Pour garder le texte bien lisible */
   }
 
   .dropdown:hover .dropdown-content {
