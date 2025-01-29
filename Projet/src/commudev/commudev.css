@@ -732,45 +732,4 @@ body {
   .carousel-images {
     width: 100%;
   }
-
-  /* Masquer tout le texte dans la section partage histoire */
-  .share {
-    padding: 10px;
-  }
-
-  .earth-description h1,
-  .earth-description p,
-  .share p,
-  .share h2,
-  .share-story p,
-  .share-story h2,
-  .share-story-text {
-    display: none;
-  }
-
-  .earth-icon {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-  }
-
-  .earth-icon img {
-    width: 80%;
-    max-width: 300px;
-    height: auto;
-  }
-
-  .share-button {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .share-button .relief-button {
-    width: auto;
-    padding: 10px 20px;
-    font-size: 1em;
-  }
 }
