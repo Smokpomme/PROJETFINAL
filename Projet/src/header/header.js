@@ -17,42 +17,43 @@ function showCONPopup() {
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header');
     let lastScrollTop = 0;
-    const delta = 5; // Sensibilité du défilement
-    let scrollListener = null;
+    let ticking = false;
 
     // Fonction pour ajouter/supprimer l'écouteur de défilement
     function toggleScrollListener() {
         const isMobile = window.innerWidth <= 480;
         
         // Supprimer l'ancien écouteur s'il existe
-        if (scrollListener && !isMobile) {
-            window.removeEventListener('scroll', scrollListener);
+        if (!isMobile) {
+            window.removeEventListener('scroll', handleScroll);
             header.classList.remove('hide');
-            scrollListener = null;
+            return;
         }
-        
-        // Ajouter un nouvel écouteur si on est en mobile
-        if (isMobile && !scrollListener) {
-            scrollListener = () => {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
+        // Ajouter un écouteur si on est en mobile
+        window.addEventListener('scroll', handleScroll, { passive: true });
+    }
+
+    // Gestionnaire de défilement optimisé
+    function handleScroll(event) {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
                 // Détermine la direction du défilement
-                if (Math.abs(lastScrollTop - scrollTop) <= delta) {
-                    return;
-                }
-
                 if (scrollTop > lastScrollTop) {
                     // Défilement vers le bas - se retire immédiatement
                     header.classList.add('hide');
-                } else if (scrollTop < lastScrollTop) {
+                } else {
                     // Défilement vers le haut
                     header.classList.remove('hide');
                 }
 
                 lastScrollTop = scrollTop;
-            };
-            
-            window.addEventListener('scroll', scrollListener);
+                ticking = false;
+            });
+
+            ticking = true;
         }
     }
 
