@@ -367,21 +367,24 @@ button.relief-button:hover {
     position: relative;
   }
 
+  /* Correction du dropdown de Mojang */
   .dropdown-content {
     position: absolute;
     top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
+    left: 0; /* Aligné à gauche */
+    width: max-content; /* Largeur ajustée au contenu */
+    min-width: 180px; /* Assure une taille correcte */
     background: rgba(0, 0, 0, 0.9);
     z-index: 999;
     display: none;
+    padding: 10px; /* Ajoute du padding interne */
   }
 
   .dropdown:hover .dropdown-content {
     display: block;
   }
 
+  /* Ajustement du bouton Connexion */
   .top-right .relief-button {
     padding: 5px 10px;
     font-size: 12px;
