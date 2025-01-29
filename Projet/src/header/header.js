@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
 
-                if (scrollTop > lastScrollTop && scrollTop > 50) {
-                    // Défilement vers le bas
+                if (scrollTop > lastScrollTop) {
+                    // Défilement vers le bas - se retire immédiatement
                     header.classList.add('hide');
                 } else if (scrollTop < lastScrollTop) {
                     // Défilement vers le haut
