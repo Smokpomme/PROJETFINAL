@@ -520,4 +520,43 @@ body {
     font-size: 0.8em;
     padding: 10px 15px 20px;
   }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .grid-item {
+    position: relative;
+    width: 100%;
+  }
+
+  .grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+  /* Masquer tous les textes sous les images */
+  .grid-item p,
+  .grid-item h3,
+  .grid-item h2,
+  .grid-item span {
+    display: none !important;
+  }
+
+  /* Garder uniquement les badges/étiquettes ACTUALITÉ et CONTENU */
+  .grid-item .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    display: block !important;
+  }
 }
