@@ -384,6 +384,15 @@ body {
 
 /* Mobile */
 @media screen and (max-width: 480px) {
+  .list-wrapper {
+    width: 100%;
+  }
+
+  .item {
+    flex: 0 0 100%;
+  }
+
+
   .carousel-1-images,
   .carousel-2-images,
   .carousel-3-images {
