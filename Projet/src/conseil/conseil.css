@@ -384,37 +384,6 @@ body {
 
 /* Mobile */
 @media screen and (max-width: 480px) {
-  body {
-    font-size: 12px;
-  }
-  .main-content {
-    min-height: 120vh;
-  }
-  .minecraft-news-title {
-    font-size: 28px;
-  }
-  .community-creations h2 {
-    font-size: 24px;
-  }
-  .creations-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .creation-card {
-    max-width: 100%;
-    padding: 8px;
-  }
-  .carousel-description h2 {
-    font-size: 28px;
-  }
-  .carr-slide a {
-    font-size: 11px;
-  }
-  .social-icon img {
-    width: 25px;
-    height: 25px;
-  }
-  
   .carousel-1-images,
   .carousel-2-images,
   .carousel-3-images {
@@ -438,8 +407,8 @@ body {
   }
 
   .carr-slide img {
-    width: 35% !important;
-    height: 45px !important;
+    width: 90% !important;
+    height: 80px !important;
     object-fit: cover !important;
     border-radius: 0 !important;
     margin: 0 auto !important;
