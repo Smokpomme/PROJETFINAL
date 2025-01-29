@@ -346,42 +346,46 @@ button.relief-button:hover {
 /* Mobile */
 @media screen and (max-width: 480px) {
   .header {
-    padding: 5px 8px; /* Réduction du padding */
+    padding: 5px 10px;
+    align-items: center;
+    flex-wrap: nowrap;
   }
 
-  /* Ajustement de la barre de navigation */
   .top-center {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap; /* Empêche le passage à la ligne */
     width: 100%;
-    gap: 5px; /* Réduction de l'espacement */
+    padding: 0 5px;
   }
 
   .top {
-    font-size: 11px; /* Réduction de la taille de police */
-    padding: 4px 3px; /* Réduction du padding */
-    white-space: nowrap; /* Empêche la coupure du texte */
+    font-size: 12px;
+    padding: 5px;
   }
 
-  /* Ajustement du bouton Connexion */
-  .top-right .relief-button {
-    padding: 4px 8px; /* Réduction du padding */
-    font-size: 12px; /* Réduction de la taille de police */
-    width: 80px; /* Réduction de la largeur */
+  .dropdown {
+    position: relative;
   }
 
-  /* Ajustement des dropdowns */
   .dropdown-content {
-    width: 170px; /* Réduction de la largeur */
+    position: absolute;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    top: 90%;
-    position: absolute;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+    display: none;
   }
 
-  .dropdown-content a {
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .top-right .relief-button {
+    padding: 5px 10px;
     font-size: 12px;
+    width: auto;
+    height: auto;
   }
 }
