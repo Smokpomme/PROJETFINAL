@@ -388,6 +388,8 @@ body {
   .carousel-2-images,
   .carousel-3-images {
     background: white !important;
+    width: 100% !important;
+    overflow: hidden !important;
   }
 
   .carrousel-slides {
@@ -396,33 +398,35 @@ body {
     gap: 15px !important;
     padding: 10px !important;
     width: max-content !important;
-    overflow-x: auto !important;
+    overflow-x: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-behavior: smooth !important;
+    scrollbar-width: none !important;  /* Pour Firefox */
+    -ms-overflow-style: none !important;  /* Pour Internet Explorer et Edge */
+  }
+
+  .carrousel-slides::-webkit-scrollbar {
+    display: none !important; /* Pour Chrome, Safari et Opera */
   }
 
   .carr-slide {
-    width: 200px !important;
-    flex-shrink: 0 !important;
+    width: 150px !important;
+    flex: 0 0 auto !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
   .carr-slide img {
-    width: 90% !important;
-    height: 80px !important;
+    width: 100% !important;
+    height: 150px !important;
     object-fit: cover !important;
     border-radius: 0 !important;
-    margin: 0 auto !important;
-    display: block !important;
+    margin: 0 !important;
   }
 
   /* Navigation simplifiée */
   .carr-prev,
   .carr-next {
-    font-size: 20px !important;
-    padding: 8px !important;
-    z-index: 10 !important;
+    display: none !important; /* Cacher les flèches sur mobile car on utilise le scroll tactile */
   }
-
-  .carr-prev { left: 5px !important; }
-  .carr-next { right: 5px !important; }
 }
