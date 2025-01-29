@@ -346,79 +346,58 @@ button.relief-button:hover {
 /* Mobile */
 @media screen and (max-width: 480px) {
   .header {
-    padding: 8px 10px;
-    align-items: center;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .header.hide {
-    transform: translateY(-100%);
+    padding: 5px 10px !important;
   }
 
   .top-center {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
     width: 100%;
-    padding: 5px;
-    justify-items: center;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  }
+
+  .top-center::-webkit-scrollbar {
+    display: none; /* WebKit */
   }
 
   .top {
-    text-align: center;
-    font-size: 14px;
-    padding: 8px 5px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 0.7em !important;
+    white-space: nowrap;
+    padding: 3px !important;
+    margin: 0 !important;
+    text-decoration: none;
+    color: white;
   }
 
   .dropdown {
-    width: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
   }
 
-  .logo {
-    width: 120px;
-    margin-bottom: 10px;
-  }
-
-  .top-left img {
-    height: 30px;
+  .dropdown .arrow {
+    display: none; /* Cacher les flèches pour simplifier */
   }
 
   .dropdown-content {
-    width: 200px;
-    left: 50%;
-    transform: translateX(-50%);
+    display: none; /* Cacher le contenu déroulant par défaut */
   }
 
-  .dropdown-content .dropdown-section {
-    padding: 8px;
+  .top-left, .top-right {
+    display: flex;
+    align-items: center;
   }
 
-  .dropdown-content a {
-    font-size: 13px;
+  .logo {
+    width: 100px; /* Réduire encore plus la taille du logo */
   }
 
-  .top-right .relief-button {
-    padding: 6px 12px;
-    font-size: 13px;
-  }
-
-  .CONpopup-content {
-    padding: 15px;
-    max-width: 300px;
-  }
-
-  .form-group input {
-    padding: 6px;
-  }
-
-  button.relief-button {
-    padding: 8px;
-    font-size: 0.9rem;
+  .relief-button {
+    font-size: 0.7em !important;
+    padding: 5px 10px !important;
   }
 }
