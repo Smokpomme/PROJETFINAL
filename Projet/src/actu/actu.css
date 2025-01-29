@@ -515,8 +515,8 @@ body {
   }
 
   .creation-image {
-    width: 80% !important;
-    height: 40px !important;
+    width: 100% !important;
+    height: 100px !important;
     object-fit: cover !important;
     border-radius: 0 !important;
     margin: 0 auto !important;
