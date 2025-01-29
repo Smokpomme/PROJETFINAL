@@ -464,179 +464,13 @@ body {
 
 /* Media Queries pour Mobile */
 @media screen and (max-width: 480px) {
-  .title-container {
-    padding-top: 70px;
-    padding-bottom: 20px;
-  }
-
-  .minecraft-news-title {
-    font-size: 28px;
-  }
-
-  .item {
-    flex: 0 0 100%;
-  }
-
-  .collection-container {
-    padding: 5px;
-    gap: 10px;
-  }
-
-  .community-creations {
-    padding: 15px;
-  }
-
-  .section-title {
-    font-size: 1.5em;
-  }
-
-  .section-description {
-    font-size: 1em;
-    margin-bottom: 20px;
-  }
-
-  .creation-info {
-    padding: 15px;
-  }
-
-  .creation-info h3 {
-    font-size: 1.2em;
-  }
-
-  .creation-info p {
-    font-size: 0.9em;
-  }
-
-  .button {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-
-  .button::before {
-    padding: 6px;
-  }
-
-  .description {
-    font-size: 0.8em;
-    padding: 10px 15px 20px;
-  }
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 15px;
-  }
-
-  .grid-item {
-    position: relative;
-    width: 100%;
-    margin-bottom: 0;
-    background: none;
-    box-shadow: none;
-  }
-
-  .grid-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-    margin: 0;
-  }
-
-  /* Masquer tout le texte */
-  .grid-item h2,
-  .grid-item h3,
-  .grid-item p,
-  .grid-item span,
-  .grid-item .text-content {
-    display: none !important;
-  }
-
-  /* Garder uniquement le badge ACTUALITÉ/CONTENU */
-  .grid-item .badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-weight: bold;
-    display: block !important;
-    z-index: 2;
-  }
-
-  /* Enlever les marges et paddings inutiles */
-  .section-actus {
-    padding: 10px 0;
-  }
-
-  .section-actus h1 {
-    margin-bottom: 10px;
-    padding: 0 15px;
-  }
-
-  /* Forcer les changements pour les images de création */
-  .creation-image,
-  img[class*="creation"] {
-    width: 100% !important;
-    height: auto !important;
-    min-height: 200px !important;
-    max-width: none !important;
-    object-fit: cover !important;
-    border-radius: 8px !important;
-    margin: 0 !important;
-  }
-
-  /* Conteneur des images */
-  .grid-container {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-    padding: 15px !important;
-    width: 100% !important;
-  }
-
-  .grid-item {
+  /* Supprimer la barre blanche */
+  html, body {
+    overflow-x: hidden !important;
+    position: relative !important;
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
-    background: none !important;
-    box-shadow: none !important;
-  }
-
-  /* Masquer tout le texte */
-  .grid-item > *:not(img):not(.badge) {
-    display: none !important;
-  }
-
-  /* Style du badge */
-  .grid-item .badge {
-    position: absolute !important;
-    top: 10px !important;
-    left: 10px !important;
-    z-index: 10 !important;
-    background: white !important;
-    padding: 5px 10px !important;
-    border-radius: 4px !important;
-  }
-
-  /* Cibler les bonnes classes pour les images */
-  .creation-card {
-    width: 100% !important;
-    margin: 0 0 20px 0 !important;
-    padding: 0 !important;
-    background: none !important;
-    box-shadow: none !important;
-  }
-
-  .creation-image {
-    width: 25% !important;
-    height: 40px !important;
-    object-fit: cover !important;
-    border-radius: 0 !important;
-    margin: 0 auto !important;
-    display: block !important;
   }
 
   .creations-grid {
@@ -656,8 +490,8 @@ body {
   }
 
   .creation-image {
-    width: 30% !important;
-    height: 50px !important;
+    width: 20% !important;
+    height: 35px !important;
     object-fit: cover !important;
     border-radius: 0 !important;
     margin: 0 auto !important;
@@ -679,14 +513,5 @@ body {
   .section-description {
     padding: 0 10px !important;
     margin-bottom: 8px !important;
-  }
-
-  /* Supprimer la barre blanche */
-  html, body {
-    overflow-x: hidden !important;
-    position: relative !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
   }
 }
