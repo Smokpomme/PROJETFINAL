@@ -1,9 +1,20 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
   font-family: "CUSTOM";
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  touch-action: manipulation;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* font */
@@ -540,5 +551,83 @@ body {
 
   .creation-info p {
     font-size: 0.75em;
+  }
+
+  .main-content {
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+  }
+
+  .creations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .creation-card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .flip-card {
+    width: 100%;
+    height: 200px;
+  }
+
+  .creation-title {
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+
+  .creation-description {
+    font-size: 0.8em;
+    padding: 5px;
+  }
+
+  .section-title {
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .section-description {
+    font-size: 0.9em;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .share-section p,
+  .share-section h2 {
+    display: none;
+  }
+
+  .share-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .share-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .share-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .share-button .relief-button {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 1em;
   }
 }
