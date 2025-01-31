@@ -232,7 +232,7 @@ body {
 /* Slider */
 .sliderMC {
   position: relative;
-  padding-left: 300px;
+  padding-left: 0px;
   padding-right: 500px;
   padding-top: 30px;
   max-width: 100%;
