@@ -195,19 +195,33 @@ body {
 
 
 /* Style de la description du jeu */
-.game-description {
-  border-radius: 8px;
-  color: #f5f5f5;
-  padding-left: 300px;
-  padding-right: 500px;
-  padding-bottom: 10px;
+.game-description,
+.sliderMC,
+.comparison-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+.game-description img,
+.sliderMC img,
+.comparison-container img,
+.comparison-container table {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .game-description h3 {
   font-size: 3.0em;
   margin-bottom: 15px;
   color: #ffffff; 
-  padding-right: 300px;
+  padding-right: 0;
 }
 
 .game-description p {
@@ -232,8 +246,8 @@ body {
 /* Slider */
 .sliderMC {
   position: relative;
-  padding-left: 0px;
-  padding-right: 500px;
+  padding-left: 0;
+  padding-right: 0;
   padding-top: 30px;
   max-width: 100%;
   margin: auto;
@@ -312,8 +326,8 @@ body {
   font-size: 20px;
 }
 
-.prev { left: 310px; }
-.next { right: 980px; }
+.prev { left: 0; }
+.next { right: 0; }
 
 .prev:hover, .next:hover {
   background-color: rgb(24, 24, 24);
@@ -323,8 +337,8 @@ body {
 
 /* Conteneur principal */
 .comparison-container {
-  padding-left: 300px;
-  padding-right: 500px;
+  padding-left: 0;
+  padding-right: 0;
   max-width: 100%;
   margin: auto;
   text-align: left;
@@ -488,14 +502,14 @@ body {
   }
 
   .game-description {
-    padding-left: 300px;
-    padding-right: 500px;
+    padding-left: 0;
+    padding-right: 0;
     padding-bottom: 10px;
   }
 
   .sliderMC {
-    padding-left: 300px;
-    padding-right: 500px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .creations-grid {
@@ -553,13 +567,13 @@ body {
   }
 
   .game-description {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .sliderMC {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .new-button-class {
@@ -587,8 +601,8 @@ body {
   }
 
   .game-description {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .version-box {
