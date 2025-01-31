@@ -620,144 +620,99 @@ body {
   }
 }
 
-/* Mobile */
 @media screen and (max-width: 480px) {
-  body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+  /* Force game-description modifications */
+  .game-description {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 10px !important;
   }
 
-  .main-content {
-    width: 100%;
-    padding: 0;
-    margin: 0;
+  .game-description h3 {
+    font-size: 1.5em !important;
+    margin-bottom: 10px !important;
   }
 
-  /* Ajustement pour coller les sections à gauche */
-  .sliderMC,
-  .comparison-container {
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .container,
-  .image-container {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-  }
-
-  .main-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  .description-box,
-  .version-selection {
-    width: 90%;
-    left: 5%;
-    transform: translateY(-50%);
-    padding: 10px;
-  }
-
-  .comparison-table {
-    width: 100%;
-    min-width: 300px;
-    border-collapse: collapse;
-  }
-
-  .comparison-table th,
-  .comparison-table td {
-    padding: 5px;
-    font-size: 0.8em;
-    white-space: nowrap;
-  }
-
-  .thumbnail-containerMC {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .thumbnail-containerMC img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-
-  .version-box h3 {
-    font-size: 1.1em;
-  }
-
-  .version-box p, 
-  .version-box ul li {
-    font-size: 0.9em;
-  }
-
-  .new-div-class .new-button-class {
-    padding: 8px 15px;
-    font-size: 14px;
-    margin-left: 5px;
-  }
-
-  .versionLOGO {
-    max-width: 90%;
-  }
-
-  /* Scrollbar invisible */
-  .sliderMC::-webkit-scrollbar,
-  .comparison-container::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  /* Cacher le texte de game-description */
   .game-description p {
     display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  /* Réduction du comparison-container */
+  /* Force comparison-container modifications */
   .comparison-container {
-    width: 90%; /* Largeur réduite */
-    max-width: 100%;
-    padding: 0 5px; /* Padding minimal */
-    margin: 0 auto;
+    width: 90% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 5px !important;
   }
 
   .comparison-title {
-    font-size: 1.2em; /* Réduction de la taille du titre */
-    margin-bottom: 10px;
-    text-align: center;
+    font-size: 1.2em !important;
+    margin-bottom: 10px !important;
+    text-align: center !important;
   }
 
   .comparison-table {
-    width: 100%;
-    font-size: 0.6em; /* Police très petite */
-    border-collapse: collapse;
+    width: 100% !important;
+    font-size: 0.6em !important;
+    border-collapse: collapse !important;
   }
 
   .comparison-table thead th {
-    padding: 5px;
-    font-size: 0.8em;
+    padding: 5px !important;
+    font-size: 0.8em !important;
   }
 
   .comparison-table tbody td {
-    padding: 5px;
-    font-size: 0.7em;
+    padding: 5px !important;
+    font-size: 0.7em !important;
   }
 
   .comparison-container p {
-    display: none; /* Cacher le texte de note en bas de tableau */
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  /* Réduire la taille des colonnes applicable/non applicable */
-  .applicable, 
-  .not-applicable {
-    font-size: 1em;
+  /* Main image and slider adjustments */
+  .main-imageMC {
+    max-width: 60% !important;
+    margin: 0 auto !important;
+  }
+
+  .thumbnail-containerMC {
+    gap: 10px !important;
+  }
+
+  .thumbnail-containerMC img {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .prev, .next {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  .prev {
+    left: calc(50% - 200px) !important;
+  }
+
+  .next {
+    right: calc(50% - 200px) !important;
+  }
+
+  /* Additional specificity for applicable/non-applicable */
+  .comparison-table .applicable,
+  .comparison-table .not-applicable {
+    font-size: 1em !important;
+    text-align: center !important;
   }
 }
 }
