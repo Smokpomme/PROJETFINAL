@@ -186,7 +186,9 @@
   .footer-section:nth-child(2) {
     grid-column: span 1;
   }
-  .logofoot1 {width: 2% !important;}
-  .logofoot2 {width: 2% !important;}
+  .logofoot1 {width: 8% !important;
+      padding: 5px 5px;
+  }
+  .logofoot2 {width: 8% !important;}
 
 }
