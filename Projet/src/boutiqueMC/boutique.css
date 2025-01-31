@@ -268,16 +268,18 @@ body {
 }
 
 .main-slideMC {
-  width: 100%;
-  overflow: hidden;
   display: flex;
-  justify-content: flex-start; 
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
 }
 
 .main-imageMC {
-  width: 100%;
   max-width: 600px;
+  width: 100%;
   object-fit: contain;
+  margin: 0 auto;
   display: block;
 }
 
@@ -316,8 +318,8 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #3C8527;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
   padding: 10px;
   cursor: pointer;
   font-family: "CUSTOM";
@@ -331,8 +333,13 @@ body {
   font-size: 20px;
 }
 
-.prev { left: 100px; }
-.next { right: 100px; }
+.prev { 
+  left: calc(50% - 350px); 
+}
+
+.next { 
+  right: calc(50% - 350px); 
+}
 
 .prev:hover, .next:hover {
   background-color: rgb(24, 24, 24);
@@ -740,4 +747,17 @@ body {
     font-size: 0.9em;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .main-imageMC {
+    max-width: 60%;
+  }
+
+  .prev {
+    left: calc(50% - 200px);
+  }
+
+  .next {
+    right: calc(50% - 200px);
+  }
 }
