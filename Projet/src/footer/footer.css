@@ -186,6 +186,7 @@
   .footer-section:nth-child(2) {
     grid-column: span 1;
   }
-  .logofoot1 {width: 50% !important;}
+  .logofoot1 {width: 2% !important;}
+  .logofoot2 {width: 2% !important;}
 
 }
