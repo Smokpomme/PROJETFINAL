@@ -661,4 +661,63 @@ body {
     word-wrap: break-word;
   }
 }
+
+/* Mobile Responsive - Comparaison et Description */
+@media screen and (max-width: 480px) {
+  /* Cacher COMPLETEMENT le texte de game-description */
+  .game-description p {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Réduction DRASTIQUE du comparison-container */
+  .comparison-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transform: scale(0.8) !important;
+    transform-origin: top center !important;
+  }
+
+  .comparison-title {
+    font-size: 0.9em !important;
+    text-align: center !important;
+    margin-bottom: 5px !important;
+  }
+
+  .comparison-table {
+    width: 100% !important;
+    font-size: 0.5em !important;
+    border-collapse: collapse !important;
+  }
+
+  .comparison-table thead th {
+    padding: 3px !important;
+    font-size: 0.7em !important;
+  }
+
+  .comparison-table tbody td {
+    padding: 3px !important;
+    font-size: 0.6em !important;
+    text-align: center !important;
+  }
+
+  .comparison-container p {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    opacity: 0 !important;
+  }
+
+  .applicable, 
+  .not-applicable {
+    font-size: 0.8em !important;
+    text-align: center !important;
+  }
 }
