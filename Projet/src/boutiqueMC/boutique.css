@@ -620,99 +620,45 @@ body {
   }
 }
 
+/* Ajustements spécifiques pour les écrans de 480px et moins */
 @media screen and (max-width: 480px) {
-  /* Force game-description modifications */
-  .game-description {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 10px !important;
-  }
-
-  .game-description h3 {
-    font-size: 1.5em !important;
-    margin-bottom: 10px !important;
-  }
-
-  .game-description p {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /* Force comparison-container modifications */
-  .comparison-container {
-    width: 90% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    padding: 0 5px !important;
-  }
-
+  /* Réduire la taille du titre pour s'adapter à l'écran */
   .comparison-title {
-    font-size: 1.2em !important;
-    margin-bottom: 10px !important;
-    text-align: center !important;
+    font-size: 1.1em;
+    text-align: center;
   }
 
+  /* Réduire la taille du tableau */
   .comparison-table {
-    width: 100% !important;
-    font-size: 0.6em !important;
-    border-collapse: collapse !important;
+    font-size: 0.8em;
   }
 
-  .comparison-table thead th {
-    padding: 5px !important;
-    font-size: 0.8em !important;
+  /* Réduire l'espacement des cellules du tableau */
+  .comparison-table td {
+    padding: 6px 8px;
   }
 
-  .comparison-table tbody td {
-    padding: 5px !important;
-    font-size: 0.7em !important;
+  /* Ajuster la taille des icônes "✓" et "✗" pour qu'elles soient visibles sur petit écran */
+  .applicable, .not-applicable {
+    font-size: 1.2em;
   }
 
+  /* Réduire la taille du texte sous le tableau */
   .comparison-container p {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    font-size: 0.7em;
+    text-align: center;
   }
 
-  /* Main image and slider adjustments */
-  .main-imageMC {
-    max-width: 60% !important;
-    margin: 0 auto !important;
+  /* Empêcher le tableau de dépasser de l'écran */
+  .comparison-table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
   }
 
-  .thumbnail-containerMC {
-    gap: 10px !important;
-  }
-
-  .thumbnail-containerMC img {
-    width: 70px !important;
-    height: 70px !important;
-  }
-
-  .prev, .next {
-    position: absolute !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-  }
-
-  .prev {
-    left: calc(50% - 200px) !important;
-  }
-
-  .next {
-    right: calc(50% - 200px) !important;
-  }
-
-  /* Additional specificity for applicable/non-applicable */
-  .comparison-table .applicable,
-  .comparison-table .not-applicable {
-    font-size: 1em !important;
-    text-align: center !important;
+  /* Éviter les sauts de ligne pour les cellules du tableau et garantir la lisibilité */
+  .comparison-table td {
+    word-wrap: break-word;
   }
 }
 }
