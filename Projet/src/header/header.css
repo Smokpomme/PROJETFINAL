@@ -360,7 +360,33 @@ button.relief-button:hover {
     display: none; /* Masquer la navigation originale */
   }
 
-  /* Nouveau menu mobile */
+  .logo {
+    width: 100px;
+  }
+
+  .relief-button {
+    font-size: 0.7em;
+    padding: 5px 10px;
+  }
+}
+
+/* Styles pour écrans larges (desktop) */
+@media screen and (min-width: 481px) {
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+
+  .mobile-dropdown {
+    display: none !important;
+  }
+
+  .top-center {
+    display: flex !important;
+  }
+}
+
+/* Styles pour écrans mobiles */
+@media screen and (max-width: 480px) {
   .mobile-menu-toggle {
     display: block;
     position: absolute;
@@ -416,14 +442,5 @@ button.relief-button:hover {
 
   .mobile-dropdown-section a:hover {
     background-color: rgba(255,255,255,0.1);
-  }
-
-  .logo {
-    width: 100px;
-  }
-
-  .relief-button {
-    font-size: 0.7em;
-    padding: 5px 10px;
   }
 }
