@@ -25,7 +25,6 @@ body {
     }
   
   
-  
 
 
 
@@ -396,7 +395,7 @@ body {
 
 .not-applicable {
   font-size: 1.5em;
-
+}
 
 /* Styles des lignes */
 .comparison-table tbody tr:nth-child(odd) {
@@ -620,80 +619,42 @@ body {
   }
 }
 
-/* Ajustements spécifiques pour les écrans de 480px et moins */
-@media screen and (max-width: 480px) {
-  /* Réduire la taille du titre pour s'adapter à l'écran */
-  .comparison-title {
-    font-size: 1.1em;
-    text-align: center;
-  }
 
-  /* Réduire la taille du tableau */
-  .comparison-table {
-    font-size: 0.8em;
-  }
-
-  /* Réduire l'espacement des cellules du tableau */
-  .comparison-table td {
-    padding: 6px 8px;
-  }
-
-  /* Ajuster la taille des icônes "✓" et "✗" pour qu'elles soient visibles sur petit écran */
-  .applicable, .not-applicable {
-    font-size: 1.2em;
-  }
-
-  /* Réduire la taille du texte sous le tableau */
-  .comparison-container p {
-    font-size: 0.7em;
-    text-align: center;
-  }
-
-  /* Empêcher le tableau de dépasser de l'écran */
-  .comparison-table {
-    width: 100%;
-    overflow-x: auto;
-    display: block;
-  }
-
-  /* Éviter les sauts de ligne pour les cellules du tableau et garantir la lisibilité */
-  .comparison-table td {
-    word-wrap: break-word;
-  }
-}
 
 /* Mobile Responsive - Comparaison et Description */
 @media screen and (max-width: 480px) {
   /* Cacher COMPLETEMENT le texte de game-description */
   .game-description p {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    opacity: 0 !important;
-    position: absolute !important;
-    width: 0 !important;
-    overflow: hidden !important;
+    text-align: left !important;  
+    font-size: 0.7em !important;  
+    line-height: 1.3 !important;  
+    color: #555 !important;       
+    padding: 0 10px !important;   
+    margin: 5px 0 !important;     
+    max-width: 100% !important;   
+    word-wrap: break-word !important; 
   }
 
   /* Réduction DRASTIQUE du comparison-container */
   .comparison-container {
-    width: 100% !important;
+    width: 90% !important;
     max-width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    transform: scale(0.8) !important;
-    transform-origin: top center !important;
+    margin: 10px auto !important;
+    padding: 5px !important;
+    transform: scale(0.85) !important;
+    transform-origin: center !important;
+    overflow: hidden !important;
   }
 
   .comparison-title {
-    font-size: 0.9em !important;
+    font-size: 0.8em !important;
     text-align: center !important;
     margin-bottom: 5px !important;
   }
 
   .comparison-table {
     width: 100% !important;
-    font-size: 0.5em !important;
+    font-size: 0.6em !important;
     border-collapse: collapse !important;
   }
 
@@ -703,21 +664,62 @@ body {
   }
 
   .comparison-table tbody td {
-    padding: 3px !important;
+    padding: 2px !important;
     font-size: 0.6em !important;
     text-align: center !important;
   }
 
-  .comparison-container p {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    opacity: 0 !important;
-  }
-
   .applicable, 
   .not-applicable {
-    font-size: 0.8em !important;
+    font-size: 0.7em !important;
     text-align: center !important;
+  }
+
+  /* Masquer le texte supplémentaire */
+  .comparison-container p {
+    display: none !important;
+  }
+}
+
+/* Élimination des barres blanches latérales */
+@media screen and (max-width: 480px) {
+  html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .main-content {
+    width: 100vw !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Forcer le centrage et la largeur maximale pour tous les conteneurs principaux */
+  .game-description,
+  .sliderMC,
+  .comparison-container {
+    width: 100vw !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Réduire les marges et padding globaux */
+  * {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Ajustements spécifiques pour iPhone 13 */
+  @supports (-webkit-touch-callout: none) {
+    body {
+      -webkit-text-size-adjust: 100% !important;
+    }
   }
 }
