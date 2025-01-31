@@ -791,7 +791,7 @@ body {
   }
 
   .flip-card-back p {
-    font-size: 0.7em !important; /* Réduction de la taille du paragraphe */
+    font-size: 0.6em !important; /* Réduction de la taille du paragraphe */
     line-height: 1.3 !important;
   }
 
