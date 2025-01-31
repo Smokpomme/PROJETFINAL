@@ -3,7 +3,11 @@ body {
     font-family: "CUSTOM";
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
   }
   /* font */
   @font-face {
@@ -197,10 +201,9 @@ body {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 0px;
+  padding: 0 !important;
   box-sizing: border-box;
 }
-
 
 .game-description h3 {
   text-align: center;
@@ -209,6 +212,7 @@ body {
   color: #ffffff; 
   padding-right: 0;
   font-size: 2.5em;
+  padding-right: 0 !important;
 }
 
 .game-description p {
@@ -257,8 +261,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .main-imageMC {
@@ -601,14 +606,14 @@ body {
   }
 
   .game-description {
-    padding-left: 300px;
-    padding-right: 500px;
+    padding-left: 0;
+    padding-right: 0;
     padding-bottom: 10px;
   }
 
   .sliderMC {
-    padding-left: 300px;
-    padding-right: 500px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .creations-grid {
@@ -666,13 +671,13 @@ body {
   }
 
   .game-description {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .sliderMC {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .new-button-class {
@@ -700,8 +705,8 @@ body {
   }
 
   .game-description {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .game-description h3 {
