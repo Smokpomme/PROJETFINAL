@@ -203,9 +203,10 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 800px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 100px;
+  box-sizing: border-box;
 }
 
 .game-description img,
@@ -223,14 +224,17 @@ body {
   margin-bottom: 15px;
   color: #ffffff; 
   padding-right: 0;
+  font-size: 2.5em;
 }
 
 .game-description p {
   text-align: center;
   width: 100%;
   color: #e0e0e0;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   font-family: "NOTO";
+  font-size: 1em;
+  line-height: 1.6;
 }
 
 .game-description p span {
@@ -273,8 +277,8 @@ body {
 }
 
 .main-imageMC {
-  max-width: 50%;
-  height: 400;
+  max-width: 35%;
+  height: auto;
   object-fit: contain;
   margin: 0 auto;
   display: block;
@@ -708,7 +712,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .main-imageMC {
-    max-width: 90%;
+    max-width: 60%;
   }
 
   .thumbnail-containerMC {
@@ -728,11 +732,11 @@ body {
 @media screen and (max-width: 480px) {
   .game-description {
     width: 90%;
-    padding: 0 10px;
+    padding: 0 20px;
   }
 
   .game-description h3 {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
 
   .game-description p {
