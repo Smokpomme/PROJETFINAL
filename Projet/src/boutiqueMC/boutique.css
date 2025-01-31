@@ -232,7 +232,7 @@ body {
   margin-bottom: 20px;
   font-family: "NOTO";
   font-size: 1em;
-  line-height: 1.6;
+  line-height: 2.0;
 }
 
 .game-description p span {
@@ -277,7 +277,7 @@ body {
 .main-imageMC {
   width: 100%;
   max-width: 600px;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
@@ -331,8 +331,8 @@ body {
   font-size: 20px;
 }
 
-.prev { left: 0; }
-.next { right: 0; }
+.prev { left: 100px; }
+.next { right: 100px; }
 
 .prev:hover, .next:hover {
   background-color: rgb(24, 24, 24);
