@@ -612,32 +612,22 @@ body {
     overflow-x: hidden;
   }
 
-  .sliderMC {
+  .sliderMC,
+  .game-description,
+  .comparison-container {
     width: 100%;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-  }
-
-  .game-description {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
     box-sizing: border-box;
+    overflow-x: auto;
   }
 
-  .container {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-  }
-
+  .container,
   .image-container {
     width: 100%;
     height: auto;
+    padding: 0;
+    margin: 0;
     overflow: hidden;
   }
 
@@ -647,71 +637,13 @@ body {
     object-fit: cover;
   }
 
-  .description-box {
+  .description-box,
+  .version-selection {
     width: 90%;
     left: 5%;
     transform: translateY(-50%);
     padding: 10px;
-  }
-
-  .version-selection {
-    width: 90%;
-    left: 5%;
-    margin-right: 0;
-    padding: 10px;
     box-sizing: border-box;
-  }
-
-  .comparison-container {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    overflow-x: auto;
-  }
-
-  .comparison-table {
-    width: 100%;
-    min-width: 300px;
-    border-collapse: collapse;
-  }
-
-  .comparison-table th, 
-  .comparison-table td {
-    padding: 5px;
-    font-size: 0.8em;
-  }
-
-  .thumbnail-containerMC {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .thumbnail-containerMC img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-
-  .sliderMC,
-  .comparison-container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .sliderMC,
-  .comparison-container {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
-  }
-
-  .sliderMC img,
-  .comparison-container table {
-    max-width: 100%;
-    width: 100%;
   }
 
   .comparison-table {
@@ -725,9 +657,40 @@ body {
   .comparison-table td {
     padding: 5px;
     font-size: 0.8em;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
   }
 
+  .thumbnail-containerMC {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .thumbnail-containerMC img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .version-box h3 {
+    font-size: 1.1em;
+  }
+
+  .version-box p, 
+  .version-box ul li {
+    font-size: 0.9em;
+  }
+
+  .new-div-class .new-button-class {
+    padding: 8px 15px;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+
+  .versionLOGO {
+    max-width: 90%;
+  }
+
+  /* Scrollbar invisible */
   .sliderMC::-webkit-scrollbar,
   .comparison-container::-webkit-scrollbar {
     width: 0;
@@ -744,5 +707,4 @@ body {
 .game-description {
   padding-left: 10px !important;
   padding-right: 10px !important;
-}
 }
