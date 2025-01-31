@@ -142,44 +142,59 @@
 
 /* Mobile */
 @media screen and (max-width: 480px) {
-  .footer {
-    padding: 25px 0;
-  }
-
   .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
     padding: 0 15px;
   }
 
   .footer-section {
-    margin-bottom: 20px;
-    min-width: 100%;
+    margin-bottom: 10px;
+    min-width: auto;
   }
 
   .footer-section h4 {
-    font-size: 15px;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 5px;
   }
 
   .footer-section a {
-    font-size: 13px;
-    margin-bottom: 8px;
+    font-size: 12px;
+    margin-bottom: 6px;
+    padding: 3px 0;
+    transition: color 0.3s ease;
+  }
+
+  .footer-section a:hover {
+    color: #31ad00;
+    transform: translateX(5px);
   }
 
   .footer-bottom {
-    margin-top: 20px;
-    font-size: 11px;
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    font-size: 10px;
   }
 
-  .footer-links a {
-    font-size: 11px;
-    margin: 0 8px;
-    display: inline-block;
+  /* Répartition des sections */
+  .footer-section:nth-child(1),
+  .footer-section:nth-child(2) {
+    grid-column: span 1;
   }
 
-  .logofoot1 {
-    width: 25px;
+  /* Groupement des sections */
+  .footer-section:nth-child(1) h4,
+  .footer-section:nth-child(3) h4 {
+    color: #4CAF50; /* Jeux et Découvrir */
   }
 
-  .logofoot2 {
-    width: 100px;
+  .footer-section:nth-child(2) h4,
+  .footer-section:nth-child(4) h4 {
+    color: #2196F3; /* Boutique et Support */
   }
 }
