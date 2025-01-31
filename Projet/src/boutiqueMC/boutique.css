@@ -602,32 +602,27 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    max-width: 100%;
   }
 
   .main-content {
     width: 100%;
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
   }
 
+  /* Ajustement pour coller les sections à gauche */
   .sliderMC,
-  .game-description,
   .comparison-container {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
     width: 100%;
-    padding: 0 !important;
-    margin: 0 !important;
     box-sizing: border-box;
-    overflow-x: auto;
   }
 
   .container,
   .image-container {
     width: 100%;
     height: auto;
-    padding: 0;
-    margin: 0;
     overflow: hidden;
   }
 
@@ -643,14 +638,12 @@ body {
     left: 5%;
     transform: translateY(-50%);
     padding: 10px;
-    box-sizing: border-box;
   }
 
   .comparison-table {
     width: 100%;
     min-width: 300px;
     border-collapse: collapse;
-    overflow-x: auto;
   }
 
   .comparison-table th,
@@ -693,18 +686,7 @@ body {
   /* Scrollbar invisible */
   .sliderMC::-webkit-scrollbar,
   .comparison-container::-webkit-scrollbar {
-    width: 0;
-    background: transparent;
+    display: none;
   }
-}
-
-.sliderMC,
-.comparison-container {
-  max-width: 100%;
-  overflow-x: auto;
-}
-
-.game-description {
-  padding-left: 10px !important;
-  padding-right: 10px !important;
+  }
 }
