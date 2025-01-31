@@ -1,16 +1,9 @@
 body {
-    margin: 0;
-    font-family: "CUSTOM";
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow-x: hidden !important;
-    width: 100%;
-    padding: 0;
-    margin: 0 !important;
-    box-sizing: border-box;
-    max-width: 100% !important;
+  margin: 0;
+  font-family: "CUSTOM";
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
   }
   /* font */
   @font-face {
