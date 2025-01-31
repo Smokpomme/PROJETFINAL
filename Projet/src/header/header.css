@@ -353,13 +353,42 @@ button.relief-button:hover {
 
   .top-center {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0 5px;
+    gap: 3px; /* Très petit espace */
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 
   .top {
-    font-size: 9px;
+    font-size: 10px;
+    padding: 2px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .dropdown {
+    display: flex;
+    align-items: center;
+  }
+
+  .dropdown .top {
+    cursor: pointer;
+  }
+
+  .dropdown .arrow {
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 3px solid white;
+    margin-left: 2px;
+    display: inline-block;
+  }
+
+  .top {
+    font-size: 10px;
     padding: 2px;
   }
 

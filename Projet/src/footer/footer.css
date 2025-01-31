@@ -187,14 +187,4 @@
     grid-column: span 1;
   }
 
-  /* Groupement des sections */
-  .footer-section:nth-child(1) h4,
-  .footer-section:nth-child(3) h4 {
-    color: #4CAF50; /* Jeux et Découvrir */
-  }
-
-  .footer-section:nth-child(2) h4,
-  .footer-section:nth-child(4) h4 {
-    color: #2196F3; /* Boutique et Support */
-  }
 }
