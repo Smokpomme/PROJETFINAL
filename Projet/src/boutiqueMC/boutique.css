@@ -598,11 +598,11 @@ body {
 
 /* Mobile */
 @media screen and (max-width: 480px) {
-  body {
-    overflow-x: hidden;
-    width: 100%;
+  body, html {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    max-width: 100%;
   }
 
   .main-content {
@@ -620,8 +620,10 @@ body {
   }
 
   .game-description {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     width: 100%;
     box-sizing: border-box;
   }
@@ -662,8 +664,8 @@ body {
 
   .comparison-container {
     width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
     overflow-x: auto;
   }
 
@@ -689,5 +691,57 @@ body {
     height: auto;
     margin-bottom: 10px;
   }
+
+  .sliderMC,
+  .comparison-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .sliderMC,
+  .comparison-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+  }
+
+  .sliderMC img,
+  .comparison-container table {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .comparison-table {
+    width: 100%;
+    min-width: 300px;
+    border-collapse: collapse;
+    overflow-x: auto;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 5px;
+    font-size: 0.8em;
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+
+  .sliderMC::-webkit-scrollbar,
+  .comparison-container::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
 }
+
+.sliderMC,
+.comparison-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.game-description {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
 }
