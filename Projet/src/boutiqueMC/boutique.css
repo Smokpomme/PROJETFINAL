@@ -716,7 +716,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .comparison-container {
-    width: 95%;
+    width: 70%;
     max-width: 100%;
     padding: 0 10px;
   }
@@ -752,7 +752,7 @@ body {
   }
 
   .game-description p {
-    display: none; /* Masquer le texte sur mobile */
+    display: none !important;
   }
 
   .main-imageMC {
