@@ -751,6 +751,59 @@ body {
   }
 
 }
+
+/* Responsive Mobile - Grille de créations */
+@media screen and (max-width: 480px) {
+  .community-creations {
+    padding: 10px;
+  }
+
+  .creations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .creation-card {
+    width: 100% !important;
+    height: 200px !important; /* Hauteur fixe pour uniformité */
+    margin-bottom: 10px !important;
+  }
+
+  .creation-title {
+    font-size: 1em !important; /* Réduction de la taille du titre */
+    text-align: center !important;
+    padding: 5px !important;
+  }
+
+  .flip-card-back .creation-info {
+    padding: 5px !important;
+  }
+
+  .flip-card-back h3 {
+    font-size: 1em !important; /* Réduction de la taille du h3 */
+    margin-bottom: 5px !important;
+  }
+
+  .flip-card-back p {
+    font-size: 0.7em !important; /* Réduction de la taille du paragraphe */
+    line-height: 1.3 !important;
+  }
+
+  /* Pour la carte avec image */
+  .creation-card .creation-image {
+    max-height: 120px !important;
+    object-fit: cover !important;
+  }
+
+  .creation-overlay {
+    font-size: 0.8em !important;
+    padding: 5px !important;
+  }
+}
+
   /* Ajustements spécifiques pour iPhone 13 */
   @supports (-webkit-touch-callout: none) {
     body {
