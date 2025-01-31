@@ -209,8 +209,6 @@ body {
   box-sizing: border-box;
 }
 
-.game-description img,
-.sliderMC img,
 .comparison-container img,
 .comparison-container table {
   max-width: 100%;
