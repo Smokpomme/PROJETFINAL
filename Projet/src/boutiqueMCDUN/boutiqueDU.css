@@ -187,28 +187,45 @@ body {
     transform: translateY(2px);
 }
 
-  /* Style de la description du jeu */
-.game-description {
-  border-radius: 8px;
-  color: #f5f5f5;
-  padding-left: 300px;
-  padding-right: 500px;
-  padding-bottom: 10px;
+/* Style de la description du jeu */
+.game-description,
+.sliderMC,
+.comparison-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+.comparison-container img,
+.comparison-container table {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .game-description h3 {
-  font-size: 3.0em;
+  text-align: center;
+  width: 100%;
   margin-bottom: 15px;
   color: #ffffff; 
-  padding-right: 300px;
+  padding-right: 0;
+  font-size: 2.5em;
 }
 
 .game-description p {
-  font-size: 0.8em;
-  line-height: 1.6;
+  text-align: center;
+  width: 100%;
   color: #e0e0e0;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   font-family: "NOTO";
+  font-size: 1em;
+  line-height: 2.0;
 }
 
 .game-description p span {
@@ -225,8 +242,8 @@ body {
 /* Slider */
 .sliderMC {
   position: relative;
-  padding-left: 300px;
-  padding-right: 500px;
+  padding-left: 0;
+  padding-right: 0;
   padding-top: 30px;
   max-width: 100%;
   margin: auto;
@@ -244,16 +261,18 @@ body {
 }
 
 .main-slideMC {
-  width: 100%;
-  overflow: hidden;
   display: flex;
-  justify-content: flex-start; 
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
 }
 
 .main-imageMC {
-  width: 100%;
   max-width: 600px;
-  object-fit: cover;
+  width: 100%;
+  object-fit: contain;
+  margin: 0 auto;
   display: block;
 }
 
@@ -267,7 +286,9 @@ body {
 /* Miniatures */
 .thumbnail-containerMC {
   display: flex;
-  justify-content: flex-start; 
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
   margin-top: 10px;
 }
 
@@ -290,8 +311,8 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #3C8527;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
   padding: 10px;
   cursor: pointer;
   font-family: "CUSTOM";
@@ -305,15 +326,20 @@ body {
   font-size: 20px;
 }
 
-.prev { left: 310px; }
-.next { right: 980px; }
+.prev { 
+  left: calc(50% - 350px); 
+}
+
+.next { 
+  right: calc(50% - 350px); 
+}
 
 .prev:hover, .next:hover {
   background-color: rgb(24, 24, 24);
   box-shadow: 4px 4px 0 #000000;
   color: #5FCA42;
 }
-
+  
 /* Container Styles */
 .color-background1 {
     background-color: #3d0029; 
@@ -694,42 +720,47 @@ body {
   }
 }
 
-/* Mobile */
+/* Mobile Responsive - Comparaison et Description */
 @media screen and (max-width: 480px) {
-  .description-box, .version-selection {
-    width: 95%;
-    padding: 15px;
+  /* Cacher COMPLETEMENT le texte de game-description */
+  .game-description p {
+    text-align: left !important;  
+    font-size: 0.7em !important;  
+    line-height: 1.3 !important;  
+    color: #d3d3d3 !important;       
+    padding: 3px 10px !important;   
+    margin: 5px 0 !important;     
+    max-width: 100% !important;   
+    word-wrap: break-word !important; 
   }
 
-  .image-container {
-    height: 40vh;
+  .applicable, 
+  .not-applicable {
+    font-size: 0.8em !important;
+    text-align: center !important;
   }
 
-  .game-description h3 {
-    font-size: 1.8em;
+
+  html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  .version-box h3 {
-    font-size: 1.1em;
+  .main-content {
+    width: 100vw !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
   }
 
-  .version-box p, .version-box ul li {
-    font-size: 0.9em;
-  }
-
-  .new-div-class .new-button-class {
-    padding: 8px 15px;
-    font-size: 14px;
-    margin-left: 5px;
-  }
-
-  .versionLOGO {
-    max-width: 90%;
-  }
-
-  .thumbnail-containerMC {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
 }
+  /* Ajustements spécifiques pour iPhone 13 */
+  @supports (-webkit-touch-callout: none) {
+    body {
+      -webkit-text-size-adjust: 100% !important;
+    }
+  }
+
