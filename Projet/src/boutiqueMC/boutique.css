@@ -715,65 +715,49 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-  .comparison-container {
-    width: 70%;
-    max-width: 100%;
-    padding: 0 10px;
-  }
-
-  .comparison-table {
-    font-size: 0.7em;
-    width: 100%;
-  }
-
-  .comparison-table thead th {
-    padding: 8px 5px;
-    font-size: 0.9em;
-  }
-
-  .comparison-table tbody td {
-    padding: 8px 5px;
-    font-size: 0.8em;
-  }
-
-  .comparison-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-
-  .game-description {
-    width: 100%;
-    padding: 0 15px;
-  }
-
-  .game-description h3 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-  }
-
+  /* Cacher le texte de game-description */
   .game-description p {
     display: none !important;
   }
 
-  .main-imageMC {
-    max-width: 60%;
+  /* Réduction du comparison-container */
+  .comparison-container {
+    width: 90%; /* Largeur réduite */
+    max-width: 100%;
+    padding: 0 5px; /* Padding minimal */
+    margin: 0 auto;
   }
 
-  .thumbnail-containerMC {
-    gap: 10px;
+  .comparison-title {
+    font-size: 1.2em; /* Réduction de la taille du titre */
+    margin-bottom: 10px;
+    text-align: center;
   }
 
-  .thumbnail-containerMC img {
-    width: 70px;
-    height: 70px;
+  .comparison-table {
+    width: 100%;
+    font-size: 0.6em; /* Police très petite */
+    border-collapse: collapse;
   }
 
-  .prev {
-    left: calc(50% - 200px);
+  .comparison-table thead th {
+    padding: 5px;
+    font-size: 0.8em;
   }
 
-  .next {
-    right: calc(50% - 200px);
+  .comparison-table tbody td {
+    padding: 5px;
+    font-size: 0.7em;
+  }
+
+  .comparison-container p {
+    display: none; /* Cacher le texte de note en bas de tableau */
+  }
+
+  /* Réduire la taille des colonnes applicable/non applicable */
+  .applicable, 
+  .not-applicable {
+    font-size: 1em;
   }
 }
 }
