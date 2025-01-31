@@ -629,7 +629,7 @@ body {
     font-size: 0.7em !important;  
     line-height: 1.3 !important;  
     color: #d3d3d3 !important;       
-    padding: 0 10px !important;   
+    padding: 3px 10px !important;   
     margin: 5px 0 !important;     
     max-width: 100% !important;   
     word-wrap: break-word !important; 
@@ -637,7 +637,7 @@ body {
 
   /* Réduction DRASTIQUE du comparison-container */
   .comparison-container {
-    width: 90% !important;
+    width: 100% !important;
     max-width: 100% !important;
     margin: 10px auto !important;
     padding: 5px !important;
@@ -647,31 +647,31 @@ body {
   }
 
   .comparison-title {
-    font-size: 0.8em !important;
+    font-size: 1em !important;
     text-align: center !important;
     margin-bottom: 5px !important;
   }
 
   .comparison-table {
     width: 100% !important;
-    font-size: 0.6em !important;
+    font-size: 0.8em !important;
     border-collapse: collapse !important;
   }
 
   .comparison-table thead th {
     padding: 3px !important;
-    font-size: 0.7em !important;
+    font-size: 0.8em !important;
   }
 
   .comparison-table tbody td {
     padding: 2px !important;
-    font-size: 0.6em !important;
+    font-size: 0.8em !important;
     text-align: center !important;
   }
 
   .applicable, 
   .not-applicable {
-    font-size: 0.7em !important;
+    font-size: 0.8em !important;
     text-align: center !important;
   }
 
