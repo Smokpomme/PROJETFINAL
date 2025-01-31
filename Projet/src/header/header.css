@@ -398,6 +398,7 @@ button.relief-button:hover {
     font-size: 20px;
     cursor: pointer;
     z-index: 1000;
+    padding-top: 20px;
   }
 
   .mobile-dropdown {
