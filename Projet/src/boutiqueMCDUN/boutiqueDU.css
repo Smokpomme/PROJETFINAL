@@ -797,7 +797,7 @@ body {
 
   /* Pour la carte avec image */
   .creation-card .creation-image {
-    max-height: 120px !important;
+    max-height: 200px !important;
     object-fit: cover !important;
   }
 
