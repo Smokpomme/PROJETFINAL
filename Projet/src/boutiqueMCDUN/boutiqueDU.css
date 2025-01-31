@@ -750,10 +750,6 @@ body {
     overflow-x: hidden !important;
   }
 
-}
-
-/* Responsive Mobile - Grille de créations */
-@media screen and (max-width: 480px) {
   .community-creations {
     padding: 10px;
   }
@@ -776,6 +772,13 @@ body {
     font-size: 1em !important; /* Réduction de la taille du titre */
     text-align: center !important;
     padding: 5px !important;
+  }
+
+  .flip-card {
+    width: 100% !important;
+    height: 180px !important; /* Réduction de la hauteur */
+    perspective: 500px !important;
+    transform-style: preserve-3d !important;
   }
 
   .flip-card-back .creation-info {
@@ -803,6 +806,7 @@ body {
     padding: 5px !important;
   }
 }
+
 
   /* Ajustements spécifiques pour iPhone 13 */
   @supports (-webkit-touch-callout: none) {
