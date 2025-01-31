@@ -346,52 +346,84 @@ button.relief-button:hover {
 /* Mobile */
 @media screen and (max-width: 480px) {
   .header {
-    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
+    padding: 5px 10px;
+  }
+
+  .top-left, .top-right {
+    flex: 1;
   }
 
   .top-center {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 5px;
+    display: none; /* Masquer la navigation originale */
   }
 
-  .top {
-    font-size: 10px;
-    padding: 2px;
-  }
-
-  .dropdown {
-    position: relative;
-  }
-
-  /* Correction des dropdowns de Mojang et À Propos De Nous */
-  .dropdown-content {
+  /* Nouveau menu mobile */
+  .mobile-menu-toggle {
+    display: block;
     position: absolute;
-    top: 100%;
-    left: 50%; /* Centrage horizontal */
-    transform: translateX(-50%); /* Décale pour centrer */
-    width: max-content; /* Ajusté au texte */
-    min-width: 180px;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 999;
-    display: none;
-    padding: 10px;
-    text-align: left;
-    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
   }
 
-  .dropdown:hover .dropdown-content {
+  .mobile-dropdown {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 2000;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .mobile-dropdown.active {
     display: block;
   }
 
-  /* Ajustement du bouton Connexion */
-  .top-right .relief-button {
+  .mobile-dropdown-section {
+    margin-bottom: 20px;
+  }
+
+  .mobile-dropdown-section h4 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 5px;
+  }
+
+  .mobile-dropdown-section a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 0.8em;
+    transition: background-color 0.3s;
+  }
+
+  .mobile-dropdown-section a:hover {
+    background-color: rgba(255,255,255,0.1);
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .relief-button {
+    font-size: 0.7em;
     padding: 5px 10px;
-    font-size: 12px;
-    width: auto;
-    height: auto;
   }
 }

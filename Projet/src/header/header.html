@@ -5,6 +5,12 @@
             <img class="logo" src="pic/mc.svg" alt="Start">
         </a>
     </div>
+
+    <!-- Bouton menu mobile -->
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        ☰
+    </button>
+
     <div class="top-center">
         <div class="dropdown">
             <a id="mojang" class="top" href="#">Mojang <span class="arrow"></span> </a>
@@ -46,9 +52,37 @@
 
     <div class="top-right">
         <button class="relief-button" id="connexionButton" onclick="showCONPopup()">Connexion</button> 
-      </div>
-      
-      <!-- Popup -->
+    </div>
+    
+    <!-- Menu déroulant mobile -->
+    <div class="mobile-dropdown">
+        <div class="mobile-dropdown-section">
+            <h4>Mojang</h4>
+            <a href="/index.html">Minecraft</a>
+            <a href="/Projet/src/minecraftd/minecraftdun.html">Minecraft Dungeons</a>
+            <a href="/Projet/src/communaute/commu.html">Communauté</a>
+            <a href="/Projet/src/commudev/commudev.html">Communauté de développeurs</a>
+        </div>
+
+        <div class="mobile-dropdown-section">
+            <h4>Boutique</h4>
+            <a href="/Projet/src/boutiqueMC/boutique.html">Minecraft</a>
+            <a href="/Projet/src/boutiqueMCDUN/boutiqueDU.html">Minecraft Dungeons</a>
+        </div>
+
+        <div class="mobile-dropdown-section">
+            <h4>Actualités</h4>
+            <a href="/Projet/src/actu/actu.html">Dernières Actualités</a>
+        </div>
+
+        <div class="mobile-dropdown-section">
+            <h4>À Propos</h4>
+            <a href="/Projet/src/conseil/conseil.html">Conseils</a>
+            <a href="/Projet/src/vie/vie.html">Carrières chez Mojang</a>
+        </div>
+    </div>
+
+    <!-- Popup -->
     <div id="CONpopup" class="CONpopup">
         <div class="CONpopup-content">
             <span class="CONpopup-close" onclick="closeCONPopup()">&times;</span>
@@ -59,5 +93,3 @@
     <script src="/Projet/src/header/header.js"></script>
 
 </div>
-
-
