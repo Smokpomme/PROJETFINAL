@@ -1,7 +1,21 @@
 // chatbot.ts
+// Suppression des imports
+// Déclaration globale pour éviter les erreurs de typage
+declare global {
+  interface Window {
+    initializeChatbot: () => void;
+    handleChoice: (choice: string) => void;
+    showCategoryDetails: (category: string) => void;
+    showCraftDetails: (categoryOrCraftKey: string, craftKey?: string) => void;
+    handleSubChoice: (subChoice: string) => void;
+  }
+}
+
+// Importation des types depuis crafts.d.ts
 import { Donnees, Element, Categories } from './crafts';
 
 let crafts: Donnees = {}; // Variable globale pour stocker les données JSON
+let isFirstVisit = true; // Variable pour suivre si c'est la première visite
 
 // Charger le fichier JSON
 function loadCraftsData(): void {
@@ -174,8 +188,6 @@ function appendMessage(sender: 'user' | 'bot', message: string): void {
 // CHOIX MULTIPLES
 
 // Initialisation des choix principaux
-let isFirstVisit = true; // Variable pour suivre si c'est la première visite
-
 function initializeChatbot(): void {
   console.log('Initializing chatbot');
   
@@ -335,13 +347,17 @@ function handleOverworldQuestion(question: string): void {
 }
 
 // Initialisation du chatbot lors du chargement de la page
-document.addEventListener('DOMContentLoaded', initializeChatbot);
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM fully loaded and parsed');
+  initializeChatbot();
+});
+
+if (typeof window !== 'undefined') {
+  window.initializeChatbot = initializeChatbot;
+  window.handleChoice = handleChoice;
+  window.showCategoryDetails = showCategoryDetails;
+  window.showCraftDetails = showCraftDetails;
+  window.handleSubChoice = handleSubChoice;
+}
 
 console.log('Chatbot script loaded');
-
-// Exports globaux pour la compatibilité
-(window as any).initializeChatbot = initializeChatbot;
-(window as any).handleChoice = handleChoice;
-(window as any).showCategoryDetails = showCategoryDetails;
-(window as any).showCraftDetails = showCraftDetails;
-(window as any).handleSubChoice = handleSubChoice;
