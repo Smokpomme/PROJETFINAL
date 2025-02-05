@@ -1,24 +1,10 @@
 // chatbot.ts
+// Suppression des imports
 // Déclaration globale pour éviter les erreurs de typage
-declare global {
-  interface Window {
-    initializeChatbot: () => void;
-    handleChoice: (choice: string) => void;
-    showCategoryDetails: (category: string) => void;
-    showCraftDetails: (categoryOrCraftKey: string, craftKey?: string) => void;
-    handleSubChoice: (subChoice: string) => void;
-    toggleChatbot: () => void;
-    toggleChoicesMenu: () => void;
-    handleUserInput: () => void;
-  }
-}
-
-// Importation des types depuis crafts.d.ts
-import { Donnees, Element, Categories } from './crafts';
 
 (function(window) {
   // Variable globale pour stocker les données JSON
-  const crafts: Donnees = {}; 
+  const crafts: any = {}; 
   let isFirstVisit = true; // Variable pour suivre si c'est la première visite
 
   // Charger le fichier JSON
@@ -30,16 +16,13 @@ import { Donnees, Element, Categories } from './crafts';
         }
         return response.json();
       })
-      .then((data: Donnees) => {
+      .then((data: any) => {
         Object.assign(crafts, data); 
         console.log("Données JSON chargées :", crafts);
       })
       .catch(error => console.error("Erreur :", error));
   }
 
-  // Charger les données au démarrage
-  document.addEventListener('DOMContentLoaded', loadCraftsData);
-  
   // Fonction pour basculer le chatbot
   function toggleChatbot(): void {
     const chatbotIcon = document.getElementById('chatbotIcon') as HTMLElement;
@@ -67,7 +50,7 @@ import { Donnees, Element, Categories } from './crafts';
       // Check if crafts is not empty
       if (Object.keys(crafts).length > 0) {
         for (let category in crafts) {
-          const categoryData = crafts[category as keyof Donnees];
+          const categoryData = crafts[category as keyof any];
           if (categoryData && 
               categoryData[userMessage] !== undefined) {
             showCraftDetails(category, userMessage);
@@ -95,12 +78,12 @@ import { Donnees, Element, Categories } from './crafts';
 
   // Fonction pour afficher les détails d'un craft spécifique
   function showCraftDetails(categoryOrCraftKey: string, craftKey?: string): void {
-    let foundCraft: Element | undefined;
+    let foundCraft: any | undefined;
 
     // If two parameters are provided, search in the specific category
     if (craftKey) {
       // Validate that the category exists and is not undefined
-      const category = (Object.keys(crafts) as Array<keyof Donnees>)
+      const category = (Object.keys(crafts) as Array<keyof any>)
         .find(key => key === categoryOrCraftKey);
       
       if (category) {
@@ -123,7 +106,7 @@ import { Donnees, Element, Categories } from './crafts';
       const craftKeyToFind = categoryOrCraftKey;
       
       // Use type-safe method to find category
-      const foundCategory = (Object.values(crafts) as Categories[])
+      const foundCategory = (Object.values(crafts) as any[])
         .find(category => category && category[craftKeyToFind] !== undefined);
 
       if (foundCategory) {
@@ -150,10 +133,10 @@ import { Donnees, Element, Categories } from './crafts';
 
   // Affiche les détails d'une catégorie
   function showCategoryDetails(category: string): void {
-    const categoryData = crafts[category as keyof Donnees];
+    const categoryData = crafts[category as keyof any];
     if (categoryData) {
       const items = Object.keys(categoryData).map(craftKey => {
-        const craft = categoryData[craftKey] as Element;
+        const craft = categoryData[craftKey] as any;
         return `
           <div class="craft-item">
             <button onclick="showCraftDetails('${category}', '${craftKey}')">
@@ -351,23 +334,22 @@ import { Donnees, Element, Categories } from './crafts';
     }
   }
 
+  // Exportation globale
+  (window as any).toggleChatbot = toggleChatbot;
+  (window as any).initializeChatbot = initializeChatbot;
+  (window as any).handleChoice = handleChoice;
+  (window as any).showCategoryDetails = showCategoryDetails;
+  (window as any).showCraftDetails = showCraftDetails;
+  (window as any).handleSubChoice = handleSubChoice;
+  (window as any).toggleChoicesMenu = toggleChoicesMenu;
+  (window as any).handleUserInput = handleUserInput;
+
   // Initialisation du chatbot lors du chargement de la page
   document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded and parsed');
     loadCraftsData();
     initializeChatbot();
   });
-
-  if (typeof window !== 'undefined') {
-    window.toggleChatbot = toggleChatbot;
-    window.initializeChatbot = initializeChatbot;
-    window.handleChoice = handleChoice;
-    window.showCategoryDetails = showCategoryDetails;
-    window.showCraftDetails = showCraftDetails;
-    window.handleSubChoice = handleSubChoice;
-    window.toggleChoicesMenu = toggleChoicesMenu;
-    window.handleUserInput = handleUserInput;
-  }
 
   console.log('Chatbot script loaded');
 })(window);
