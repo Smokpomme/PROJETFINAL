@@ -151,11 +151,9 @@
       }).join('');
 
       appendMessage('bot', `<p>Voici tous les éléments de la catégorie <strong>${category}</strong> :</p><div>${items}</div>`);
-      
-      // Retour automatique aux choix principaux après un court délai
-      setTimeout(() => {
-        initializeChatbot();
-      }, 5000); // 5 secondes
+
+      initializeChatbot();
+
     } else {
       appendMessage('bot', `<p>Désolé, cette catégorie est introuvable.</p>`);
     }
