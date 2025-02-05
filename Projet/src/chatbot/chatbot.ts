@@ -177,16 +177,21 @@ function appendMessage(sender: 'user' | 'bot', message: string): void {
 let isFirstVisit = true; // Variable pour suivre si c'est la première visite
 
 function initializeChatbot(): void {
+  console.log('Initializing chatbot');
+  
   if (isFirstVisit) {
+    console.log('First visit, adding initial message');
     appendMessage('bot', "<p>Voici quelques thèmes spécifiques à Minecraft. Ces sujets pourront t'aider, alors clique sur ce qui t'intéresse pour en savoir plus !</p>");
-    isFirstVisit = false; // Assurez-vous que le message ne s'affiche qu'une seule fois
+    isFirstVisit = false;
   }
+  
+  console.log('Showing initial choices');
   showChoices([
     { text: "Crafts", onclick: "handleChoice('crafts')" },
     { text: "Avez-vous des questions concernant le jeu ?", onclick: "handleChoice('questions')" },
   ]);
 }
-  
+
 // Affiche ou masque le menu rétractable
 function toggleChoicesMenu(): void {
   const chatbotChoices = document.getElementById('chatbotChoices') as HTMLElement;
@@ -202,19 +207,30 @@ function toggleChoicesMenu(): void {
   
 // Affiche les choix dans le menu rétractable
 function showChoices(choices: { text: string, onclick: string }[]): void {
-  const chatbotChoices = document.getElementById('chatbotChoices') as HTMLElement;
+  console.log('Showing choices:', choices);
+  const chatbotChoices = document.getElementById('chatbotChoices');
+  
+  if (!chatbotChoices) {
+    console.error('Chatbot choices element not found');
+    return;
+  }
+  
   chatbotChoices.innerHTML = ''; // Réinitialise le contenu du menu
   
   choices.forEach(choice => {
     const button = document.createElement('button');
     button.textContent = choice.text;
     button.setAttribute('onclick', choice.onclick);
+    console.log('Adding button:', button);
     chatbotChoices.appendChild(button);
   });
   
-  const toggleSpan = document.getElementById('toggleChoices') as HTMLElement;
-  chatbotChoices.style.display = 'block'; // Affiche le menu
-  toggleSpan.textContent = "▲"; // Ajuste le texte du bouton
+  const toggleSpan = document.getElementById('toggleChoices');
+  if (toggleSpan) {
+    toggleSpan.textContent = "▲";
+  }
+  
+  chatbotChoices.style.display = 'block';
 }
   
 // Masque le menu rétractable
@@ -320,3 +336,12 @@ function handleOverworldQuestion(question: string): void {
 
 // Initialisation du chatbot lors du chargement de la page
 document.addEventListener('DOMContentLoaded', initializeChatbot);
+
+console.log('Chatbot script loaded');
+
+// Exports globaux pour la compatibilité
+(window as any).initializeChatbot = initializeChatbot;
+(window as any).handleChoice = handleChoice;
+(window as any).showCategoryDetails = showCategoryDetails;
+(window as any).showCraftDetails = showCraftDetails;
+(window as any).handleSubChoice = handleSubChoice;

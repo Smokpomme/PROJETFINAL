@@ -157,10 +157,13 @@ function appendMessage(sender, message) {
 // Initialisation des choix principaux
 let isFirstVisit = true; // Variable pour suivre si c'est la première visite
 function initializeChatbot() {
+    console.log('Initializing chatbot');
     if (isFirstVisit) {
+        console.log('First visit, adding initial message');
         appendMessage('bot', "<p>Voici quelques thèmes spécifiques à Minecraft. Ces sujets pourront t'aider, alors clique sur ce qui t'intéresse pour en savoir plus !</p>");
-        isFirstVisit = false; // Assurez-vous que le message ne s'affiche qu'une seule fois
+        isFirstVisit = false;
     }
+    console.log('Showing initial choices');
     showChoices([
         { text: "Crafts", onclick: "handleChoice('crafts')" },
         { text: "Avez-vous des questions concernant le jeu ?", onclick: "handleChoice('questions')" },
@@ -181,17 +184,25 @@ function toggleChoicesMenu() {
 }
 // Affiche les choix dans le menu rétractable
 function showChoices(choices) {
+    console.log('Showing choices:', choices);
     const chatbotChoices = document.getElementById('chatbotChoices');
+    if (!chatbotChoices) {
+        console.error('Chatbot choices element not found');
+        return;
+    }
     chatbotChoices.innerHTML = ''; // Réinitialise le contenu du menu
     choices.forEach(choice => {
         const button = document.createElement('button');
         button.textContent = choice.text;
         button.setAttribute('onclick', choice.onclick);
+        console.log('Adding button:', button);
         chatbotChoices.appendChild(button);
     });
     const toggleSpan = document.getElementById('toggleChoices');
-    chatbotChoices.style.display = 'block'; // Affiche le menu
-    toggleSpan.textContent = "▲"; // Ajuste le texte du bouton
+    if (toggleSpan) {
+        toggleSpan.textContent = "▲";
+    }
+    chatbotChoices.style.display = 'block';
 }
 // Masque le menu rétractable
 function hideChoices() {
@@ -290,4 +301,11 @@ function handleOverworldQuestion(question) {
 }
 // Initialisation du chatbot lors du chargement de la page
 document.addEventListener('DOMContentLoaded', initializeChatbot);
+console.log('Chatbot script loaded');
+// Exports globaux pour la compatibilité
+window.initializeChatbot = initializeChatbot;
+window.handleChoice = handleChoice;
+window.showCategoryDetails = showCategoryDetails;
+window.showCraftDetails = showCraftDetails;
+window.handleSubChoice = handleSubChoice;
 //# sourceMappingURL=chatbot.js.map
