@@ -1,5 +1,4 @@
 // chatbot.ts
-// Suppression des imports
 // Déclaration globale pour éviter les erreurs de typage
 declare global {
   interface Window {
@@ -9,6 +8,8 @@ declare global {
     showCraftDetails: (categoryOrCraftKey: string, craftKey?: string) => void;
     handleSubChoice: (subChoice: string) => void;
     toggleChatbot: () => void;
+    toggleChoicesMenu: () => void;
+    handleUserInput: () => void;
   }
 }
 
@@ -357,13 +358,16 @@ import { Donnees, Element, Categories } from './crafts';
     initializeChatbot();
   });
 
-  // Exportez les fonctions globalement
-  window.initializeChatbot = initializeChatbot;
-  window.handleChoice = handleChoice;
-  window.showCategoryDetails = showCategoryDetails;
-  window.showCraftDetails = showCraftDetails;
-  window.handleSubChoice = handleSubChoice;
-  window.toggleChatbot = toggleChatbot;
+  if (typeof window !== 'undefined') {
+    window.toggleChatbot = toggleChatbot;
+    window.initializeChatbot = initializeChatbot;
+    window.handleChoice = handleChoice;
+    window.showCategoryDetails = showCategoryDetails;
+    window.showCraftDetails = showCraftDetails;
+    window.handleSubChoice = handleSubChoice;
+    window.toggleChoicesMenu = toggleChoicesMenu;
+    window.handleUserInput = handleUserInput;
+  }
 
   console.log('Chatbot script loaded');
 })(window);
