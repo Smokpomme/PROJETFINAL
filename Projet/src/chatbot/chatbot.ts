@@ -343,6 +343,11 @@
   (window as any).handleSubChoice = handleSubChoice;
   (window as any).toggleChoicesMenu = toggleChoicesMenu;
   (window as any).handleUserInput = handleUserInput;
+  
+  // Ajout des fonctions de questions
+  (window as any).handleNetherQuestion = handleNetherQuestion;
+  (window as any).handleEndQuestion = handleEndQuestion;
+  (window as any).handleOverworldQuestion = handleOverworldQuestion;
 
   // Initialisation du chatbot lors du chargement de la page
   document.addEventListener('DOMContentLoaded', () => {
