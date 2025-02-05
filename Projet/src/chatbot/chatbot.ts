@@ -123,7 +123,7 @@
       const craftDetails = `
         <p><strong>${craftName}</strong></p>
         <p>${foundCraft.description}</p>
-        <img src="${foundCraft.image}" alt="${craftName}" style="width: 100px; height: 100px; margin-top: 10px;" />
+        <img src="${foundCraft.image}" alt="${craftName}"/>
       `;
       appendMessage('bot', craftDetails);
     } else {
