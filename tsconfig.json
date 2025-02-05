@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
     "target": "es2017",
-    "module": "none",
+    "module": "umd",
     "lib": ["es2017", "dom"],
     "strict": true,
     "esModuleInterop": true,
     "outDir": "./dist",
     "rootDir": "./Projet/src/chatbot",
     "sourceMap": true,
-    "removeComments": false
+    "removeComments": false,
+    "moduleResolution": "node"
   },
   "include": ["Projet/src/chatbot/**/*.ts"],
   "exclude": ["**/*.d.ts"]
