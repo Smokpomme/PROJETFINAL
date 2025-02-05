@@ -307,6 +307,7 @@
         appendMessage('bot', "Les principaux monstres du Nether sont les Blazes, les Ghasts, les Piglins, les Zombified Piglins et les Withers.");
         break;
     }
+    initializeChatbot();
   }
 
   function handleEndQuestion(question: string): void {
@@ -321,6 +322,7 @@
         appendMessage('bot', "L'Ender Dragon est le boss final de Minecraft. Vaincre ce dragon marque la fin du jeu et débloque de nouveaux éléments de gameplay.");
         break;
     }
+    initializeChatbot();
   }
 
   function handleOverworldQuestion(question: string): void {
@@ -335,6 +337,7 @@
         appendMessage('bot', "Pour survivre dans l'Overworld : collectez des ressources, construisez un abri, fabriquez des outils, gérez votre faim et évitez les monstres la nuit.");
         break;
     }
+    initializeChatbot();
   }
 
   // Exportation globale
