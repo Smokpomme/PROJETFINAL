@@ -8,6 +8,7 @@ declare global {
     showCategoryDetails: (category: string) => void;
     showCraftDetails: (categoryOrCraftKey: string, craftKey?: string) => void;
     handleSubChoice: (subChoice: string) => void;
+    toggleChatbot: () => void;
   }
 }
 
@@ -362,6 +363,7 @@ import { Donnees, Element, Categories } from './crafts';
   window.showCategoryDetails = showCategoryDetails;
   window.showCraftDetails = showCraftDetails;
   window.handleSubChoice = handleSubChoice;
+  window.toggleChatbot = toggleChatbot;
 
   console.log('Chatbot script loaded');
 })(window);
